@@ -1,0 +1,2172 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>عالم ليليان بومدين</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500;600;700;800&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Layout: a girl's school notebook — squared pages for maths, ruled lines for Arabic, a rose margin on the right.
+   Raspberry and lilac carry the feminine touch; the classroom colours stay semantic:
+   units red / tens green / hundreds yellow in maths, noun blue / verb red / particle green in Arabic.
+   Dark theme = a plum night sky. One column on phones, wider grids on tablets, keypad beside the exercise on computers. */
+:root{
+  --bg:#FFF7FA; --rule:rgba(214,69,127,.085); --margin:rgba(214,69,127,.42);
+  --ink:#2A1F3D; --ink-soft:#6A5C7E; --card:#FFFFFF; --edge:#F0D6E3; --lift:#E8C3D6;
+  --accent:#D6457F; --on-accent:#FFFFFF; --accent-soft:#FDE6EF;
+  --lilac:#8E6CD9; --lilac-soft:#EFE8FC; --peach:#FF9E7A;
+  --units:#E2453B; --tens:#22995A; --hund:#F2B233; --thou:#7A50D4; --orange:#F0862A;
+  --noun:#2E5BDB; --verb:#D93B33; --harf:#22995A; --gold:#F2B233;
+  --hund-soft:#FFF3D1; --gold-soft:#FFF3D1; --ruler:#FFE9A8; --gridline:#E7C9D8;
+  --ok:#1C8F4E; --ok-bg:#E2F5E9; --bad:#C24E1C; --bad-bg:#FDEBE1; --try:#9A6A00; --try-bg:#FFF4D6;
+  --star:#F4B000; --chip:#FBEFF5;
+  --f-ui:"Baloo Bhaijaan 2","Segoe UI",Tahoma,system-ui,sans-serif;
+  --f-text:"Noto Naskh Arabic","Amiri","Traditional Arabic","Times New Roman",serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#1E1622; --rule:rgba(255,255,255,.05); --margin:rgba(255,130,180,.4);
+    --ink:#F6EEF4; --ink-soft:#C4B2C6; --card:#2B2030; --edge:#47354E; --lift:#120C15;
+    --accent:#FF8FBF; --on-accent:#2A0F1E; --accent-soft:#4A2638;
+    --lilac:#B9A0FF; --lilac-soft:#33284A; --peach:#FFB08F;
+    --units:#FF7568; --tens:#4FD08A; --hund:#FFC852; --thou:#B79CFF; --orange:#FFA05A;
+    --noun:#8CB0FF; --verb:#FF7A6E; --harf:#52D18B; --gold:#FFC852;
+    --hund-soft:#3D3320; --gold-soft:#3D3320; --ruler:#5B4E24; --gridline:rgba(246,238,244,.22);
+    --ok:#5BDA92; --ok-bg:#183A28; --bad:#FF9C6E; --bad-bg:#3C251B; --try:#FFD36B; --try-bg:#3A3118;
+    --star:#FFC93A; --chip:#372A3D; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#1E1622; --rule:rgba(255,255,255,.05); --margin:rgba(255,130,180,.4);
+  --ink:#F6EEF4; --ink-soft:#C4B2C6; --card:#2B2030; --edge:#47354E; --lift:#120C15;
+  --accent:#FF8FBF; --on-accent:#2A0F1E; --accent-soft:#4A2638;
+  --lilac:#B9A0FF; --lilac-soft:#33284A; --peach:#FFB08F;
+  --units:#FF7568; --tens:#4FD08A; --hund:#FFC852; --thou:#B79CFF; --orange:#FFA05A;
+  --noun:#8CB0FF; --verb:#FF7A6E; --harf:#52D18B; --gold:#FFC852;
+  --hund-soft:#3D3320; --gold-soft:#3D3320; --ruler:#5B4E24; --gridline:rgba(246,238,244,.22);
+  --ok:#5BDA92; --ok-bg:#183A28; --bad:#FF9C6E; --bad-bg:#3C251B; --try:#FFD36B; --try-bg:#3A3118;
+  --star:#FFC93A; --chip:#372A3D; color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{min-height:100%}
+body{
+  background-color:var(--bg); color:var(--ink);
+  background-image:linear-gradient(var(--rule) 1px,transparent 1px),linear-gradient(90deg,var(--rule) 1px,transparent 1px);
+  background-size:22px 22px;
+  font-family:var(--f-ui); font-size:17px; line-height:1.5;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));
+  padding-right:max(16px, env(safe-area-inset-right, 0px));
+  padding-block:14px 40px;
+  -webkit-text-size-adjust:100%;
+}
+body[data-subj="ar"]{background-image:linear-gradient(transparent 33px,var(--rule) 33px);background-size:100% 34px}
+button{font:inherit;color:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+a{color:inherit}
+button:focus-visible,.slot:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.opt,.card,.door,.tile,.stile,.oslot,.sslot,.cell,.pad button,.player,.bctl button{-webkit-user-select:none;user-select:none}
+#app{max-width:1120px;margin:0 auto;border-inline-start:2px solid var(--margin);padding-inline-start:clamp(10px,2vw,22px)}
+.screen{max-width:1080px;margin:0 auto}
+.n,.m{font-family:var(--f-ui);font-variant-numeric:tabular-nums}
+.m{display:inline-block;white-space:nowrap;font-weight:700}
+.ar{font-family:var(--f-text)}
+.d-u{color:var(--units)}.d-t{color:var(--tens)}.d-h{color:var(--hund)}.d-th{color:var(--thou)}.d-a{color:var(--accent)}
+.c-n{color:var(--noun)}.c-v{color:var(--verb)}.c-h{color:var(--harf)}.c-g{color:var(--gold)}
+.linkbtn{background:none;border:0;text-decoration:underline;color:var(--ink-soft);padding:6px 0;font-size:15px}
+.mini{border:2px solid var(--edge);background:var(--card);border-radius:10px;padding:2px 14px;min-height:38px}
+.iconbtn{flex:none;width:48px;height:48px;border-radius:50%;border:2px solid var(--edge);background:var(--card);display:grid;place-items:center;box-shadow:0 3px 0 var(--lift)}
+.iconbtn svg{width:22px;height:22px}
+.tag{margin:2px 0 0;font-family:var(--f-text);color:var(--ink-soft);font-size:15px;line-height:1.9}
+
+/* ---------- portal ---------- */
+.portal-head{position:relative;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:start;padding-top:6px}
+.ptitle{margin:0;line-height:1.2;text-wrap:balance}
+.pt1{display:inline-block;font-size:clamp(34px,7.4vw,64px);font-weight:800;background:linear-gradient(90deg,var(--accent),var(--lilac));-webkit-background-clip:text;background-clip:text;color:transparent}
+@supports not ((-webkit-background-clip:text) or (background-clip:text)){.pt1{color:var(--accent)}}
+.pt2{display:block;font-size:clamp(22px,4.4vw,36px);font-weight:700;color:var(--ink);margin-top:4px}
+.flutter{display:flex;gap:6px;align-items:center;margin-bottom:2px}
+.bfly{width:42px;height:36px}
+.bfly.sm{width:28px;height:24px;opacity:.85}
+.bfly .wl,.bfly .wr{transform-box:fill-box;animation:flap 2.4s ease-in-out infinite}
+.bfly .wl{transform-origin:100% 50%}.bfly .wr{transform-origin:0% 50%}
+@keyframes flap{0%,100%{transform:scaleX(1)}50%{transform:scaleX(.72)}}
+.players{margin-top:18px;background:var(--card);border:2px solid var(--edge);border-radius:22px;padding:12px 14px 14px;box-shadow:0 4px 0 var(--lift)}
+.phead{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.phead h2{margin:0;font-size:22px;font-weight:800}
+.plist{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+.player{position:relative;display:inline-flex;align-items:center;gap:8px;min-height:56px;padding:6px 14px 6px 12px;border-radius:999px;border:2px solid var(--edge);background:var(--chip);font-weight:700;font-size:18px;transition:transform .12s}
+.player .ava{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-size:24px;background:var(--card);border:2px solid var(--edge)}
+.player .pst{display:inline-flex;align-items:center;gap:2px;font-size:14px;color:var(--ink-soft)}
+.player .pst svg{width:15px;height:15px}
+.player.on{border-color:var(--accent);background:var(--accent-soft);box-shadow:0 0 0 3px var(--accent-soft)}
+.player.on .ava{border-color:var(--accent)}
+.player.add{border-style:dashed;color:var(--accent);background:transparent}
+.player .del{position:absolute;inset-block-start:-8px;inset-inline-end:-6px;width:28px;height:28px;border-radius:50%;border:2px solid var(--card);background:var(--bad);color:#fff;font:800 16px/1 var(--f-ui);display:grid;place-items:center;padding:0}
+.delask{margin-top:10px;font-family:var(--f-text);font-size:17px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.hello{margin:22px 0 12px;font-size:clamp(20px,3.6vw,28px);font-weight:800;text-align:center}
+.hello .ava{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--accent-soft);margin-inline-end:6px;vertical-align:middle}
+.doors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(14px,4vw,48px);max-width:820px;margin:0 auto;perspective:1100px}
+.door{border:0;background:none;padding:0;display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;min-width:0}
+.arch{position:relative;width:min(100%,280px);aspect-ratio:3/4;border-radius:50% 50% 16px 16px / 34% 34% 16px 16px;background:radial-gradient(ellipse at 50% 40%,#FFF6C9,var(--gold) 70%);border:4px solid var(--ink);box-shadow:0 6px 0 var(--lift);overflow:hidden}
+.leaf{position:absolute;inset:0;border-radius:inherit;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;transform-origin:100% 50%;transition:transform .45s cubic-bezier(.3,.9,.4,1);background:var(--g);box-shadow:inset 0 0 0 10px rgba(255,255,255,.14)}
+.leaf::before,.leaf::after{content:"";position:absolute;inset-inline:18%;border:3px solid rgba(255,255,255,.35);border-radius:14px}
+.leaf::before{top:12%;height:34%;border-radius:999px 999px 14px 14px}
+.leaf::after{bottom:9%;height:30%}
+.door-math .leaf{--g:linear-gradient(165deg,var(--accent),var(--peach))}
+.door-ar .leaf{--g:linear-gradient(165deg,var(--lilac),var(--accent))}
+.glyphs{position:relative;z-index:1;display:flex;gap:4px;direction:ltr;font:800 clamp(30px,6vw,52px)/1 var(--f-ui)}
+.glyphs i{font-style:normal;display:grid;place-items:center;width:1.05em;height:1.15em;border-radius:10px;background:var(--card);box-shadow:0 3px 0 rgba(0,0,0,.18)}
+.door-ar .glyphs{direction:rtl;font-family:var(--f-text);font-weight:700}
+.knob{position:absolute;left:12%;top:63%;width:14px;height:14px;border-radius:50%;background:var(--gold);border:2px solid var(--ink);z-index:1}
+.dname{font-size:clamp(20px,3.4vw,28px);font-weight:800;line-height:1.3;margin-top:8px}
+.dsub{font-family:var(--f-text);font-size:clamp(14px,2vw,17px);color:var(--ink-soft);line-height:1.6}
+.dprog{display:flex;align-items:center;gap:6px;width:min(100%,240px);font-weight:700;font-size:15px;color:var(--ink-soft)}
+.dprog svg{width:18px;height:18px;flex:none}
+.dprog .tr-bar{flex:1;margin:0}
+.dgo{margin-top:4px;min-height:46px;padding:2px 26px;border-radius:999px;background:var(--accent);color:var(--on-accent);font-weight:800;font-size:19px;box-shadow:0 4px 0 var(--lift);display:inline-flex;align-items:center}
+.door-ar .dgo{background:var(--lilac)}
+.door.opening .leaf{transform:rotateY(-74deg)}
+
+/* ---------- subject home ---------- */
+.sbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:space-between}
+.who-chip{display:inline-flex;align-items:center;gap:6px;background:var(--accent-soft);border-radius:999px;padding:2px 12px 2px 6px;font-weight:700}
+.who-chip .ava{font-size:22px}
+.shead{display:flex;gap:12px;align-items:center;margin-top:14px}
+.shead h1{font-size:clamp(30px,6vw,46px);line-height:1.25;margin:0;font-weight:800}
+.logo{display:grid;grid-template-columns:repeat(3,auto);gap:4px;align-items:end;flex:none}
+.logo i{display:block;border:1.5px solid rgba(0,0,0,.3);border-radius:4px}
+.logo .lg-h{width:14px;height:34px;background:var(--hund)}.logo .lg-t{width:14px;height:24px;background:var(--tens)}.logo .lg-u{width:14px;height:14px;background:var(--units)}
+.logo .lt{display:grid;place-items:center;width:26px;height:30px;border-radius:6px;font:800 18px var(--f-text);font-style:normal;color:#fff}
+.logo .l1{background:var(--noun)}.logo .l2{background:var(--verb)}.logo .l3{background:var(--harf)}
+.treasure{display:flex;gap:14px;align-items:center;background:var(--card);border:2px solid var(--edge);border-radius:18px;padding:12px 14px;box-shadow:0 4px 0 var(--lift);margin-top:14px}
+.treasure svg{width:62px;height:52px;flex:none}
+.tr-body{flex:1;min-width:0}
+.tr-text{font-family:var(--f-text);font-size:16px;line-height:1.9;margin:0}
+.tr-bar{height:14px;border-radius:8px;background:var(--chip);border:1.5px solid var(--edge);overflow:hidden;margin-top:6px}
+.tr-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--gold) 55%,var(--lilac));transition:width .6s}
+.tr-num{font-weight:700;font-size:15px;color:var(--ink-soft);margin-top:2px}
+.rules{font-family:var(--f-text);color:var(--ink-soft);margin:14px 0 4px;line-height:1.9}
+.level{margin-top:22px}
+.lvhead{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.lvnum{width:38px;height:38px;display:grid;place-items:center;border-radius:12px;background:var(--accent);color:var(--on-accent);font-weight:800;font-size:22px;flex:none}
+.lvhead h2{margin:0;font-size:24px;font-weight:800}
+.diff{display:inline-flex;align-items:center;gap:4px;font-size:15px;font-weight:700;color:var(--ink-soft);background:var(--chip);border-radius:20px;padding:2px 10px}
+.diff i{width:10px;height:10px;border-radius:50%;background:var(--edge);display:inline-block}
+.diff i.on{background:var(--accent)}
+.lvstars{margin-inline-start:auto;font-weight:700;color:var(--ink-soft);display:inline-flex;gap:4px;align-items:center}
+.lvstars svg{width:18px;height:18px}
+.lvdesc{font-family:var(--f-text);color:var(--ink-soft);margin:4px 0 10px;line-height:1.9}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(158px,1fr));gap:12px}
+.card{display:flex;flex-direction:column;align-items:stretch;gap:4px;text-align:start;background:var(--card);border:2px solid var(--edge);border-radius:18px;padding:10px 12px 12px;box-shadow:0 4px 0 var(--lift);transition:transform .12s, box-shadow .12s;min-width:0}
+.card:active{transform:translateY(2px);box-shadow:0 2px 0 var(--lift)}
+.badge{height:60px;display:flex;align-items:center;justify-content:center;border-radius:12px;background:var(--chip);overflow:hidden;gap:4px;white-space:nowrap}
+.card.math .badge{direction:ltr;font:800 24px var(--f-ui)}
+.card.ar .badge{font:700 20px var(--f-text);gap:6px}
+.badge small{font-size:15px}
+.cname{font-size:18px;font-weight:700;line-height:1.6;margin-top:4px}
+.csub{font-family:var(--f-text);font-size:13.5px;color:var(--ink-soft);line-height:1.8}
+.cstars{display:flex;gap:2px;margin-top:2px}
+.cstars svg{width:20px;height:20px}
+.foot{margin-top:28px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;color:var(--ink-soft);font-size:15px}
+
+/* ---------- game ---------- */
+#game{max-width:1000px}
+.gbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.back{display:inline-flex;align-items:center;gap:6px;min-height:44px;border:2px solid var(--edge);background:var(--card);border-radius:12px;padding:2px 12px;font-weight:700;box-shadow:0 3px 0 var(--lift)}
+.back svg{width:18px;height:18px}
+.gtitle{font-size:21px;font-weight:800;line-height:1.5}
+.chip{font-size:13px;font-weight:700;background:var(--chip);border-radius:20px;padding:1px 10px;color:var(--ink-soft);margin-inline-start:6px;vertical-align:middle}
+.gmeta{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:10px 0 4px;flex-wrap:wrap}
+.qcount{font-family:var(--f-text);font-size:15px;color:var(--ink-soft)}
+.dots{display:flex;gap:6px}
+.dots i{width:14px;height:14px;border-radius:50%;background:var(--chip);border:2px solid var(--edge)}
+.dots i.cur{border-color:var(--accent);background:var(--accent-soft)}
+.dots i.ok{background:var(--ok);border-color:var(--ok)}
+.dots i.ok2{background:var(--hund);border-color:var(--hund)}
+.dots i.bad{background:var(--bad);border-color:var(--bad)}
+.consigne{display:flex;gap:10px;align-items:flex-start;margin-top:8px}
+.owl{width:60px;height:62px;flex:none}
+.bubble{position:relative;flex:1;min-width:0;background:var(--card);border:2px solid var(--edge);border-radius:18px;padding:8px 14px;font-family:var(--f-text);font-size:18px;line-height:2.05;margin:0}
+.bubble::before{content:"";position:absolute;inset-inline-start:-9px;top:18px;width:14px;height:14px;background:var(--card);border-inline-start:2px solid var(--edge);border-bottom:2px solid var(--edge);transform:rotate(45deg)}
+.qprompt{font-family:var(--f-text);font-weight:700;font-size:20px;line-height:2.1;margin:14px 0 6px;text-align:start}
+.qprompt:empty{display:none}
+.stage{max-width:620px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:14px;min-height:120px}
+.visual{width:100%;display:flex;flex-direction:column;align-items:center;gap:10px}
+.visual:empty{display:none}
+.bign{font-size:42px;font-weight:800;line-height:1.2;font-variant-numeric:tabular-nums}
+.bign.xl{font-size:54px;letter-spacing:2px}
+.bign span{transition:color .3s, background .3s;border-radius:6px;padding:0 1px}
+.bign span.hl{background:var(--hund-soft);color:var(--accent)}
+.eq{font-size:34px;font-weight:800;display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;font-variant-numeric:tabular-nums}
+.qbox{display:inline-grid;place-items:center;min-width:56px;height:52px;padding:0 8px;border:3px dashed var(--accent);border-radius:12px;color:var(--accent);background:var(--accent-soft)}
+.qbox.solved{border-style:solid;background:var(--ok-bg);color:var(--ok);border-color:var(--ok)}
+.bigword{font-family:var(--f-text);font-size:46px;font-weight:700;line-height:1.9;background:var(--card);border:2px solid var(--edge);border-radius:18px;padding:4px 28px;box-shadow:0 4px 0 var(--lift);text-align:center}
+.pic{font-size:52px;line-height:1.1}
+.sent{font-family:var(--f-text);font-size:24px;font-weight:600;line-height:2.4;background:var(--card);border:2px solid var(--edge);border-radius:16px;padding:8px 18px;width:100%;text-align:start;margin:0}
+.blank{display:inline-block;min-width:78px;padding:0 10px;margin:0 2px;border-bottom:3px dashed var(--accent);color:var(--accent);text-align:center;line-height:1.6;background:var(--accent-soft);border-radius:8px 8px 0 0}
+.blank.solved{border-bottom-style:solid;border-color:var(--ok);color:var(--ok);background:var(--ok-bg)}
+.blank.mark{min-width:46px;font-size:30px;font-weight:800}
+.u{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:8px;color:var(--accent)}
+.textcard{font-family:var(--f-text);font-size:20px;line-height:2.2;background:var(--card);border:2px solid var(--edge);border-radius:16px;padding:10px 18px;width:100%;margin:0;text-align:start}
+.textcard::before{content:"";display:block;width:44px;height:5px;border-radius:3px;background:var(--accent);margin-bottom:6px}
+
+/* options */
+.opts{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;width:100%}
+.opt{min-height:60px;min-width:88px;border:2px solid var(--edge);border-radius:16px;background:var(--card);box-shadow:0 4px 0 var(--lift);padding:6px 16px;font:800 30px/1.4 var(--f-ui);display:inline-flex;flex-direction:column;align-items:center;justify-content:center;transition:transform .1s}
+#game[data-subj="ar"] .opt{font:700 23px/1.9 var(--f-text);min-width:96px;padding:4px 18px}
+.opt:active{transform:translateY(3px);box-shadow:0 1px 0 var(--lift)}
+.opt.is-ok{border-color:var(--ok);background:var(--ok-bg);color:var(--ok)}
+.opt.is-bad{border-color:var(--bad);background:var(--bad-bg);color:var(--bad);opacity:.85}
+.opt:disabled{cursor:default}
+.opt .em{font-size:30px;line-height:1.2}
+.opt small{font-family:var(--f-text);font-size:14px;font-weight:600;line-height:1.7;color:var(--ink-soft)}
+.list{flex-direction:column;align-items:stretch}
+.list .opt{flex-direction:row;gap:10px;justify-content:flex-start;align-items:center;text-align:start;font-size:22px}
+#game[data-subj="ar"] .list .opt{font-size:21px}
+.words .opt{font-family:var(--f-text);font-size:21px;font-weight:600;line-height:2;align-items:stretch;text-align:start}
+.side3 .opt{font-size:17px;font-family:var(--f-text);font-weight:700;min-width:92px;padding:6px 10px;line-height:1.8}
+.signs .opt{min-width:96px}
+.sign{font-size:40px;line-height:1}
+.figs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.figs .opt{padding:8px;min-width:0}
+.fruits .opt{font-family:var(--f-text);font-size:19px;font-weight:700;min-width:120px;flex-direction:row;gap:6px}
+.marks .opt{min-width:100px}
+#game .marks .opt b{font:800 38px/1.1 var(--f-ui)}
+.cats .opt{min-width:100px}
+.cats .opt[data-tag="n"]{color:var(--noun)}.cats .opt[data-tag="v"]{color:var(--verb)}.cats .opt[data-tag="h"]{color:var(--harf)}
+.cats .opt.is-ok{color:var(--ok)}.cats .opt.is-bad{color:var(--bad)}
+.sentence{gap:8px;background:var(--card);border:2px solid var(--edge);border-radius:16px;padding:12px}
+#game .sentence .opt{min-width:0;padding:2px 12px;font-size:24px;box-shadow:0 3px 0 var(--lift);background:var(--gold-soft)}
+.sentence .dot{font:700 24px/2.4 var(--f-text);align-self:center}
+.who .opt{flex-direction:row;gap:10px}
+.balloons{gap:14px}
+.balloons .opt{background:none;border:0;box-shadow:none;padding:0;min-width:0}
+.bln{position:relative;display:grid;place-items:center;width:74px;height:88px;border-radius:50% 50% 48% 48%/56% 56% 44% 44%;background:var(--bc);color:#fff;font-size:26px;font-weight:800;text-shadow:0 1px 2px rgba(0,0,0,.35);box-shadow:inset -8px -10px 0 rgba(0,0,0,.12)}
+.bln::after{content:"";position:absolute;bottom:-26px;left:50%;width:2px;height:24px;background:var(--ink-soft)}
+.bln::before{content:"";position:absolute;bottom:-5px;left:calc(50% - 5px);border:5px solid transparent;border-top-color:var(--bc)}
+.balloons .opt:nth-child(1) .bln{animation:float 3.2s ease-in-out infinite}
+.balloons .opt:nth-child(2) .bln{animation:float 2.7s ease-in-out .4s infinite}
+.balloons .opt:nth-child(3) .bln{animation:float 3.5s ease-in-out .2s infinite}
+.balloons .opt:nth-child(4) .bln{animation:float 3s ease-in-out .7s infinite}
+@keyframes float{50%{transform:translateY(-8px)}}
+.balloons .opt.is-ok .bln{animation:pop .45s ease-out forwards;outline:4px solid var(--ok);outline-offset:3px}
+.balloons .opt.is-bad .bln{filter:grayscale(1);opacity:.45;animation:none}
+@keyframes pop{40%{transform:scale(1.25)}100%{transform:scale(1.1)}}
+
+/* feedback + actions */
+.fb{display:flex;gap:10px;align-items:flex-start;border-radius:14px;padding:10px 14px;margin:14px auto 0;max-width:620px;font-family:var(--f-text);font-size:18px;line-height:2;border:2px solid transparent}
+.fb.ok{background:var(--ok-bg);color:var(--ok);border-color:var(--ok)}
+.fb.try{background:var(--try-bg);color:var(--try);border-color:var(--try)}
+.fb.bad{background:var(--bad-bg);color:var(--bad);border-color:var(--bad)}
+.fb-ic{flex:none;width:28px;height:28px;margin-top:6px}
+.fb-tx{min-width:0}
+.fb .hint,.fb .exp{display:block;color:var(--ink);font-weight:500;font-size:17px}
+.fb .m{color:var(--ink)}
+.actions{display:flex;justify-content:center;gap:12px;margin-top:16px}
+.primary{min-height:56px;padding:4px 32px;border:0;border-radius:18px;background:var(--accent);color:var(--on-accent);font-size:22px;font-weight:800;box-shadow:0 4px 0 var(--lift)}
+.primary:disabled{opacity:.4;cursor:default}
+.primary:active:not(:disabled){transform:translateY(3px);box-shadow:0 1px 0 var(--lift)}
+.secondary{min-height:54px;padding:4px 22px;border:2px solid var(--edge);border-radius:16px;background:var(--card);font-size:20px;font-weight:800;box-shadow:0 4px 0 var(--lift)}
+
+/* keypad + slots */
+.pad{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;max-width:340px;margin:16px auto 0}
+.pad button{min-height:56px;border:2px solid var(--edge);border-radius:14px;background:var(--card);box-shadow:0 3px 0 var(--lift);font-size:26px;font-weight:800}
+.pad button:active{transform:translateY(2px);box-shadow:0 1px 0 var(--lift)}
+.pad .pk-del{font-family:var(--f-text);font-size:16px;font-weight:700;color:var(--ink-soft)}
+.pad .pk-ok{background:var(--accent);color:var(--on-accent);border-color:var(--accent);font-size:19px}
+.pad .pk-ok:disabled{opacity:.4}
+.slot{display:inline-grid;place-items:center;min-width:calc(var(--w,2) * 17px + 22px);height:52px;padding:0 6px;border:3px dashed var(--edge);border-radius:12px;background:var(--card);font-family:var(--f-ui);font-size:28px;font-weight:800;color:var(--accent);cursor:pointer;font-variant-numeric:tabular-nums;vertical-align:middle;direction:ltr}
+.slot.active{border-color:var(--accent);border-style:solid;box-shadow:0 0 0 4px var(--accent-soft)}
+.slot.filled{border-style:solid}
+.slot.is-bad{border-color:var(--bad);background:var(--bad-bg);color:var(--bad)}
+.slot.is-ok,.slot.revealed{border-color:var(--ok);background:var(--ok-bg);color:var(--ok);border-style:solid}
+.ansrow{display:flex;align-items:center;justify-content:center;gap:10px;font-family:var(--f-text);font-size:20px;font-weight:700}
+.unit{font-family:var(--f-text);font-weight:700;font-size:20px}
+.problem{font-family:var(--f-text);font-size:20px;line-height:2.2;background:var(--card);border:2px solid var(--edge);border-radius:14px;padding:10px 16px;width:100%;text-align:start}
+.problem .n{font-weight:800;color:var(--accent);font-size:22px}
+.seq{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:6px;font-size:26px;font-weight:800}
+.seq .term{background:var(--card);border:2px solid var(--edge);border-radius:10px;padding:2px 8px}
+.seq .sep{color:var(--ink-soft)}
+.col{display:grid;grid-template-columns:30px repeat(var(--cols),46px);gap:4px;font-size:32px;font-weight:800;align-items:center;justify-items:center;font-variant-numeric:tabular-nums}
+.col .carry{width:30px;height:28px;border:2px dashed var(--edge);border-radius:8px;font-size:17px;color:var(--units);display:grid;place-items:center;background:var(--card);padding:0}
+.col .carry.on{border-style:solid;border-color:var(--units)}
+.col .line{grid-column:1 / -1;height:3px;background:var(--ink);width:100%;border-radius:2px}
+.col .slot{min-width:44px;width:44px;height:50px;padding:0}
+.col .cap{font-size:12px;font-weight:700;color:var(--ink-soft);font-family:var(--f-text)}
+.colhelp{font-family:var(--f-text);font-size:14px;color:var(--ink-soft)}
+.regroup{display:flex;flex-direction:column;align-items:flex-start;gap:8px;font-size:28px;font-weight:800}
+.rg-row{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.rg-head{font-size:32px}
+
+/* maths visuals */
+.blocks{display:flex;gap:18px;align-items:flex-end;justify-content:center;flex-wrap:wrap;padding:12px;background:var(--card);border:2px solid var(--edge);border-radius:14px;max-width:100%}
+.blocks>div{display:flex;flex-wrap:wrap;gap:4px;align-items:flex-end}
+.bg-h{max-width:148px}.bg-t{max-width:126px}.bg-u{max-width:44px}
+.plate{display:inline-block;width:44px;height:44px;background-color:var(--hund);background-image:linear-gradient(rgba(0,0,0,.2) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,.2) 1px,transparent 1px);background-size:4.4px 4.4px;border:1.5px solid rgba(0,0,0,.4);border-radius:3px}
+.bar{display:inline-block;width:10px;height:44px;background-color:var(--tens);background-image:linear-gradient(rgba(0,0,0,.26) 1px,transparent 1px);background-size:10px 4.4px;border:1.5px solid rgba(0,0,0,.4);border-radius:2px}
+.cube{display:inline-block;width:10px;height:10px;background:var(--units);border:1.5px solid rgba(0,0,0,.4);border-radius:2px}
+.legend{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;font-family:var(--f-text);font-size:15px;color:var(--ink-soft)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend .plate{width:18px;height:18px;background-size:1.8px 1.8px}
+.legend .bar{height:18px;width:6px;background-size:6px 1.8px}
+.legend .cube{width:7px;height:7px}
+.builder{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;width:100%}
+.bcol{background:var(--card);border:2px solid var(--edge);border-radius:14px;padding:8px 6px;display:flex;flex-direction:column;align-items:center;gap:6px;min-width:0}
+.bcol.is-bad{border-color:var(--bad);background:var(--bad-bg)}
+.bcol.is-ok{border-color:var(--ok);background:var(--ok-bg)}
+.blab{font-family:var(--f-text);font-weight:700;font-size:16px;line-height:1.8}
+.c-h .blab{color:var(--hund);filter:brightness(.85)}.c-t .blab{color:var(--tens)}.c-u .blab{color:var(--units)}
+.bvis{height:108px;display:flex;flex-wrap:wrap;align-content:flex-end;justify-content:center;gap:3px;width:100%}
+.c-h .bvis{max-width:96px}
+.c-h .plate{width:28px;height:28px;background-size:2.8px 2.8px}
+.c-t .bar{width:7px;height:50px;background-size:7px 5px}
+.c-u .bvis{max-width:46px}
+.bcnt{font-size:34px;font-weight:800;line-height:1}
+.c-h .bcnt{color:var(--hund)}.c-t .bcnt{color:var(--tens)}.c-u .bcnt{color:var(--units)}
+.bctl{display:flex;gap:6px}
+.bctl button{width:46px;height:46px;border-radius:12px;border:2px solid var(--edge);background:var(--chip);font-size:26px;font-weight:800;line-height:1;box-shadow:0 3px 0 var(--lift)}
+.order-slots{display:flex;align-items:center;justify-content:center;gap:4px;flex-wrap:wrap}
+.oslot{width:62px;height:52px;border:3px dashed var(--edge);border-radius:12px;background:var(--card);font-size:22px;font-weight:800;padding:0}
+.oslot.filled{border-style:solid;border-color:var(--accent);color:var(--accent)}
+.oslot.is-bad{border-color:var(--bad);background:var(--bad-bg);color:var(--bad)}
+.oslot.is-ok,.oslot.revealed{border-color:var(--ok);background:var(--ok-bg);color:var(--ok);border-style:solid}
+.osign{font-size:26px;font-weight:800;color:var(--ink-soft)}
+.tiles{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.tile{min-width:70px;height:56px;border:2px solid var(--edge);border-radius:14px;background:var(--hund-soft);font-size:26px;font-weight:800;box-shadow:0 4px 0 var(--lift)}
+.tile.used{visibility:hidden}
+.arrows{display:flex;gap:6px;justify-content:center;flex-wrap:wrap}
+.arw{width:44px;height:44px;border-radius:10px;background:var(--accent);color:var(--on-accent);display:grid;place-items:center;transition:transform .2s}
+.arw svg{width:28px;height:28px}
+.arw.now{transform:scale(1.18);background:var(--units)}
+.gridwrap{position:relative;width:min(100%,360px)}
+.grid{display:grid;grid-template-columns:repeat(var(--cols),1fr);border:2px solid var(--ink-soft);border-radius:8px;overflow:hidden;background:var(--card)}
+.cell{aspect-ratio:1;border:0;border-inline-end:1.5px solid var(--gridline);border-bottom:1.5px solid var(--gridline);background:transparent;padding:0}
+.cell.is-bad{background:var(--bad-bg)}
+.cell.is-ok{background:var(--ok-bg);box-shadow:inset 0 0 0 3px var(--ok)}
+.cell.start{background:repeating-linear-gradient(45deg,transparent 0 6px,var(--chip) 6px 12px)}
+.bug{position:absolute;width:calc(100% / var(--cols));aspect-ratio:1;left:calc(var(--bx) * 100% / var(--cols));top:calc(var(--by) * 100% / var(--rows));transition:left .3s ease, top .3s ease;pointer-events:none;display:grid;place-items:center}
+.bug svg{width:70%;height:70%}
+svg{direction:ltr}
+.ruler{width:100%;max-width:480px}
+.ruler .rb{fill:var(--ruler);stroke:var(--ink-soft);stroke-width:1.5}
+.ruler .tk{stroke:var(--ink);stroke-width:1.6}
+.ruler .tk.sm{stroke-width:1}
+.ruler .tl{font:700 12px var(--f-ui);fill:var(--ink);text-anchor:middle}
+.ruler .seg{stroke:var(--units);stroke-width:6;stroke-linecap:round}
+.ruler .segcap{stroke:var(--units);stroke-width:2.5}
+.ruler .guide{stroke:var(--units);stroke-width:1.2;stroke-dasharray:3 3}
+.bal{width:100%;max-width:460px}
+.bal .stand{fill:var(--ink-soft)}
+.bal .post{stroke:var(--ink-soft);stroke-width:6;stroke-linecap:round}
+.bal .bm{stroke:var(--ink);stroke-width:6;stroke-linecap:round}
+.bal .pv{fill:var(--hund);stroke:var(--ink);stroke-width:2}
+.bal .str{stroke:var(--ink-soft);stroke-width:1.6}
+.bal .dish{fill:var(--chip);stroke:var(--ink);stroke-width:2}
+.bal .wt{fill:var(--ink-soft);stroke:var(--ink);stroke-width:1.2}
+.bal .qm{font:800 28px var(--f-ui);fill:var(--accent);text-anchor:middle}
+.bal .beam,.bal .pan{transform-box:view-box;transition:transform .7s cubic-bezier(.3,1.4,.5,1)}
+.bal .beam{transform-origin:170px 60px}
+.bal.tilt-L .beam{transform:rotate(-8deg)}.bal.tilt-L .pl{transform:translateY(15px)}.bal.tilt-L .pr{transform:translateY(-15px)}
+.bal.tilt-R .beam{transform:rotate(8deg)}.bal.tilt-R .pl{transform:translateY(-15px)}.bal.tilt-R .pr{transform:translateY(15px)}
+.pans{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%;max-width:460px}
+.pans>div{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+.wchip{background:var(--card);border:2px solid var(--edge);border-radius:10px;padding:0 8px;font-weight:800;font-size:18px}
+.chart{width:100%;max-width:460px}
+.chart .gl{stroke:var(--edge);stroke-width:1}
+.chart .gl.base{stroke:var(--ink);stroke-width:2}
+.chart .yl{font:700 11px var(--f-ui);fill:var(--ink-soft);text-anchor:end}
+.chart .em{font-size:20px;text-anchor:middle}
+.chart .fl{font:700 13px var(--f-text);fill:var(--ink);text-anchor:middle}
+.chart .bv{font:800 15px var(--f-ui);fill:var(--ink);text-anchor:middle}
+.chart .barr{stroke:var(--ink);stroke-width:1.5}
+.ctitle{font-family:var(--f-text);font-weight:700;font-size:16px;color:var(--ink-soft);margin:0}
+.fig{width:100%;height:auto;display:block}
+.fig .ln{stroke:var(--ink);stroke-width:3;stroke-linecap:round}
+.fig .ax{stroke:var(--accent);stroke-width:2.5;stroke-dasharray:7 5}
+.fig .sh{fill:var(--hund-soft);stroke:var(--ink);stroke-width:2.5;stroke-linejoin:round}
+.fig .pt{fill:var(--units);stroke:var(--ink);stroke-width:1.2}
+.fig .vx{fill:var(--ink)}
+.croc{font-size:40px;line-height:1}
+.cmp{display:flex;align-items:center;gap:12px;font-size:44px;font-weight:800}
+.wordsbig{font-family:var(--f-text);font-size:26px;font-weight:700;line-height:2.1;text-align:center;background:var(--card);border:2px solid var(--edge);border-radius:14px;padding:8px 16px}
+
+/* arabic visuals */
+.scene{width:100%;max-width:440px}
+.scene .floor{stroke:var(--ink-soft);stroke-width:3;stroke-linecap:round}
+.scene .wood{fill:var(--orange);stroke:var(--ink);stroke-width:2;stroke-linejoin:round}
+.scene .obj{font-size:40px;text-anchor:middle}
+.scene .obj.sm{font-size:32px}
+.sslots{list-style:none;margin:0;padding:0;width:100%;display:flex;flex-direction:column;gap:8px}
+.sslot{width:100%;min-height:54px;display:flex;align-items:center;gap:10px;text-align:start;border:3px dashed var(--edge);border-radius:14px;background:var(--card);padding:4px 10px;font:600 19px/1.9 var(--f-text)}
+.sslot b{flex:none;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--chip);font:800 18px var(--f-ui);color:var(--ink-soft)}
+.sslot.filled{border-style:solid;border-color:var(--accent)}
+.sslot.filled b{background:var(--accent);color:var(--on-accent)}
+.sslot.is-bad{border-color:var(--bad);background:var(--bad-bg)}
+.sslot.is-ok,.sslot.revealed{border-color:var(--ok);background:var(--ok-bg);border-style:solid}
+.story-title{font-family:var(--f-text);font-weight:700;font-size:18px;color:var(--ink-soft);margin:0}
+.stiles{display:flex;flex-direction:column;gap:8px;width:100%}
+.stile{width:100%;text-align:start;border:2px solid var(--edge);border-radius:14px;background:var(--gold-soft);box-shadow:0 3px 0 var(--lift);padding:6px 12px;font:600 19px/1.9 var(--f-text)}
+.stile.used{display:none}
+
+/* overlays */
+.overlay{position:fixed;inset:0;z-index:20;display:grid;place-items:center;padding:16px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));background:rgba(30,12,30,.55);overflow-y:auto}
+.sheet{width:min(100%,440px);background:var(--card);border:2px solid var(--edge);border-radius:24px;padding:22px 20px;text-align:center;box-shadow:0 8px 0 var(--lift)}
+.sheet h2{margin:4px 0 6px;font-size:28px;font-weight:800}
+.sheet p{font-family:var(--f-text);font-size:18px;line-height:2;margin:4px 0}
+.rstars{display:flex;justify-content:center;gap:6px}
+.rstars svg{width:58px;height:58px;transform:scale(0);animation:starIn .45s cubic-bezier(.3,1.6,.5,1) forwards}
+.rstars svg:nth-child(2){animation-delay:.25s}.rstars svg:nth-child(3){animation-delay:.5s}
+@keyframes starIn{to{transform:scale(1)}}
+.ractions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:14px}
+.record{display:inline-block;background:var(--hund-soft);color:var(--ink);border-radius:20px;padding:0 12px;font-family:var(--f-text);font-weight:700;font-size:15px}
+.tr-win{margin-top:10px;padding:10px;border-radius:14px;background:var(--hund-soft)}
+.tr-win svg{width:70px;height:58px}
+#playerForm label{display:block;font-family:var(--f-text);font-size:19px;font-weight:700;margin:8px 0 4px}
+#nameInput{width:100%;font:700 22px var(--f-ui);padding:8px 12px;border:2px solid var(--edge);border-radius:12px;background:var(--bg);color:var(--ink);text-align:center}
+.avas{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}
+.avas button{aspect-ratio:1;border-radius:14px;border:2px solid var(--edge);background:var(--chip);font-size:26px;padding:0}
+.avas button[aria-pressed="true"]{border-color:var(--accent);background:var(--accent-soft);box-shadow:0 0 0 3px var(--accent-soft)}
+.formerr{color:var(--bad);font-family:var(--f-text);font-size:16px;min-height:1.6em;margin:4px 0 0}
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:30}
+
+/* ---------- responsive ---------- */
+@media (hover:hover) and (pointer:fine){
+  .card:hover{transform:translateY(-2px);box-shadow:0 6px 0 var(--lift)}
+  .door:hover .leaf{transform:rotateY(-22deg)}
+  .player:hover{transform:translateY(-1px)}
+  .opt:hover:not(:disabled){border-color:var(--accent)}
+  .cell:hover{background:var(--accent-soft)}
+}
+@media (max-width:420px){
+  .eq{font-size:28px}.cmp{font-size:38px}.bign.xl{font-size:46px}
+  .opt{font-size:26px;min-width:76px}
+  #game[data-subj="ar"] .opt{font-size:21px;min-width:84px;padding:4px 14px}
+  .oslot{width:56px;font-size:20px}
+  .col{grid-template-columns:26px repeat(var(--cols),42px);font-size:28px}
+  .col .slot{width:40px;min-width:40px}
+  .bln{width:66px;height:80px;font-size:23px}
+  .bubble{font-size:17px}
+  .sent{font-size:21px}.bigword{font-size:40px}.textcard{font-size:19px}
+  #game .sentence .opt{font-size:21px}
+  .player{font-size:16px;min-height:52px}
+  .player .ava{width:34px;height:34px;font-size:20px}
+}
+@media (min-width:768px){
+  body{font-size:18px}
+  .bubble{font-size:20px}
+  .qprompt{font-size:23px}
+  .stage{max-width:720px}
+  .fb{max-width:720px;font-size:19px}
+  .opt{min-height:66px;font-size:32px}
+  #game[data-subj="ar"] .opt{font-size:25px}
+  #game[data-subj="ar"] .list .opt{font-size:23px}
+  .sent{font-size:27px}.textcard{font-size:22px}.bigword{font-size:54px}
+  .eq{font-size:40px}.bign.xl{font-size:64px}.cmp{font-size:52px}
+  .pad{max-width:380px}.pad button{min-height:62px;font-size:30px}
+  .owl{width:72px;height:74px}
+  .cards{grid-template-columns:repeat(auto-fill,minmax(186px,1fr));gap:16px}
+  .cname{font-size:19px}
+  .figs{gap:16px}
+  .stile,.sslot{font-size:21px}
+  .col{grid-template-columns:36px repeat(var(--cols),56px);gap:6px;font-size:40px}
+  .col .slot{width:54px;min-width:54px;height:60px;font-size:32px}
+  .col .carry{width:36px;height:32px;font-size:19px}
+  .slot{height:58px;font-size:31px}
+  .seq{font-size:30px}
+  .problem{font-size:22px}
+}
+@media (min-width:1000px){
+  .gbody.has-pad{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:32px;align-items:start}
+  .gbody.has-pad .gside{position:sticky;top:calc(16px + env(safe-area-inset-top,0px))}
+  .gbody.has-pad .pad{margin-top:72px}
+  .portal-wide{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:40px;align-items:start}
+  .portal-wide .hello{text-align:start;margin-top:0}
+  .cards{grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}
+}
+@media (max-height:520px) and (orientation:landscape){
+  body{padding-block:8px 24px}
+  .owl{width:44px;height:46px}
+  .bubble{font-size:16px;line-height:1.9;padding:4px 12px}
+  .qprompt{margin:8px 0 4px}
+  .arch{width:min(100%,170px)}
+  .glyphs{font-size:26px}
+  .pt1{font-size:34px}.pt2{font-size:22px}
+  .stage{gap:8px;min-height:0}
+  .opt{min-height:52px}
+  .gbody.has-pad{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:20px;align-items:start}
+  .gbody.has-pad .pad{margin-top:0;max-width:280px;gap:6px}
+  .gbody.has-pad .pad button{min-height:44px;font-size:24px}
+  .col{grid-template-columns:30px repeat(var(--cols),46px);gap:4px;font-size:32px}
+  .col .slot{width:44px;min-width:44px;height:48px;font-size:28px}
+  .col .carry{width:30px;height:26px;font-size:17px}
+  .slot{height:48px;font-size:28px}
+}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+</style>
+
+<main id="app" dir="rtl" lang="ar">
+  <!-- ============ PORTAL ============ -->
+  <section id="home" class="screen">
+    <header class="portal-head">
+      <div>
+        <div class="flutter" aria-hidden="true"><svg class="bfly" viewBox="0 0 48 40"><g class="wl"><path d="M23 20C15 5 3 3 4 13c1 6 8 8 19 8z" fill="var(--accent)"/><path d="M23 22c-10 0-16 7-13 12 3 4 11-2 13-11z" fill="var(--lilac)"/></g><g class="wr"><path d="M25 20C33 5 45 3 44 13c-1 6-8 8-19 8z" fill="var(--accent)"/><path d="M25 22c10 0 16 7 13 12-3 4-11-2-13-11z" fill="var(--lilac)"/></g><rect x="22.6" y="12" width="2.8" height="18" rx="1.4" fill="var(--ink)"/><path d="M24 13q-2-6-6-8M24 13q2-6 6-8" stroke="var(--ink)" stroke-width="1.3" fill="none" stroke-linecap="round"/></svg><svg class="bfly sm" viewBox="0 0 48 40"><g class="wl"><path d="M23 20C15 5 3 3 4 13c1 6 8 8 19 8z" fill="var(--lilac)"/><path d="M23 22c-10 0-16 7-13 12 3 4 11-2 13-11z" fill="var(--peach)"/></g><g class="wr"><path d="M25 20C33 5 45 3 44 13c-1 6-8 8-19 8z" fill="var(--lilac)"/><path d="M25 22c10 0 16 7 13 12-3 4-11-2-13-11z" fill="var(--peach)"/></g><rect x="22.6" y="12" width="2.8" height="18" rx="1.4" fill="var(--ink)"/><path d="M24 13q-2-6-6-8M24 13q2-6 6-8" stroke="var(--ink)" stroke-width="1.3" fill="none" stroke-linecap="round"/></svg></div>
+        <h1 class="ptitle"><span class="pt1">عَالَمُ ليليان بومدين</span><span class="pt2">لِلْمُرَاجَعَةِ الْمُمْتِعَةِ</span></h1>
+        <p class="tag">أَلْعَابٌ لِمُرَاجَعَةِ الرِّيَاضِيَّاتِ وَاللُّغَةِ الْعَرَبِيَّةِ<br>السَّنَةُ الثَّالِثَةُ مِنَ التَّعْلِيمِ الِابْتِدَائِيِّ · الْفَصْلُ الْأَوَّلُ</p>
+      </div>
+      <button class="iconbtn sound-btn" type="button" aria-label="الصَّوْتُ"></button>
+    </header>
+    <div class="portal-wide">
+      <section class="players" aria-labelledby="whoTitle">
+        <div class="phead"><h2 id="whoTitle">مَنْ تَلْعَبُ الْآنَ؟</h2><button id="manageBtn" class="linkbtn" type="button">تَعْدِيلُ الْأَسْمَاءِ</button></div>
+        <div id="playerList" class="plist"></div>
+        <div id="delAsk" class="delask" hidden></div>
+      </section>
+      <section aria-labelledby="hello">
+        <h2 class="hello" id="hello"></h2>
+        <div class="doors" id="doors"></div>
+      </section>
+    </div>
+  </section>
+
+  <!-- ============ SUBJECT HOME ============ -->
+  <section id="subj" class="screen" hidden>
+    <div class="sbar">
+      <button id="homeBtn" class="back" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>الْبَوَّابَتَانِ</button>
+      <span class="who-chip" id="whoChip"></span>
+      <button class="iconbtn sound-btn" type="button" aria-label="الصَّوْتُ"></button>
+    </div>
+    <header class="shead"><div class="logo" id="sLogo" aria-hidden="true"></div><div><h1 id="sTitle"></h1><p class="tag" id="sTag"></p></div></header>
+    <section class="treasure" aria-live="polite">
+      <span id="chestBox"></span>
+      <div class="tr-body"><p class="tr-text" id="trText"></p><div class="tr-bar"><i id="trBar" style="width:0"></i></div><div class="tr-num" id="trNum" dir="ltr"></div></div>
+    </section>
+    <p class="rules">كُلُّ لُعْبَةٍ فِيهَا <bdi class="n">6</bdi> أَسْئِلَةٍ. اِرْبَحِي حَتَّى <bdi class="n">3</bdi> نُجُومٍ فِي كُلِّ لُعْبَةٍ، وَأَعِيدِي اللُّعْبَةَ مَتَى شِئْتِ: الْأَسْئِلَةُ تَتَغَيَّرُ فِي كُلِّ مَرَّةٍ!</p>
+    <div id="levels"></div>
+    <div class="foot">
+      <button id="resetBtn" class="linkbtn" type="button">مَسْحُ نُجُومِي فِي هَذِهِ الْمَادَّةِ</button>
+      <span id="resetAsk" hidden>مَسْحُ النُّجُومِ؟ <button id="resetYes" class="mini" type="button">نَعَمْ</button> <button id="resetNo" class="mini" type="button">لَا</button></span>
+    </div>
+  </section>
+
+  <!-- ============ GAME ============ -->
+  <section id="game" class="screen" hidden>
+    <div class="gbar">
+      <button id="backBtn" class="back" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>رُجُوعٌ</button>
+      <div class="gtitle"><span id="gName"></span><span id="gLevel" class="chip"></span></div>
+    </div>
+    <div class="gmeta"><span class="qcount" id="qCount"></span><div class="dots" id="dots"></div></div>
+    <div class="gbody" id="gbody">
+      <div class="gmain">
+        <div class="consigne">
+          <svg class="owl" viewBox="0 0 64 66" aria-hidden="true">
+            <path d="M14 20 L20 8 L26 18 Z M50 20 L44 8 L38 18 Z" fill="var(--lilac)"/>
+            <ellipse cx="32" cy="38" rx="22" ry="24" fill="var(--lilac)"/>
+            <ellipse cx="32" cy="46" rx="13" ry="14" fill="var(--lilac-soft)"/>
+            <path d="M32 9 L22 3 L23 15 Z M32 9 L42 3 L41 15 Z" fill="var(--accent)"/><circle cx="32" cy="9" r="3.4" fill="var(--accent)"/>
+            <circle cx="23" cy="29" r="9" fill="#fff" stroke="var(--ink)" stroke-width="1.5"/>
+            <circle cx="41" cy="29" r="9" fill="#fff" stroke="var(--ink)" stroke-width="1.5"/>
+            <circle cx="24" cy="30" r="4" fill="#2A1F3D"/><circle cx="40" cy="30" r="4" fill="#2A1F3D"/>
+            <circle cx="25.5" cy="28.5" r="1.2" fill="#fff"/><circle cx="41.5" cy="28.5" r="1.2" fill="#fff"/>
+            <path d="M29 36 L35 36 L32 41 Z" fill="var(--gold)"/>
+            <circle cx="16" cy="40" r="3" fill="var(--accent)" opacity=".35"/><circle cx="48" cy="40" r="3" fill="var(--accent)" opacity=".35"/>
+            <path d="M24 49 q2 2 4 0 M30 53 q2 2 4 0 M36 49 q2 2 4 0" stroke="var(--lilac)" stroke-width="1.6" fill="none"/>
+          </svg>
+          <p class="bubble" id="cText"></p>
+        </div>
+        <div class="qprompt" id="qPrompt"></div>
+        <div class="stage" id="stage"></div>
+        <div class="fb" id="fb" hidden></div>
+      </div>
+      <div class="gside">
+        <div class="pad" id="pad" dir="ltr" hidden>
+          <button type="button" data-k="1">1</button><button type="button" data-k="2">2</button><button type="button" data-k="3">3</button>
+          <button type="button" data-k="4">4</button><button type="button" data-k="5">5</button><button type="button" data-k="6">6</button>
+          <button type="button" data-k="7">7</button><button type="button" data-k="8">8</button><button type="button" data-k="9">9</button>
+          <button type="button" data-k="del" class="pk-del">اِمْسَحِي</button><button type="button" data-k="0">0</button><button type="button" data-k="ok" class="pk-ok" id="padOk" disabled>تَحَقَّقِي</button>
+        </div>
+        <div class="actions">
+          <button id="checkBtn" class="primary" type="button" hidden disabled>تَحَقَّقِي</button>
+          <button id="nextBtn" class="primary" type="button" hidden>تَابِعِي</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OVERLAYS ============ -->
+  <div id="result" class="overlay" hidden>
+    <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="rTitle">
+      <div class="rstars" id="rStars"></div>
+      <h2 id="rTitle">اِنْتَهَتِ اللُّعْبَةُ!</h2>
+      <p id="rMsg"></p>
+      <p id="rScore"></p>
+      <div id="rExtra"></div>
+      <div class="ractions">
+        <button id="rAgain" class="primary" type="button">أَعِيدِي اللُّعْبَةَ</button>
+        <button id="rMenu" class="secondary" type="button">لُعْبَةٌ أُخْرَى</button>
+      </div>
+    </div>
+  </div>
+  <div id="playerModal" class="overlay" hidden>
+    <form class="sheet" id="playerForm" novalidate>
+      <h2>اِسْمٌ جَدِيدٌ</h2>
+      <label for="nameInput">مَا اسْمُكِ؟</label>
+      <input id="nameInput" maxlength="20" autocomplete="off" placeholder="اُكْتُبِي اسْمَكِ هُنَا">
+      <label>اِخْتَارِي صُورَتَكِ:</label>
+      <div class="avas" id="avas"></div>
+      <p class="formerr" id="formErr"></p>
+      <div class="ractions">
+        <button class="primary" type="submit">حِفْظٌ</button>
+        <button class="secondary" type="button" id="playerCancel">إِلْغَاءٌ</button>
+      </div>
+    </form>
+  </div>
+  <canvas id="confetti" hidden></canvas>
+</main>
+
+<script>
+(() => {
+'use strict';
+/* ================= shared utilities ================= */
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const R = (a, b) => a + Math.floor(Math.random() * (b - a + 1));
+const pick = a => a[Math.floor(Math.random() * a.length)];
+const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const take = (arr, k) => shuffle(arr).slice(0, k);
+const mix = parts => shuffle(parts.flatMap(([arr, k]) => take(arr, k)));
+const digits = n => String(n).split('').map(Number);
+const N = n => `<bdi class="n">${n}</bdi>`;
+const M = s => `<span class="m" dir="ltr">${s}</span>`;
+const Q = s => `«${s}»`;
+const MINUS = '−', LT = '&lt;', GT = '&gt;';
+const BLANK = '___';
+const withBlank = (s, cls = '') => s.replace(BLANK, `<span class="blank ${cls}" data-q>…</span>`);
+const fillQ = v => { const q = $('#stage [data-q]'); if (q) { q.innerHTML = v; q.classList.add('solved'); } };
+const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const reduceMotion = () => window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function opts(correct, cands, k, lo = 0, hi = 9999) {
+  const out = [correct];
+  for (const c of shuffle(cands)) { if (out.length >= k) break; if (Number.isInteger(c) && c >= lo && c <= hi && !out.includes(c)) out.push(c); }
+  let g = 0;
+  while (out.length < k && g++ < 200) { const c = correct + pick([-1, 1]) * R(1, 20); if (c >= lo && c <= hi && !out.includes(c)) out.push(c); }
+  return shuffle(out);
+}
+
+/* ================= players & storage ================= */
+const KEY = 'alam-lilian-v1';
+const AVATARS = ['🦋', '🌸', '🦄', '🐱', '🐰', '🌙', '⭐', '🌻', '🐼', '🦊', '🐬', '🍓'];
+let store = { players: [], cur: null, sound: true };
+try { const s = JSON.parse(localStorage.getItem(KEY) || 'null'); if (s && Array.isArray(s.players)) store = Object.assign(store, s); } catch (e) {}
+if (!store.players.length) { store.players.push({ id: 'p1', name: 'ليليان', av: '🦋', best: {}, tr: {} }); store.cur = 'p1'; }
+function save() { try { localStorage.setItem(KEY, JSON.stringify(store)); } catch (e) {} }
+const P = () => store.players.find(p => p.id === store.cur) || store.players[0];
+
+/* ================= sound ================= */
+let ac = null;
+function tone(f, d, type = 'sine', when = 0, vol = .14) {
+  if (!store.sound) return;
+  try {
+    ac = ac || new (window.AudioContext || window.webkitAudioContext)();
+    const t = ac.currentTime + when, o = ac.createOscillator(), g = ac.createGain();
+    o.type = type; o.frequency.setValueAtTime(f, t);
+    g.gain.setValueAtTime(.0001, t); g.gain.exponentialRampToValueAtTime(vol, t + .02); g.gain.exponentialRampToValueAtTime(.0001, t + d);
+    o.connect(g); g.connect(ac.destination); o.start(t); o.stop(t + d + .05);
+  } catch (e) {}
+}
+const sfx = {
+  ok() { tone(660, .14, 'triangle'); tone(990, .24, 'triangle', .11); },
+  bad() { tone(196, .28, 'sawtooth', 0, .06); },
+  tap() { tone(560, .05, 'sine', 0, .05); },
+  win() { [523, 659, 784, 1047].forEach((f, i) => tone(f, .26, 'triangle', i * .12)); },
+};
+
+/* ================= engine state (declared before the subject modules use it) ================= */
+let G = null;
+
+/* ================= MATHS module (كنز الأعداد) ================= */
+const MATH = (() => {
+/* ================= number words (fully vowelled) ================= */
+const W_U = ['', 'وَاحِدٌ', 'اِثْنَانِ', 'ثَلَاثَةٌ', 'أَرْبَعَةٌ', 'خَمْسَةٌ', 'سِتَّةٌ', 'سَبْعَةٌ', 'ثَمَانِيَةٌ', 'تِسْعَةٌ'];
+const W_TEEN = ['عَشَرَةٌ', 'أَحَدَ عَشَرَ', 'اِثْنَا عَشَرَ', 'ثَلَاثَةَ عَشَرَ', 'أَرْبَعَةَ عَشَرَ', 'خَمْسَةَ عَشَرَ', 'سِتَّةَ عَشَرَ', 'سَبْعَةَ عَشَرَ', 'ثَمَانِيَةَ عَشَرَ', 'تِسْعَةَ عَشَرَ'];
+const W_T = ['', '', 'عِشْرُونَ', 'ثَلَاثُونَ', 'أَرْبَعُونَ', 'خَمْسُونَ', 'سِتُّونَ', 'سَبْعُونَ', 'ثَمَانُونَ', 'تِسْعُونَ'];
+const W_H = ['', 'مِئَةٌ', 'مِئَتَانِ', 'ثَلَاثُ مِئَةٍ', 'أَرْبَعُ مِئَةٍ', 'خَمْسُ مِئَةٍ', 'سِتُّ مِئَةٍ', 'سَبْعُ مِئَةٍ', 'ثَمَانِي مِئَةٍ', 'تِسْعُ مِئَةٍ'];
+const W_TH = ['', 'أَلْفٌ', 'أَلْفَانِ', 'ثَلَاثَةُ آلَافٍ', 'أَرْبَعَةُ آلَافٍ', 'خَمْسَةُ آلَافٍ', 'سِتَّةُ آلَافٍ', 'سَبْعَةُ آلَافٍ', 'ثَمَانِيَةُ آلَافٍ', 'تِسْعَةُ آلَافٍ'];
+function words(n) {
+  if (n === 0) return 'صِفْرٌ';
+  const th = Math.floor(n / 1000), h = Math.floor(n / 100) % 10, r = n % 100, t = Math.floor(r / 10), u = r % 10;
+  const p = [];
+  if (th) p.push(W_TH[th]);
+  if (h) p.push(W_H[h]);
+  if (r) {
+    if (r < 10) p.push(W_U[u]);
+    else if (r < 20) p.push(W_TEEN[r - 10]);
+    else if (u === 0) p.push(W_T[t]);
+    else { p.push(W_U[u]); p.push(W_T[t]); }
+  }
+  // after «وَ» the hamzat al-wasl of اِثْنَانِ / اِثْنَا loses its kasra
+  return p.map((x, i) => i === 0 ? x : 'وَ' + x.replace(/^اِ/, 'ا')).join(' ');
+}
+
+/* ================= drawing helpers ================= */
+const STAR = (on) => `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.8 6.1 6.6.7-4.9 4.5 1.4 6.6L12 17.2l-5.9 3.3 1.4-6.6-4.9-4.5 6.6-.7z" fill="${on ? 'var(--star)' : 'none'}" stroke="${on ? 'var(--star)' : 'var(--edge)'}" stroke-width="1.8" stroke-linejoin="round"/></svg>`;
+const ICON = {
+  ok: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="currentColor"/><path d="M6.5 12.5l3.5 3.5 7.5-8" stroke="var(--card)" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  try: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="currentColor"/><path d="M12 6.5v7" stroke="var(--card)" stroke-width="2.6" stroke-linecap="round"/><circle cx="12" cy="17.3" r="1.6" fill="var(--card)"/></svg>',
+  bad: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="currentColor"/><path d="M12 6.5v7" stroke="var(--card)" stroke-width="2.6" stroke-linecap="round"/><circle cx="12" cy="17.3" r="1.6" fill="var(--card)"/></svg>',
+};
+const SPEAKER = on => `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/>${on ? '<path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>' : '<path d="M16 9l5 6M21 9l-5 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>'}</svg>`;
+const CHEST = open => `<svg viewBox="0 0 62 52" aria-hidden="true">
+  ${open ? '<path d="M6 22 L10 6 Q31 -2 52 6 L56 22 Z" fill="var(--orange)" stroke="var(--ink)" stroke-width="2"/><circle cx="20" cy="20" r="4" fill="var(--hund)"/><circle cx="31" cy="17" r="5" fill="var(--hund)"/><circle cx="42" cy="20" r="4" fill="var(--hund)"/>'
+          : '<path d="M6 24 Q6 8 31 8 Q56 8 56 24 Z" fill="var(--orange)" stroke="var(--ink)" stroke-width="2"/>'}
+  <rect x="6" y="24" width="50" height="24" rx="3" fill="var(--orange)" stroke="var(--ink)" stroke-width="2"/>
+  <rect x="6" y="24" width="50" height="5" fill="var(--hund)" stroke="var(--ink)" stroke-width="1.5"/>
+  <rect x="27" y="26" width="8" height="10" rx="2" fill="var(--hund)" stroke="var(--ink)" stroke-width="1.5"/></svg>`;
+const ARROW = d => `<svg viewBox="0 0 24 24" style="transform:rotate(${{ R: 0, D: 90, L: 180, U: -90 }[d]}deg)"><path d="M4 12h14M12 6l6 6-6 6" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+const BUG = `<svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="9" r="6" fill="var(--ink)"/><ellipse cx="20" cy="23" rx="13" ry="14" fill="var(--units)" stroke="var(--ink)" stroke-width="2"/><line x1="20" y1="10" x2="20" y2="37" stroke="var(--ink)" stroke-width="2"/><g fill="var(--ink)"><circle cx="13.5" cy="19" r="2.6"/><circle cx="26.5" cy="19" r="2.6"/><circle cx="13" cy="28" r="2.3"/><circle cx="27" cy="28" r="2.3"/></g></svg>`;
+
+function blocksHTML(h, t, u) {
+  return `<div class="blocks" dir="ltr"><div class="bg-h">${'<i class="plate"></i>'.repeat(h)}</div><div class="bg-t">${'<i class="bar"></i>'.repeat(t)}</div><div class="bg-u">${'<i class="cube"></i>'.repeat(u)}</div></div>`;
+}
+const LEGEND = `<div class="legend" dir="ltr"><span><i class="plate"></i>مِئَةٌ</span><span><i class="bar"></i>عَشَرَةٌ</span><span><i class="cube"></i>وَاحِدٌ</span></div>`;
+
+function rulerSVG(s, e) {
+  const X = i => 20 + i * 25; let t = '';
+  for (let i = 0; i <= 12; i++) {
+    t += `<line x1="${X(i)}" y1="44" x2="${X(i)}" y2="60" class="tk"/><text x="${X(i)}" y="80" class="tl">${i}</text>`;
+    if (i < 12) t += `<line x1="${X(i) + 12.5}" y1="44" x2="${X(i) + 12.5}" y2="52" class="tk sm"/>`;
+  }
+  return `<svg viewBox="0 0 340 96" class="ruler" aria-hidden="true"><rect x="8" y="44" width="324" height="46" rx="5" class="rb"/>${t}
+    <line x1="${X(s)}" y1="22" x2="${X(s)}" y2="44" class="guide"/><line x1="${X(e)}" y1="22" x2="${X(e)}" y2="44" class="guide"/>
+    <line x1="${X(s)}" y1="22" x2="${X(e)}" y2="22" class="seg"/>
+    <line x1="${X(s)}" y1="12" x2="${X(s)}" y2="32" class="segcap"/><line x1="${X(e)}" y1="12" x2="${X(e)}" y2="32" class="segcap"/></svg>`;
+}
+function balanceSVG(L, Rr) {
+  const sz = { 500: 26, 200: 22, 100: 19, 50: 16, 20: 13, 10: 11 };
+  const stack = (arr, cx) => {
+    const tot = arr.reduce((a, w) => a + sz[w], 0) + (arr.length - 1) * 3; let x = cx - tot / 2;
+    return arr.map(w => { const s = sz[w]; const r = `<rect x="${x.toFixed(1)}" y="${118 - s}" width="${s}" height="${s}" rx="3" class="wt"/><rect x="${(x + s / 2 - 3).toFixed(1)}" y="${118 - s - 4}" width="6" height="5" rx="2" class="wt"/>`; x += s + 3; return r; }).join('');
+  };
+  const pan = (cx, cls, arr) => `<g class="pan ${cls}"><line x1="${cx}" y1="60" x2="${cx - 32}" y2="118" class="str"/><line x1="${cx}" y1="60" x2="${cx + 32}" y2="118" class="str"/><path d="M${cx - 42} 118 h84 q-6 14 -42 14 q-36 0 -42 -14z" class="dish"/>${stack(arr, cx)}</g>`;
+  return `<svg viewBox="0 0 340 190" class="bal" aria-hidden="true">
+    <path d="M146 184 h48 l-8 -12 h-32z" class="stand"/><line x1="170" y1="172" x2="170" y2="62" class="post"/>
+    ${pan(60, 'pl', L)}${pan(280, 'pr', Rr)}
+    <g class="beam"><line x1="60" y1="60" x2="280" y2="60" class="bm"/><circle cx="170" cy="60" r="7" class="pv"/></g>
+    <text x="170" y="38" class="qm" data-q>?</text></svg>`;
+}
+const FRUITS = [
+  { emo: '🍎', nom: 'التُّفَّاحُ', gen: 'التُّفَّاحِ', col: 'var(--units)' },
+  { emo: '🍊', nom: 'الْبُرْتُقَالُ', gen: 'الْبُرْتُقَالِ', col: 'var(--orange)' },
+  { emo: '🍌', nom: 'الْمَوْزُ', gen: 'الْمَوْزِ', col: 'var(--hund)' },
+  { emo: '🍐', nom: 'الْإِجَّاصُ', gen: 'الْإِجَّاصِ', col: 'var(--tens)' },
+];
+function chartSVG(vals) {
+  const x0 = 34, x1 = 332, y0 = 170, yTop = 20, u = (y0 - yTop) / 10, slot = (x1 - x0) / 4, bw = 40; let g = '';
+  for (let v = 0; v <= 10; v++) { const y = y0 - v * u; g += `<line x1="${x0}" x2="${x1}" y1="${y}" y2="${y}" class="gl${v === 0 ? ' base' : ''}"/><text x="${x0 - 7}" y="${y + 4}" class="yl">${v}</text>`; }
+  vals.forEach((v, i) => {
+    const cx = x0 + slot * (i + .5), y = y0 - v * u;
+    g += `<rect x="${cx - bw / 2}" y="${y}" width="${bw}" height="${v * u}" rx="3" class="barr" style="fill:${FRUITS[i].col}"/>`
+      + `<text x="${cx}" y="${y - 6}" class="bv" data-bv hidden>${v}</text>`
+      + `<text x="${cx}" y="${y0 + 24}" class="em">${FRUITS[i].emo}</text><text x="${cx}" y="${y0 + 46}" class="fl">${FRUITS[i].nom}</text>`;
+  });
+  return `<svg viewBox="0 0 340 226" class="chart" aria-hidden="true">${g}</svg>`;
+}
+
+/* geometry figures */
+const FIG = inner => `<svg viewBox="0 0 140 100" class="fig" aria-hidden="true">${inner}</svg>`;
+const LN = (x1, y1, x2, y2, c = 'ln') => `<line x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}" class="${c}"/>`;
+const rad = d => d * Math.PI / 180;
+function through(cx, cy, ang, len = 180) { const dx = Math.cos(rad(ang)) * len / 2, dy = Math.sin(rad(ang)) * len / 2; return LN(cx - dx, cy - dy, cx + dx, cy + dy); }
+function figAngle(alpha) {
+  const th = R(0, 359), vx = 70 + R(-6, 6), vy = 50 + R(-4, 4), l = 38, a = rad(th), b = rad(th + alpha);
+  return FIG(LN(vx, vy, vx + Math.cos(a) * l, vy + Math.sin(a) * l) + LN(vx, vy, vx + Math.cos(b) * l, vy + Math.sin(b) * l) + `<circle cx="${vx}" cy="${vy}" r="3.5" class="vx"/>`);
+}
+function figPair(kind) {
+  const th = R(0, 179), cx = 70, cy = 50, nx = -Math.sin(rad(th)), ny = Math.cos(rad(th));
+  if (kind === 'par') return FIG(through(cx + nx * 13, cy + ny * 13, th) + through(cx - nx * 13, cy - ny * 13, th));
+  if (kind === 'conv') return FIG(through(cx + nx * 14, cy + ny * 14, th - 5) + through(cx - nx * 14, cy - ny * 14, th + 5));
+  if (kind === 'perp') return FIG(through(cx + R(-8, 8), cy + R(-6, 6), th) + through(cx, cy, th + 90));
+  return FIG(through(cx, cy, th) + through(cx, cy, th + R(35, 58)));
+}
+const SYM_OK = [
+  () => FIG(`<polygon points="70,12 28,88 112,88" class="sh"/>` + LN(70, 4, 70, 96, 'ax')),
+  () => FIG(`<rect x="28" y="24" width="84" height="52" class="sh"/>` + LN(70, 14, 70, 86, 'ax')),
+  () => FIG(`<rect x="28" y="24" width="84" height="52" class="sh"/>` + LN(18, 50, 122, 50, 'ax')),
+  () => FIG(`<polygon points="70,10 108,38 108,90 32,90 32,38" class="sh"/>` + LN(70, 3, 70, 97, 'ax')),
+  () => FIG(`<polygon points="70,8 104,50 70,92 36,50" class="sh"/>` + LN(70, 2, 70, 98, 'ax')),
+];
+const SYM_NO = [
+  () => FIG(`<rect x="28" y="24" width="84" height="52" class="sh"/>` + LN(20, 19, 120, 81, 'ax')),
+  () => FIG(`<polygon points="34,14 34,88 112,88" class="sh"/>` + LN(70, 6, 70, 96, 'ax')),
+  () => FIG(`<rect x="28" y="24" width="84" height="52" class="sh"/>` + LN(52, 14, 52, 86, 'ax')),
+  () => FIG(`<polygon points="36,12 66,12 66,56 108,56 108,88 36,88" class="sh"/>` + LN(72, 4, 72, 96, 'ax')),
+  () => FIG(`<polygon points="46,24 116,24 94,76 24,76" class="sh"/>` + LN(70, 14, 70, 86, 'ax')),
+];
+function figAlign(ok) {
+  const th = R(0, 179), c = Math.cos(rad(th)), s = Math.sin(rad(th));
+  const ts = [-R(34, 44), R(-14, 14), R(34, 44)]; const pts = ts.map(t => [70 + c * t, 50 + s * t]);
+  if (!ok) { const off = pick([-1, 1]) * R(10, 14); pts[1] = [pts[1][0] - s * off, pts[1][1] + c * off]; }
+  return FIG(pts.map(p => `<circle cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="5" class="pt"/>`).join(''));
+}
+function figMid(kind) {
+  const th = R(0, 179), c = Math.cos(rad(th)), s = Math.sin(rad(th)), h = 46;
+  const A = [70 - c * h, 50 - s * h], B = [70 + c * h, 50 + s * h];
+  let t = .5, off = 0;
+  if (kind === 'l') t = pick([.28, .33]); if (kind === 'r') t = pick([.67, .72]); if (kind === 'off') off = pick([-1, 1]) * 13;
+  const px = A[0] + (B[0] - A[0]) * t - s * off, py = A[1] + (B[1] - A[1]) * t + c * off;
+  const cap = p => LN(p[0] - s * 6, p[1] + c * 6, p[0] + s * 6, p[1] - c * 6);
+  return FIG(LN(A[0], A[1], B[0], B[1]) + cap(A) + cap(B) + `<circle cx="${px.toFixed(1)}" cy="${py.toFixed(1)}" r="5" class="pt"/>`);
+}
+
+/* ================= the 18 games ================= */
+const RG = { u: 'الْوَحَدَاتِ', t: 'الْعَشَرَاتِ', h: 'الْمِئَاتِ', th: 'الْآلَافِ' };
+const fillQ = v => { const q = $('#stage [data-q]'); if (q) { q.innerHTML = v; q.classList.add('solved'); } };
+const numOpts = (vals, ltr = true) => vals.map(v => ({ v, html: N(v) }));
+
+const GAMES = [
+/* ---------- LEVEL 1 ---------- */
+{ id: 'blocks', lvl: 0, name: 'عُدِّي الْقِطَعَ', sub: 'تَمْثِيلُ الْأَعْدَادِ',
+  badge: '<span class="d-h">9</span><span class="d-t">4</span><span class="d-u">6</span>',
+  consigne: 'كُلُّ صَفِيحَةٍ مِئَةٌ، وَكُلُّ شَرِيطٍ عَشَرَةٌ، وَكُلُّ مُكَعَّبٍ وَاحِدٌ. عُدِّي الْقِطَعَ، ثُمَّ اخْتَارِي الْعَدَدَ الْمُمَثَّلَ.',
+  gen() {
+    let h = R(1, 9), t = R(0, 9), u = R(0, 9); if (Math.random() < .18) { h = 0; t = R(1, 9); }
+    const n = h * 100 + t * 10 + u;
+    const vals = opts(n, [h * 100 + u * 10 + t, n + 10, n - 10, n + 100, n - 100, t * 100 + h * 10 + u, n + 1, n - 1], 3, 1, 999);
+    return { kind: 'choice', prompt: 'مَا الْعَدَدُ الْمُمَثَّلُ بِالْقِطَعِ؟', visual: blocksHTML(h, t, u) + LEGEND, layout: 'row', optDir: 'ltr',
+      options: numOpts(vals), answer: n, hint: 'عُدِّي الصَّفَائِحَ أَوَّلًا، ثُمَّ الْأَشْرِطَةَ، ثُمَّ الْمُكَعَّبَاتِ.',
+      explain: M(`${h * 100} + ${t * 10} + ${u} = ${n}`) };
+  } },
+{ id: 'croc', lvl: 0, name: 'التِّمْسَاحُ الْجَائِعُ', sub: 'مُقَارَنَةُ الْأَعْدَادِ',
+  badge: `<span>85</span><span class="d-a">${LT}</span><span>263</span>`,
+  consigne: 'يَفْتَحُ التِّمْسَاحُ فَمَهُ دَائِمًا نَحْوَ الْعَدَدِ الْأَكْبَرِ. اِخْتَارِي الْعَلَامَةَ الْمُنَاسِبَةَ بَيْنَ الْعَدَدَيْنِ.',
+  gen() {
+    const ty = pick(['r', 'h', 'h', 'ht', 'sw', 'len', 'eq']); let a, b;
+    if (ty === 'r') { a = R(0, 999); b = R(0, 999); }
+    else if (ty === 'h') { const h = R(1, 9); a = h * 100 + R(0, 99); b = h * 100 + R(0, 99); }
+    else if (ty === 'ht') { const base = R(10, 99) * 10; a = base + R(0, 9); b = base + R(0, 9); }
+    else if (ty === 'sw') { const x = R(1, 9), y = R(0, 9); let z = R(0, 9); while (z === y) z = R(0, 9); a = x * 100 + y * 10 + z; b = x * 100 + z * 10 + y; }
+    else if (ty === 'len') { a = R(10, 99); b = R(100, 999); }
+    else { a = b = R(10, 999); }
+    if (Math.random() < .5) [a, b] = [b, a];
+    const ans = a < b ? '<' : a > b ? '>' : '=';
+    const ent = s => s === '<' ? LT : s === '>' ? GT : '=';
+    return { kind: 'choice', prompt: 'قَارِنِي بَيْنَ الْعَدَدَيْنِ.',
+      visual: `<div class="croc" aria-hidden="true">🐊</div><div class="cmp" dir="ltr"><span>${a}</span><span class="qbox" data-q>?</span><span>${b}</span></div>`,
+      layout: 'row signs', optDir: 'ltr',
+      options: [{ v: '<', html: `<span class="sign">${LT}</span><small>أَصْغَرُ مِنْ</small>` }, { v: '=', html: `<span class="sign">=</span><small>يُسَاوِي</small>` }, { v: '>', html: `<span class="sign">${GT}</span><small>أَكْبَرُ مِنْ</small>` }],
+      answer: ans,
+      hint: 'الْعَدَدُ ذُو الْأَرْقَامِ الْأَكْثَرِ هُوَ الْأَكْبَرُ. وَإِذَا تَسَاوَى عَدَدُ الْأَرْقَامِ فَقَارِنِي رَقْمَ الْمِئَاتِ، ثُمَّ الْعَشَرَاتِ، ثُمَّ الْوَحَدَاتِ.',
+      explain: (ans === '=' ? 'الْعَدَدَانِ مُتَسَاوِيَانِ:' : `الْعَدَدُ ${N(a)} ${ans === '<' ? 'أَصْغَرُ' : 'أَكْبَرُ'} مِنَ الْعَدَدِ ${N(b)}:`) + ' ' + M(`${a} ${ent(ans)} ${b}`),
+      after() { fillQ(ent(ans)); } };
+  } },
+{ id: 'balloons', lvl: 0, name: 'بَالُونَاتُ الْحِسَابِ', sub: 'الْجَمْعُ وَالطَّرْحُ ذِهْنِيًّا',
+  badge: '<span>47</span><span class="d-a">+</span><span>25</span>',
+  consigne: 'اُحْسُبِي فِي ذِهْنِكِ، ثُمَّ انْقُرِي الْبَالُونَ الَّذِي يَحْمِلُ النَّتِيجَةَ الصَّحِيحَةَ.',
+  gen() {
+    const ty = pick(['add', 'add', 'sub', 'sub', 'pm']); let a, b, op, c;
+    if (ty === 'add') { a = R(12, 88); b = R(3, Math.min(87, 100 - a)); op = '+'; c = a + b; }
+    else if (ty === 'sub') {
+      const ta = R(2, 9), ua = R(1, 9); a = ta * 10 + ua;
+      if (Math.random() < .3) { b = R(1, ua); } else { b = R(1, ta - 1) * 10 + R(0, ua); }
+      op = MINUS; c = a - b;
+    } else {
+      a = R(110, 889); const s = pick([10, 100]);
+      if (Math.random() < .5) { if (s === 10 && Math.floor(a / 10) % 10 === 9) a -= 10; op = '+'; }
+      else { if (s === 10 && Math.floor(a / 10) % 10 === 0) a += 10; op = MINUS; }
+      b = s; c = op === '+' ? a + b : a - b;
+    }
+    const vals = opts(c, [c + 10, c - 10, c + 1, c - 1, c + 2, c - 2, c + 100, c - 100], 4, 0, 999);
+    const cols = ['var(--hund)', 'var(--tens)', 'var(--units)', 'var(--accent)'];
+    return { kind: 'choice', prompt: 'مَا نَتِيجَةُ الْعَمَلِيَّةِ؟', visual: `<div class="eq" dir="ltr">${a} ${op} ${b} = <span class="qbox" data-q>?</span></div>`,
+      layout: 'balloons', optDir: 'ltr', options: vals.map((v, i) => ({ v, html: `<span class="bln" style="--bc:${cols[i]}">${v}</span>` })), answer: c,
+      hint: 'اُحْسُبِي الْعَشَرَاتِ مَعَ الْعَشَرَاتِ، وَالْوَحَدَاتِ مَعَ الْوَحَدَاتِ.', explain: M(`${a} ${op} ${b} = ${c}`), after() { fillQ(c); } };
+  } },
+{ id: 'grid', lvl: 0, name: 'رِحْلَةُ الدُّعْسُوقَةِ', sub: 'التَّنَقُّلُ عَلَى مَرْصُوفَةٍ',
+  badge: `<span class="d-a" style="display:flex;gap:2px">${['R', 'U', 'R'].map(d => `<span style="width:22px;display:inline-block">${ARROW(d)}</span>`).join('')}</span>`,
+  consigne: 'تَنْطَلِقُ الدُّعْسُوقَةُ مِنْ خَانَتِهَا وَتَتْبَعُ الْأَسْهُمَ خُطْوَةً خُطْوَةً. اُنْقُرِي الْخَانَةَ الَّتِي تَصِلُ إِلَيْهَا.',
+  gen() {
+    const C = 6, RW = 5, D = { R: [1, 0], L: [-1, 0], U: [0, -1], D: [0, 1] }, OPP = { R: 'L', L: 'R', U: 'D', D: 'U' };
+    let sc, sr, c, r, moves;
+    do {
+      sc = R(0, C - 1); sr = R(0, RW - 1); c = sc; r = sr; moves = []; const k = R(3, 5); let g = 0;
+      while (moves.length < k && g++ < 60) {
+        const d = pick(['R', 'L', 'U', 'D']); if (moves.length && OPP[d] === moves[moves.length - 1]) continue;
+        const nc = c + D[d][0], nr = r + D[d][1]; if (nc < 0 || nc >= C || nr < 0 || nr >= RW) continue;
+        moves.push(d); c = nc; r = nr;
+      }
+    } while (moves.length < 3 || (c === sc && r === sr));
+    const dest = { c, r }; let root, busy = false;
+    const q = { kind: 'custom', delay: 2600, prompt: 'أَيْنَ تَصِلُ الدُّعْسُوقَةُ؟',
+      hint: 'اِبْدَئِي بِالسَّهْمِ الْأَوَّلِ عَلَى الْيَمِينِ، وَتَتَبَّعِي الْأَسْهُمَ وَاحِدًا وَاحِدًا بِإِصْبَعِكِ.',
+      explain: 'تَصِلُ الدُّعْسُوقَةُ إِلَى الْخَانَةِ الْخَضْرَاءِ.', _dest: dest };
+    const place = (b, x, y) => { b.style.setProperty('--bx', x); b.style.setProperty('--by', y); };
+    const animate = () => {
+      if (busy) return; busy = true; let x = sc, y = sr, i = 0; const bug = root.querySelector('.bug'); place(bug, x, y);
+      const arws = root.querySelectorAll('.arw');
+      const step = () => {
+        if (!bug.isConnected) return; // the child already moved on to another question
+        arws.forEach(a => a.classList.remove('now'));
+        if (i >= moves.length) { busy = false; return; }
+        arws[i].classList.add('now'); x += D[moves[i]][0]; y += D[moves[i]][1]; place(bug, x, y); i++;
+        setTimeout(step, reduceMotion() ? 10 : 380);
+      };
+      setTimeout(step, 200);
+    };
+    q.mount = (stage, ctl) => {
+      let cells = '';
+      for (let y = 0; y < RW; y++) for (let x = 0; x < C; x++) cells += `<button type="button" class="cell${x === sc && y === sr ? ' start' : ''}" data-c="${x}" data-r="${y}" aria-label="خَانَةٌ"></button>`;
+      stage.innerHTML = `<div class="arrows" dir="rtl">${moves.map(d => `<span class="arw">${ARROW(d)}</span>`).join('')}</div>
+        <div class="gridwrap" style="--cols:${C};--rows:${RW}"><div class="grid" dir="ltr">${cells}</div><span class="bug" style="--bx:${sc};--by:${sr}">${BUG}</span></div>`;
+      root = stage;
+      stage.querySelector('.grid').addEventListener('click', e => {
+        const b = e.target.closest('.cell'); if (!b || G.done || busy) return;
+        const ok = +b.dataset.c === dest.c && +b.dataset.r === dest.r;
+        if (!ok) { b.classList.add('is-bad'); setTimeout(() => b.classList.remove('is-bad'), 900); }
+        ctl.submit(ok);
+      });
+    };
+    q.after = () => { root.querySelector(`.cell[data-c="${dest.c}"][data-r="${dest.r}"]`).classList.add('is-ok'); animate(); };
+    return q;
+  } },
+{ id: 'ruler', lvl: 0, name: 'الْمِسْطَرَةُ', sub: 'قِيَاسُ الْأَطْوَالِ',
+  badge: '<span>8</span><small class="ar">&nbsp;سم</small>',
+  consigne: 'اُنْظُرِي إِلَى بِدَايَةِ الْقِطْعَةِ الْحَمْرَاءِ وَنِهَايَتِهَا عَلَى الْمِسْطَرَةِ، ثُمَّ اخْتَارِي طُولَهَا.',
+  gen() {
+    const s = Math.random() < .6 ? 0 : R(1, 4), L = R(2, Math.min(10, 12 - s)), e = s + L;
+    const out = [L]; if (s > 0) out.push(e);
+    for (const v of shuffle([L + 1, L - 1, L + 2, L - 2])) { if (out.length >= 3) break; if (v > 0 && v <= 12 && !out.includes(v)) out.push(v); }
+    return { kind: 'choice', prompt: 'مَا طُولُ الْقِطْعَةِ الْحَمْرَاءِ؟', visual: rulerSVG(s, e), layout: 'row',
+      options: shuffle(out).map(v => ({ v, html: `<span>${N(v)} <small class="ar" style="font-size:20px">سم</small></span>` })), answer: L,
+      hint: 'اِنْتَبِهِي: هَلْ تَبْدَأُ الْقِطْعَةُ عِنْدَ الصِّفْرِ؟',
+      explain: s === 0 ? `تَبْدَأُ الْقِطْعَةُ عِنْدَ ${N(0)} وَتَنْتَهِي عِنْدَ ${N(e)}، إِذَنْ طُولُهَا ${N(L)} سم.`
+        : `تَبْدَأُ الْقِطْعَةُ عِنْدَ ${N(s)} وَتَنْتَهِي عِنْدَ ${N(e)}، إِذَنْ طُولُهَا ${M(`${e} ${MINUS} ${s} = ${L}`)} سم.` };
+  } },
+{ id: 'balance', lvl: 0, name: 'الْمِيزَانُ', sub: 'مُقَارَنَةُ الْكُتَلِ',
+  badge: '<span>200</span><small class="ar">&nbsp;غ</small>',
+  consigne: 'فِي كُلِّ كِفَّةٍ كُتَلٌ بِالْغِرَامِ. اِجْمَعِيهَا، ثُمَّ اخْتَارِي الْكِفَّةَ الْأَثْقَلَ.',
+  gen() {
+    const W = [500, 200, 100, 50, 20, 10], sum = a => a.reduce((x, y) => x + y, 0);
+    const combo = () => { const k = R(1, 3), a = []; for (let i = 0; i < k; i++) a.push(pick(W)); return a.sort((x, y) => y - x); };
+    const L = combo(); let Rr = combo();
+    if (Math.random() < .22) { for (let i = 0; i < 300; i++) { const c = combo(); if (sum(c) === sum(L) && c.join() !== L.join()) { Rr = c; break; } } }
+    else { let g = 0; while (sum(L) === sum(Rr) && g++ < 30) Rr = combo(); }
+    const sl = sum(L), sr = sum(Rr), ans = sl > sr ? 'L' : sl < sr ? 'R' : 'E';
+    const chips = a => a.map(w => `<span class="wchip" dir="rtl">${N(w)} غ</span>`).join('');
+    return { kind: 'choice', delay: 2200, prompt: 'أَيُّ كِفَّةٍ أَثْقَلُ؟', visual: balanceSVG(L, Rr) + `<div class="pans" dir="ltr"><div>${chips(L)}</div><div>${chips(Rr)}</div></div>`,
+      layout: 'row side3', optDir: 'ltr',
+      options: [{ v: 'L', html: 'الْكِفَّةُ الْيُسْرَى' }, { v: 'E', html: 'مُتَوَازِنَتَانِ' }, { v: 'R', html: 'الْكِفَّةُ الْيُمْنَى' }], answer: ans,
+      hint: 'اِجْمَعِي الْكُتَلَ فِي كُلِّ كِفَّةٍ، ثُمَّ قَارِنِي الْمَجْمُوعَيْنِ.',
+      explain: `الْيُسْرَى: ${M(`${L.join(' + ')} = ${sl}`)} غ، الْيُمْنَى: ${M(`${Rr.join(' + ')} = ${sr}`)} غ. `
+        + (ans === 'L' ? 'إِذَنِ الْكِفَّةُ الْيُسْرَى أَثْقَلُ.' : ans === 'R' ? 'إِذَنِ الْكِفَّةُ الْيُمْنَى أَثْقَلُ.' : 'إِذَنِ الْكِفَّتَانِ مُتَوَازِنَتَانِ.'),
+      after() { const s = $('#stage .bal'); if (!s) return; if (ans !== 'E') s.classList.add('tilt-' + ans); const qm = s.querySelector('[data-q]'); if (qm) qm.textContent = ''; } };
+  } },
+/* ---------- LEVEL 2 ---------- */
+{ id: 'build', lvl: 1, name: 'اِبْنِي الْعَدَدَ', sub: 'جَدْوَلُ الْمَرَاتِبِ',
+  badge: '<i class="plate" style="width:30px;height:30px;background-size:3px 3px"></i><i class="bar" style="height:30px;width:7px;background-size:7px 3px;margin-inline:3px"></i><i class="bar" style="height:30px;width:7px;background-size:7px 3px"></i><i class="cube" style="margin-inline-start:4px"></i>',
+  consigne: 'مَثِّلِي الْعَدَدَ بِالْقِطَعِ: أَضِيفِي الصَّفَائِحَ وَالْأَشْرِطَةَ وَالْمُكَعَّبَاتِ، ثُمَّ تَحَقَّقِي.',
+  gen() {
+    let h = R(1, 9), t = R(0, 9), u = R(0, 9); if (Math.random() < .3) { if (Math.random() < .5) t = 0; else u = 0; }
+    const n = h * 100 + t * 10 + u, target = [h, t, u], cnt = [0, 0, 0]; let root, ctlRef;
+    const SH = ['plate', 'bar', 'cube'], LAB = ['مِئَاتٌ', 'عَشَرَاتٌ', 'وَحَدَاتٌ'], CLS = ['c-h', 'c-t', 'c-u'];
+    const draw = () => { root.querySelectorAll('.bcol').forEach((col, k) => { col.querySelector('.bvis').innerHTML = `<i class="${SH[k]}"></i>`.repeat(cnt[k]); col.querySelector('.bcnt').textContent = cnt[k]; }); };
+    const q = { kind: 'custom', useCheck: true, prompt: `مَثِّلِي الْعَدَدَ ${N(n)} بِالْقِطَعِ.`, hint: 'كَمْ مِئَةً فِي الْعَدَدِ؟ وَكَمْ عَشَرَةً؟ وَكَمْ وَاحِدًا؟',
+      explain: M(`${n} = ${h * 100} + ${t * 10} + ${u}`), _target: target };
+    q.mount = (stage, ctl) => {
+      ctlRef = ctl;
+      stage.innerHTML = `<div class="builder" dir="ltr">${[0, 1, 2].map(k => `<div class="bcol ${CLS[k]}" data-k="${k}"><div class="blab">${LAB[k]}</div><div class="bvis"></div><div class="bcnt">0</div><div class="bctl"><button type="button" data-d="-1" aria-label="نَقْصٌ">−</button><button type="button" data-d="1" aria-label="زِيَادَةٌ">+</button></div></div>`).join('')}</div>`;
+      root = stage;
+      stage.querySelector('.builder').addEventListener('click', e => {
+        const b = e.target.closest('button[data-d]'); if (!b || G.done) return;
+        const col = b.closest('.bcol'), k = +col.dataset.k; cnt[k] = Math.max(0, Math.min(9, cnt[k] + +b.dataset.d));
+        col.classList.remove('is-bad'); sfx.tap(); draw(); ctl.ready(cnt.some(x => x > 0));
+      });
+      draw();
+    };
+    q.check = () => cnt.every((x, k) => x === target[k]);
+    q.markWrong = () => root.querySelectorAll('.bcol').forEach((c, k) => c.classList.toggle('is-bad', cnt[k] !== target[k]));
+    q.reveal = () => { for (let k = 0; k < 3; k++) cnt[k] = target[k]; draw(); root.querySelectorAll('.bcol').forEach(c => { c.classList.remove('is-bad'); c.classList.add('is-ok'); }); };
+    q.after = ok => { if (ok) root.querySelectorAll('.bcol').forEach(c => c.classList.add('is-ok')); };
+    return q;
+  } },
+{ id: 'decomp', lvl: 1, name: 'لُغْزُ التَّفْكِيكِ', sub: 'التَّفْكِيكُ الْجَمْعِيُّ',
+  badge: '<span style="font-size:20px"><span class="d-h">900</span>+<span class="d-t">40</span>+<span class="d-u">6</span></span>',
+  consigne: 'كُلُّ رَقْمٍ لَهُ مَرْتَبَةٌ: الْمِئَاتُ، الْعَشَرَاتُ، الْوَحَدَاتُ. اِسْتَعْمِلِي الْمَرَاتِبَ لِتَجِدِي الْجَوَابَ.',
+  gen() {
+    const ty = pick(['A', 'A', 'B', 'C']);
+    const hint = 'اُنْظُرِي إِلَى مَرْتَبَةِ كُلِّ رَقْمٍ: الْمِئَاتِ، ثُمَّ الْعَشَرَاتِ، ثُمَّ الْوَحَدَاتِ.';
+    if (ty === 'A') {
+      const h = R(1, 9), t = R(1, 9), u = R(1, 9), n = h * 100 + t * 10 + u, parts = [h * 100, t * 10, u], mi = R(0, 2), ans = parts[mi];
+      const cand = mi === 0 ? [h, h * 10, t * 100, (h + 1) * 100, (h - 1) * 100] : mi === 1 ? [t, t * 100, u * 10, (t + 1) * 10, h * 10] : [u * 10, t, u + 1, u - 1, u * 100];
+      const vals = opts(ans, cand, 3, 1, 999);
+      return { kind: 'choice', prompt: 'مَا الْعَدَدُ النَّاقِصُ فِي التَّفْكِيكِ؟',
+        visual: `<div class="eq" dir="ltr">${n} = ${parts.map((p, i) => i === mi ? '<span class="qbox" data-q>?</span>' : p).join(' + ')}</div>`,
+        layout: 'row', optDir: 'ltr', options: numOpts(vals), answer: ans, hint, explain: M(`${n} = ${h * 100} + ${t * 10} + ${u}`), after() { fillQ(ans); } };
+    }
+    if (ty === 'B') {
+      const h = R(1, 9), t = R(0, 9); let u = R(0, 9); if (t === 0 && u === 0) u = R(1, 9);
+      const n = h * 100 + t * 10 + u, parts = [h * 100, t * 10, u].filter(p => p > 0), show = Math.random() < .5 ? shuffle(parts) : parts;
+      const vals = opts(n, [h * 100 + u * 10 + t, t * 100 + h * 10 + u, h * 10 + t + u, n + 10, n - 10, (u || 1) * 100 + t * 10 + h, h * 100 + t + u * 10], 3, 1, 999);
+      return { kind: 'choice', prompt: 'مَا الْعَدَدُ الَّذِي تَفْكِيكُهُ هَكَذَا؟',
+        visual: `<div class="eq" dir="ltr"><span class="qbox" data-q>?</span> = ${show.join(' + ')}</div>`,
+        layout: 'row', optDir: 'ltr', options: numOpts(vals), answer: n, hint, explain: M(`${parts.join(' + ')} = ${n}`), after() { fillQ(n); } };
+    }
+    let h = R(1, 9), t = R(1, 9), u = R(1, 9); while (u === t) u = R(1, 9);
+    const n = h * 100 + t * 10 + u;
+    const add = (a, b, c) => ({ s: `${a * 100} + ${b * 10} + ${c}`, v: a * 100 + b * 10 + c });
+    const mul = (a, b, c) => ({ s: `(${a} × 100) + (${b} × 10) + (${c} × 1)`, v: a * 100 + b * 10 + c });
+    const good = Math.random() < .6 ? add(h, t, u) : mul(h, t, u);
+    const bads = shuffle([add(h, u, t), { s: `${h * 10} + ${t * 10} + ${u}`, v: h * 10 + t * 10 + u }, mul(h, u, t), mul(t, h, u), { s: `${h} + ${t} + ${u}`, v: h + t + u }, { s: `${h * 100} + ${t} + ${u * 10}`, v: h * 100 + t + u * 10 }])
+      .filter(o => o.v !== n).filter((o, i, arr) => arr.findIndex(x => x.s === o.s) === i).slice(0, 3);
+    const all = shuffle([good, ...bads]);
+    return { kind: 'choice', prompt: `اِخْتَارِي التَّفْكِيكَ الصَّحِيحَ لِلْعَدَدِ ${N(n)}.`, visual: '', layout: 'list', optDir: 'ltr',
+      options: all.map((o, i) => ({ v: i, html: M(o.s) })), answer: all.indexOf(good), hint, explain: M(`${n} = ${good.s}`) };
+  } },
+{ id: 'column', lvl: 1, name: 'الْعَمَلِيَّاتُ الْعَمُودِيَّةُ', sub: 'الْجَمْعُ بِالِاحْتِفَاظِ وَالطَّرْحُ',
+  badge: '<span style="font-size:16px;line-height:1;text-align:right">614<br>+386<br><span class="d-a">1000</span></span>',
+  consigne: 'اُحْسُبِي الْعَمَلِيَّةَ عَمُودِيًّا: اِبْدَئِي بِالْوَحَدَاتِ، ثُمَّ الْعَشَرَاتِ، ثُمَّ الْمِئَاتِ. اُنْقُرِي خَانَةً، ثُمَّ اكْتُبِي الرَّقْمَ.',
+  gen() {
+    const isAdd = Math.random() < .6; let a, b, res;
+    if (isAdd) {
+      if (Math.random() < .18) { a = R(101, 899); b = 1000 - a; }
+      else {
+        let g = 0;
+        do { a = R(101, 880); b = Math.random() < .2 ? R(11, Math.min(99, 999 - a)) : R(101, 999 - a); g++; }
+        while (g < 200 && !((a % 10) + (b % 10) >= 10 || (Math.floor(a / 10) % 10) + (Math.floor(b / 10) % 10) >= 10));
+      }
+      res = a + b;
+    } else {
+      const ah = R(2, 9), at = R(0, 9), au = R(0, 9); a = ah * 100 + at * 10 + au;
+      b = R(1, ah - 1) * 100 + R(0, at) * 10 + R(0, au); res = a - b;
+    }
+    const op = isAdd ? '+' : MINUS, sa = String(a), sb = String(b), sr = String(res), W = Math.max(sa.length, sb.length, sr.length);
+    const row = s => { const cells = []; for (let i = 0; i < W - s.length; i++) cells.push('<span></span>'); for (const ch of s) cells.push(`<span>${ch}</span>`); return cells.join(''); };
+    let html = `<div class="col" dir="ltr" style="--cols:${W}">`;
+    if (isAdd) { html += '<span></span>'; for (let j = 0; j < W; j++) html += j < W - 1 ? `<button type="button" class="carry" data-carry aria-label="اِحْتِفَاظٌ"></button>` : '<span class="cap"></span>'; }
+    html += `<span></span>${row(sa)}<span>${op}</span>${row(sb)}<span class="line"></span><span>=</span>`;
+    for (let i = 0; i < W - sr.length; i++) html += '<span></span>';
+    sr.split('').forEach((_, i) => { html += `<span class="slot" data-slot="${i}" style="--w:1"></span>`; });
+    html += '</div>' + (isAdd ? '<div class="colhelp">اُنْقُرِي الْمُرَبَّعَاتِ الصَّغِيرَةَ لِكِتَابَةِ الِاحْتِفَاظِ.</div>' : '');
+    const answers = sr.split('').map(Number);
+    return { kind: 'slots', html, answers, maxLen: answers.map(() => 1), order: answers.map((_, i) => answers.length - 1 - i),
+      consigne: isAdd ? 'اُحْسُبِي الْعَمَلِيَّةَ عَمُودِيًّا: اِبْدَئِي بِالْوَحَدَاتِ، وَلَا تَنْسَيِ الِاحْتِفَاظَ! اُنْقُرِي خَانَةً، ثُمَّ اكْتُبِي الرَّقْمَ.' : undefined,
+      prompt: `اُحْسُبِي: ${M(`${a} ${op} ${b}`)}`,
+      hint: isAdd ? 'اِبْدَئِي مِنَ الْيَمِينِ بِالْوَحَدَاتِ، وَإِذَا تَجَاوَزَ الْمَجْمُوعُ <bdi class="n">9</bdi> فَاكْتُبِي الْوَحَدَاتِ وَاحْتَفِظِي بِـ <bdi class="n">1</bdi> فِي الْعَمُودِ الْمُوَالِي.'
+        : 'اِطْرَحِي الْوَحَدَاتِ أَوَّلًا، ثُمَّ الْعَشَرَاتِ، ثُمَّ الْمِئَاتِ.',
+      explain: M(`${a} ${op} ${b} = ${res}`),
+      onMount(stage) { stage.querySelectorAll('[data-carry]').forEach(c => c.addEventListener('click', () => { if (G.done) return; c.textContent = c.textContent ? '' : '1'; c.classList.toggle('on', !!c.textContent); })); } };
+  } },
+{ id: 'order', lvl: 1, name: 'رَتِّبِي الْأَعْدَادَ', sub: 'التَّرْتِيبُ تَصَاعُدِيًّا وَتَنَازُلِيًّا',
+  badge: `<span style="font-size:18px">85${LT}263${LT}649</span>`,
+  consigne: 'اُنْقُرِي الْأَعْدَادَ بِالتَّرْتِيبِ لِتَضَعِيهَا فِي الْخَانَاتِ. لِإِرْجَاعِ عَدَدٍ، اُنْقُرِي عَلَيْهِ فِي خَانَتِهِ.',
+  gen() {
+    const asc = Math.random() < .5, h = R(1, 8), set = new Set(), a = h * 100 + R(10, 99); set.add(a); set.add(h * 100 + R(0, 99));
+    const d = digits(a); set.add(d[0] * 100 + d[2] * 10 + d[1]); set.add(R(10, 99)); let g = 0;
+    while (set.size < 5 && g++ < 50) set.add(R(100, 999));
+    const nums = shuffle([...set].slice(0, 5)), sorted = [...nums].sort((x, y) => asc ? x - y : y - x), placed = Array(5).fill(null); let root;
+    const q = { kind: 'custom', useCheck: true,
+      prompt: asc ? 'رَتِّبِي الْأَعْدَادَ تَصَاعُدِيًّا: مِنَ الْأَصْغَرِ إِلَى الْأَكْبَرِ.' : 'رَتِّبِي الْأَعْدَادَ تَنَازُلِيًّا: مِنَ الْأَكْبَرِ إِلَى الْأَصْغَرِ.',
+      hint: asc ? 'اِبْحَثِي أَوَّلًا عَنْ أَصْغَرِ عَدَدٍ، ثُمَّ عَنِ الَّذِي يَلِيهِ.' : 'اِبْحَثِي أَوَّلًا عَنْ أَكْبَرِ عَدَدٍ، ثُمَّ عَنِ الَّذِي يَلِيهِ.',
+      explain: M(sorted.join(asc ? ` ${LT} ` : ` ${GT} `)), _sorted: sorted, _nums: nums };
+    const draw = () => {
+      root.querySelectorAll('.oslot').forEach((s, i) => { s.textContent = placed[i] === null ? '' : nums[placed[i]]; s.classList.toggle('filled', placed[i] !== null); });
+      root.querySelectorAll('.tile').forEach((t, i) => t.classList.toggle('used', placed.includes(i)));
+    };
+    q.mount = (stage, ctl) => {
+      stage.innerHTML = `<div class="order-slots" dir="ltr">${placed.map((_, i) => `<button type="button" class="oslot" data-i="${i}"></button>${i < 4 ? `<span class="osign">${asc ? LT : GT}</span>` : ''}`).join('')}</div>
+        <div class="tiles" dir="ltr">${nums.map((v, i) => `<button type="button" class="tile" data-t="${i}">${v}</button>`).join('')}</div>`;
+      root = stage;
+      stage.addEventListener('click', e => {
+        if (G.done) return;
+        const t = e.target.closest('.tile'), s = e.target.closest('.oslot');
+        if (t && !t.classList.contains('used')) { const i = placed.indexOf(null); if (i < 0) return; placed[i] = +t.dataset.t; sfx.tap(); }
+        else if (s) { const i = +s.dataset.i; if (placed[i] === null) return; placed[i] = null; }
+        else return;
+        root.querySelectorAll('.oslot').forEach(x => x.classList.remove('is-bad'));
+        draw(); ctl.ready(placed.every(x => x !== null));
+      });
+    };
+    q.check = () => placed.every((ti, i) => ti !== null && nums[ti] === sorted[i]);
+    q.markWrong = () => root.querySelectorAll('.oslot').forEach((s, i) => s.classList.toggle('is-bad', nums[placed[i]] !== sorted[i]));
+    q.reveal = () => root.querySelectorAll('.oslot').forEach((s, i) => { s.textContent = sorted[i]; s.classList.remove('is-bad'); s.classList.add('revealed'); });
+    q.after = ok => { if (ok) root.querySelectorAll('.oslot').forEach(s => s.classList.add('is-ok')); };
+    return q;
+  } },
+{ id: 'words', lvl: 1, name: 'الْأَعْدَادُ بِالْحُرُوفِ', sub: 'قِرَاءَةُ الْأَعْدَادِ وَكِتَابَتُهَا',
+  badge: '<span class="ar" style="font-size:20px">مِئَةٌ</span>',
+  consigne: 'نَقْرَأُ الْعَدَدَ هَكَذَا: الْمِئَاتُ أَوَّلًا، ثُمَّ الْوَحَدَاتُ، ثُمَّ الْعَشَرَاتُ. اِخْتَارِي الْجَوَابَ الصَّحِيحَ.',
+  gen() {
+    const n = R(101, 999), h = Math.floor(n / 100), t = Math.floor(n / 10) % 10, u = n % 10;
+    const vals = opts(n, [h * 100 + u * 10 + t, n + 100, n - 100, n + 10, n - 10, (u || 1) * 100 + t * 10 + h, n + 1], 3, 100, 999);
+    const hint = 'اِقْرَئِي الْمِئَاتِ أَوَّلًا، ثُمَّ الْوَحَدَاتِ، ثُمَّ الْعَشَرَاتِ.';
+    if (Math.random() < .55) return { kind: 'choice', prompt: 'اِخْتَارِي الْكِتَابَةَ الصَّحِيحَةَ لِهَذَا الْعَدَدِ بِالْحُرُوفِ.',
+      visual: `<div class="bign xl" dir="ltr">${n}</div>`, layout: 'list words', options: vals.map(v => ({ v, html: words(v) })), answer: n, hint, explain: `${N(n)}: ${words(n)}` };
+    return { kind: 'choice', prompt: 'مَا الْعَدَدُ الْمَكْتُوبُ بِالْحُرُوفِ؟', visual: `<div class="wordsbig">${words(n)}</div>`, layout: 'row', optDir: 'ltr',
+      options: numOpts(vals), answer: n, hint, explain: `${words(n)}: ${N(n)}` };
+  } },
+{ id: 'chart', lvl: 1, name: 'سَلَّةُ الْفَوَاكِهِ', sub: 'قِرَاءَةُ مُخَطَّطٍ بَيَانِيٍّ',
+  badge: '<span style="display:flex;gap:3px;align-items:flex-end;height:34px"><i style="width:9px;height:20px;background:var(--units)"></i><i style="width:9px;height:32px;background:var(--orange)"></i><i style="width:9px;height:14px;background:var(--hund)"></i><i style="width:9px;height:26px;background:var(--tens)"></i></span>',
+  consigne: 'اُنْظُرِي إِلَى الْمُخَطَّطِ جَيِّدًا، ثُمَّ أَجِيبِي عَنِ السُّؤَالِ.',
+  gen() {
+    const vals = shuffle([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]).slice(0, 4);
+    const ty = pick(['val', 'val', 'max', 'min', 'diff', 'sum']); const i = R(0, 3); let j = R(0, 3); while (j === i) j = R(0, 3);
+    const X = FRUITS[i], Y = FRUITS[j], vis = `<p class="ctitle">عَدَدُ حَبَّاتِ الْفَاكِهَةِ فِي سَلَّةِ أُمِّي</p>${chartSVG(vals)}`;
+    const hint = 'اُنْظُرِي إِلَى رَأْسِ كُلِّ عَمُودٍ، ثُمَّ إِلَى الْعَدَدِ الْمُقَابِلِ لَهُ عَلَى الْيَسَارِ.';
+    const showVals = () => $$('#stage [data-bv]').forEach(t => t.removeAttribute('hidden'));
+    if (ty === 'max' || ty === 'min') {
+      const k = vals.indexOf(ty === 'max' ? Math.max(...vals) : Math.min(...vals));
+      return { kind: 'choice', prompt: ty === 'max' ? 'أَيُّ فَاكِهَةٍ هِيَ الْأَكْثَرُ عَدَدًا؟' : 'أَيُّ فَاكِهَةٍ هِيَ الْأَقَلُّ عَدَدًا؟', visual: vis, layout: 'row fruits',
+        options: FRUITS.map((f, x) => ({ v: x, html: `<span aria-hidden="true">${f.emo}</span><span>${f.nom}</span>` })), answer: k, hint,
+        explain: `${FRUITS[k].nom} هُوَ ${ty === 'max' ? 'الْأَكْثَرُ' : 'الْأَقَلُّ'} عَدَدًا: ${N(vals[k])}.`, after: showVals };
+    }
+    let prompt, ans, explain;
+    if (ty === 'val') { ans = vals[i]; prompt = `مَا عَدَدُ حَبَّاتِ ${X.gen}؟`; explain = `عَدَدُ حَبَّاتِ ${X.gen} هُوَ ${N(ans)}.`; }
+    else if (ty === 'sum') { ans = vals[i] + vals[j]; prompt = `مَا مَجْمُوعُ حَبَّاتِ ${X.gen} وَ${Y.gen}؟`; explain = M(`${vals[i]} + ${vals[j]} = ${ans}`); }
+    else { const [a, b] = vals[i] > vals[j] ? [i, j] : [j, i]; ans = vals[a] - vals[b]; prompt = `بِكَمْ يَزِيدُ عَدَدُ حَبَّاتِ ${FRUITS[a].gen} عَلَى عَدَدِ حَبَّاتِ ${FRUITS[b].gen}؟`; explain = M(`${vals[a]} ${MINUS} ${vals[b]} = ${ans}`); }
+    const o = opts(ans, [ans + 1, ans - 1, ans + 2, ans - 2, ans + 3], 4, 0, 20);
+    return { kind: 'choice', prompt, visual: vis, layout: 'row', optDir: 'ltr', options: numOpts(o), answer: ans, hint, explain, after: showVals };
+  } },
+/* ---------- LEVEL 3 ---------- */
+{ id: 'digitnum', lvl: 2, name: 'رَقْمٌ أَمْ عَدَدٌ؟', sub: 'الْأَعْدَادُ إِلَى 9999',
+  badge: '<span class="d-th">4</span><span class="d-h">6</span><span class="d-t" style="text-decoration:underline">3</span><span class="d-u">7</span>',
+  consigne: 'اِنْتَبِهِي إِلَى الْفَرْقِ بَيْنَ الرَّقْمِ وَالْعَدَدِ، ثُمَّ اكْتُبِي الْجَوَابَ.',
+  gen() {
+    const four = Math.random() < .7, n = four ? R(1000, 9999) : R(100, 999), ds = digits(n), L = ds.length, ranks = ['u', 't', 'h', 'th'].slice(0, L);
+    const kind = Math.random() < .5 ? 'digit' : 'count';
+    const r = kind === 'digit' ? pick(ranks) : pick(L === 4 ? ['t', 'h', 'h', 't', 'th'] : ['t', 'h']);
+    const ri = ranks.indexOf(r), ans = kind === 'digit' ? ds[L - 1 - ri] : Math.floor(n / [1, 10, 100, 1000][ri]);
+    return { kind: 'slots',
+      visual: `<div class="bign xl" dir="ltr">${ds.map((d, i) => `<span data-pos="${L - 1 - i}">${d}</span>`).join('')}</div>`,
+      html: `<div class="ansrow"><span>الْجَوَابُ:</span><span class="slot" data-slot="0" style="--w:4"></span></div>`,
+      answers: [ans], maxLen: [4], autoAdvance: false,
+      prompt: `مَا ${kind === 'digit' ? 'رَقْمُ' : 'عَدَدُ'} ${RG[r]} فِي الْعَدَدِ ${N(n)}؟`,
+      hint: `رَقْمُ ${RG[r]} رَقْمٌ وَاحِدٌ فَقَطْ، أَمَّا عَدَدُ ${RG[r]} فَنَأْخُذُ فِيهِ كُلَّ الْأَرْقَامِ مِنْ رَقْمِ ${RG[r]} إِلَى الْيَسَارِ.`,
+      explain: `${kind === 'digit' ? 'رَقْمُ' : 'عَدَدُ'} ${RG[r]} فِي ${N(n)} هُوَ ${N(ans)}.`,
+      after() { $$('#stage [data-pos]').forEach(s => { const p = +s.dataset.pos; s.classList.toggle('hl', kind === 'digit' ? p === ri : p >= ri); }); } };
+  } },
+{ id: 'frame', lvl: 2, name: 'الْحَصْرُ', sub: 'حَصْرُ عَدَدٍ بَيْنَ عَدَدَيْنِ',
+  badge: `<span style="font-size:17px">940${LT}<span class="d-a">946</span>${LT}950</span>`,
+  consigne: 'اُحْصُرِي الْعَدَدَ: اُكْتُبِي فِي الْخَانَةِ الْأُولَى عَدَدًا أَصْغَرَ مِنْهُ، وَفِي الثَّانِيَةِ عَدَدًا أَكْبَرَ مِنْهُ.',
+  gen() {
+    const four = Math.random() < .7, ty = pick(four ? ['t', 'h', 'th'] : ['t', 'h']), step = { t: 10, h: 100, th: 1000 }[ty];
+    const max = ty === 'th' ? 8999 : ty === 'h' ? 9899 : 9989; let n;
+    do { n = four ? R(1001, max) : R(101, 989); } while (n % step === 0);
+    const lo = Math.floor(n / step) * step, hi = lo + step;
+    const C = { t: 'اُحْصُرِي الْعَدَدَ بَيْنَ عَشَرَتَيْنِ مُتَتَالِيَتَيْنِ.', h: 'اُحْصُرِي الْعَدَدَ بَيْنَ مِئَتَيْنِ مُتَتَالِيَتَيْنِ.', th: 'اُحْصُرِي الْعَدَدَ بَيْنَ أَلْفَيْنِ مُتَتَالِيَيْنِ.' };
+    return { kind: 'slots', prompt: C[ty],
+      html: `<div class="eq" dir="ltr"><span class="slot" data-slot="0" style="--w:4"></span> ${LT} <span>${n}</span> ${LT} <span class="slot" data-slot="1" style="--w:4"></span></div>`,
+      answers: [lo, hi], maxLen: [5, 5],
+      hint: `الْعَدَدُ الْأَوَّلُ أَصْغَرُ مِنْ ${N(n)}، وَالثَّانِي أَكْبَرُ مِنْهُ، وَالْفَرْقُ بَيْنَهُمَا ${N(step)}.`,
+      explain: M(`${lo} ${LT} ${n} ${LT} ${hi}`) };
+  } },
+{ id: 'regroup', lvl: 2, name: 'فَكِّكِي وَجَمِّعِي', sub: 'الْحِسَابُ بِالتَّفْكِيكِ وَالتَّجْمِيعِ',
+  badge: '<span>77</span><span class="d-a">+</span><span>64</span>',
+  consigne: 'اُحْسُبِي بِاسْتِعْمَالِ التَّفْكِيكِ وَالتَّجْمِيعِ: نُفَكِّكُ كُلَّ عَدَدٍ إِلَى عَشَرَاتٍ وَوَحَدَاتٍ، ثُمَّ نَجْمَعُ الْعَشَرَاتِ مَعًا وَالْوَحَدَاتِ مَعًا.',
+  gen() {
+    let a, b, g = 0; const wantCarry = Math.random() < .6;
+    do { a = R(12, 89); b = R(12, 89); g++; } while (g < 200 && (a % 10 === 0 || b % 10 === 0 || (wantCarry !== ((a % 10) + (b % 10) >= 10))));
+    const ta = a - a % 10, tb = b - b % 10, ua = a % 10, ub = b % 10, T = ta + tb, U = ua + ub, S = a + b;
+    const sl = (i, w) => `<span class="slot" data-slot="${i}" style="--w:${w}"></span>`;
+    const html = `<div class="regroup" dir="ltr"><div class="rg-head">${a} + ${b}</div>
+      <div class="rg-row"><span>=</span>${sl(0, 2)}<span>+</span>${sl(1, 2)}<span>+</span>${sl(2, 1)}<span>+</span>${sl(3, 1)}</div>
+      <div class="rg-row"><span>=</span>${sl(4, 3)}<span>+</span>${sl(5, 2)}</div>
+      <div class="rg-row"><span>=</span>${sl(6, 3)}</div></div>`;
+    const answers = [ta, tb, ua, ub, T, U, S];
+    const pairWrong = (v, i, j, x, y) => {
+      const a1 = v[i], a2 = v[j];
+      if ((a1 === x && a2 === y) || (a1 === y && a2 === x)) return [];
+      const w = []; const pool = [x, y];
+      if (pool.includes(a1)) pool.splice(pool.indexOf(a1), 1); else w.push(i);
+      if (!pool.includes(a2)) w.push(j);
+      return w.length ? w : [i, j];
+    };
+    return { kind: 'slots', html, answers, maxLen: [3, 3, 2, 2, 3, 3, 3],
+      prompt: `اُحْسُبِي ${M(`${a} + ${b}`)} بِالتَّفْكِيكِ وَالتَّجْمِيعِ.`,
+      hint: 'فِي السَّطْرِ الْأَوَّلِ: عَشَرَاتُ الْعَدَدَيْنِ، ثُمَّ وَحَدَاتُهُمَا. فِي السَّطْرِ الثَّانِي: مَجْمُوعُ الْعَشَرَاتِ، ثُمَّ مَجْمُوعُ الْوَحَدَاتِ.',
+      explain: M(`${a} + ${b} = ${ta} + ${tb} + ${ua} + ${ub} = ${T} + ${U} = ${S}`),
+      check(v) {
+        const wrong = [...pairWrong(v, 0, 1, ta, tb), ...pairWrong(v, 2, 3, ua, ub), ...pairWrong(v, 4, 5, T, U)];
+        if (v[6] !== S) wrong.push(6);
+        return { ok: wrong.length === 0, wrong };
+      } };
+  } },
+{ id: 'missing', lvl: 2, name: 'الْعَدَدُ النَّاقِصُ', sub: 'الْمُتَتَالِيَاتُ وَالطَّرْحُ بِالْإِضَافَةِ',
+  badge: '<span style="font-size:18px">240+<span class="d-a">?</span>=798</span>',
+  consigne: 'اُكْتُبِي الْعَدَدَ النَّاقِصَ فِي الْخَانَةِ.',
+  gen() {
+    if (Math.random() < .6) {
+      const step = pick([1, 10, 10, 100, 100, 1000, 2, 5]), up = Math.random() < .6, span = step * 4;
+      let start; const maxStart = 9999 - span;
+      if (step === 1000) start = R(0, 5) * 1000 + R(0, 999); else start = R(step >= 100 ? 100 : 10, maxStart);
+      if (step === 10 && Math.random() < .5) { start = R(1, 9) * 1000 + R(0, 9) * 100 + 70 + R(0, 9); if (start > maxStart) start -= 1000; }
+      if (step === 100 && Math.random() < .5) { start = R(1, 8) * 1000 + 700 + R(0, 99); }
+      const terms = Array.from({ length: 5 }, (_, i) => start + i * step); if (!up) terms.reverse();
+      const mi = Math.random() < .15 ? 0 : R(1, 4), ans = terms[mi];
+      return { kind: 'slots', prompt: 'اِكْتَشِفِي الْقَاعِدَةَ: مَا الْعَدَدُ النَّاقِصُ فِي السِّلْسِلَةِ؟',
+        html: `<div class="seq" dir="ltr">${terms.map((v, i) => i === mi ? '<span class="slot" data-slot="0" style="--w:4"></span>' : `<span class="term">${v}</span>`).join('<span class="sep">،</span>')}</div>`,
+        answers: [ans], maxLen: [5], autoAdvance: false,
+        hint: 'اُحْسُبِي الْفَرْقَ بَيْنَ عَدَدَيْنِ مُتَجَاوِرَيْنِ.',
+        explain: `${up ? 'نُضِيفُ' : 'نَطْرَحُ'} ${N(step)} فِي كُلِّ مَرَّةٍ: ${M(terms.join(' ، '))}` };
+    }
+    let a, x, c, form = pick(['a?', '?b', 'round']);
+    if (form === 'round') { const target = pick([100, 1000, 1000]); a = target === 100 ? R(11, 89) : R(11, 99) * 10 + (Math.random() < .5 ? 0 : R(1, 9)); if (a >= target) a = R(11, target - 11); c = target; x = c - a; }
+    else { const h = R(1, 8), t = R(0, 8), u = R(0, 8); a = h * 100 + t * 10 + u; x = R(1, 9 - h) * 100 + R(0, 9 - t) * 10 + R(0, 9 - u); c = a + x; }
+    const html = form === '?b' ? `<div class="eq" dir="ltr"><span class="slot" data-slot="0" style="--w:3"></span> + ${a} = ${c}</div>`
+      : `<div class="eq" dir="ltr">${a} + <span class="slot" data-slot="0" style="--w:3"></span> = ${c}</div>`;
+    return { kind: 'slots', prompt: 'مَا الْعَدَدُ النَّاقِصُ فِي الْعَمَلِيَّةِ؟', html, answers: [x], maxLen: [4], autoAdvance: false,
+      hint: `كَمْ يَنْقُصُ ${N(a)} لِيَصِيرَ ${N(c)}؟ اُحْسُبِي الْفَرْقَ بَيْنَهُمَا.`,
+      explain: `${M(`${c} ${MINUS} ${a} = ${x}`)}، لِأَنَّ ${M(`${a} + ${x} = ${c}`)}` };
+  } },
+{ id: 'market', lvl: 2, name: 'مُشْكِلَاتُ السُّوقِ', sub: 'مُشْكِلَاتٌ جَمْعِيَّةٌ وَطَرْحِيَّةٌ',
+  badge: '<span>350</span><small class="ar">&nbsp;دج</small>',
+  consigne: 'اِقْرَئِي الْمُشْكِلَةَ جَيِّدًا، ثُمَّ احْسُبِي وَاكْتُبِي الْجَوَابَ.',
+  init(ctx) { ctx.order = shuffle([0, 1, 2, 3, 4, 5, 6]); },
+  gen(ctx, i) {
+    const k = ctx.order[i % 7], r50 = (a, b) => R(a, b) * 50, r10 = (a, b) => R(a, b) * 10;
+    // subtraction without borrowing: every digit of b is ≤ the digit of a (programme of the 1st term)
+    const subPair = (thMin, thMax) => {
+      for (let g = 0; g < 500; g++) {
+        const ath = R(thMin, thMax), ah = R(1, 9), at = R(1, 9);
+        const a = ath * 1000 + ah * 100 + at * 10;
+        const bth = ath > 0 ? R(0, ath) : 0, bh = R(1, ah), bt = R(0, at), b = bth * 1000 + bh * 100 + bt * 10;
+        if (b < a && a - b >= 50) return [a, b];
+      }
+      return [ thMin * 1000 + 870, thMin * 1000 + 320 ];
+    };
+    let text, expr, ans, unit = 'دج';
+    if (k === 0) { const a = r50(2, 9), b = r50(3, 12), c = r50(4, 14); ans = a + b + c; expr = `${a} + ${b} + ${c}`;
+      text = `أَرَادَتِ الْأُمُّ أَنْ تُزَيِّنَ غُرْفَةَ نَوْمِ أَطْفَالِهَا، فَاشْتَرَتْ لَوْحَةً فَنِّيَّةً ثَمَنُهَا ${N(a)} دج، وَسِتَارًا ثَمَنُهُ ${N(b)} دج، وَثُرَيَّا ثَمَنُهَا ${N(c)} دج. مَا ثَمَنُ كُلِّ الْأَغْرَاضِ الَّتِي اشْتَرَتْهَا الْأُمُّ؟`; }
+    else if (k === 1) { const a = r50(20, 60), b = r50(8, 24); ans = a + b; expr = `${a} + ${b}`;
+      text = `اِشْتَرَى أَبِي مِحْفَظَةً بِـ ${N(a)} دج، وَمِئْزَرًا بِـ ${N(b)} دج. كَمْ دَفَعَ أَبِي؟`; }
+    else if (k === 2) { const [a, b] = subPair(0, 0); ans = a - b; expr = `${a} ${MINUS} ${b}`;
+      text = `كَانَ مَعَ سَلْمَى ${N(a)} دج، فَاشْتَرَتْ قِصَّةً بِـ ${N(b)} دج. كَمْ بَقِيَ مَعَهَا؟`; }
+    else if (k === 3) { const [p, m] = subPair(2, 9); ans = p - m; expr = `${p} ${MINUS} ${m}`;
+      text = `ثَمَنُ دُمْيَةٍ ${N(p)} دج، وَمَعَ أَمِينَةَ ${N(m)} دج فَقَطْ. كَمْ يَنْقُصُهَا لِتَشْتَرِيَ الدُّمْيَةَ؟`; }
+    else if (k === 4) { const a = r50(10, 60), b = r50(10, 60); ans = a + b; expr = `${a} + ${b}`;
+      text = `اِدَّخَرَتْ مَرْيَمُ ${N(a)} دج فِي الشَّهْرِ الْأَوَّلِ، وَ${N(b)} دج فِي الشَّهْرِ الثَّانِي. كَمِ ادَّخَرَتْ فِي الشَّهْرَيْنِ؟`; }
+    else if (k === 5) { const a = r10(25, 95), b = r10(20, 90); ans = a + b; expr = `${a} + ${b}`; unit = 'غ';
+      text = `وَضَعَتِ الْبَائِعَةُ فِي كِيسٍ ${N(a)} غ مِنَ الْعِنَبِ، وَ${N(b)} غ مِنَ التَّمْرِ. مَا كُتْلَةُ مَا فِي الْكِيسِ؟`; }
+    else { const [a, b] = subPair(1, 4); ans = a - b; expr = `${a} ${MINUS} ${b}`;
+      text = `فِي حَصَّالَةِ يُوسُفَ ${N(a)} دج، أَخَذَ مِنْهَا ${N(b)} دج لِيَشْتَرِيَ كُرَةً. كَمْ بَقِيَ فِي الْحَصَّالَةِ؟`; }
+    return { kind: 'slots', prompt: '', visual: `<div class="problem">${text}</div>`,
+      html: `<div class="ansrow"><span>الْجَوَابُ:</span><span class="slot" data-slot="0" style="--w:4"></span><span class="unit">${unit}</span></div>`,
+      answers: [ans], maxLen: [5], autoAdvance: false,
+      hint: 'هَلْ نَجْمَعُ أَمْ نَطْرَحُ؟ اِقْرَئِي السُّؤَالَ مَرَّةً أُخْرَى، وَابْحَثِي عَنِ الْكَلِمَاتِ الْمُهِمَّةِ.',
+      explain: `${M(`${expr} = ${ans}`)}، الْجَوَابُ: ${N(ans)} ${unit}.` };
+  } },
+{ id: 'shapes', lvl: 2, name: 'الْأَشْكَالُ الْهَنْدَسِيَّةُ', sub: 'الزَّاوِيَةُ وَالتَّوَازِي وَالتَّنَاظُرُ',
+  badge: '<span style="display:inline-block;width:30px;height:30px;border-left:4px solid var(--ink);border-bottom:4px solid var(--ink);position:relative"><i style="position:absolute;left:0;bottom:0;width:9px;height:9px;border-top:2px solid var(--accent);border-right:2px solid var(--accent)"></i></span>',
+  consigne: 'اُنْظُرِي إِلَى الْأَشْكَالِ جَيِّدًا، ثُمَّ انْقُرِي الشَّكْلَ الْمَطْلُوبَ.',
+  init(ctx) { ctx.types = shuffle(['angle', 'par', 'perp', 'sym', 'align', 'mid']); },
+  gen(ctx, i) {
+    const ty = ctx.types[i % 6]; let good, bads, prompt, hint;
+    if (ty === 'angle') { good = figAngle(90); bads = shuffle([R(40, 62), R(112, 128), R(138, 155), R(65, 72)]).slice(0, 3).map(figAngle);
+      prompt = 'اُنْقُرِي الزَّاوِيَةَ الْقَائِمَةَ.'; hint = 'الزَّاوِيَةُ الْقَائِمَةُ تُشْبِهُ رُكْنَ الْكُرَّاسِ.'; }
+    else if (ty === 'par') { good = figPair('par'); bads = ['conv', 'acute', 'perp'].map(figPair);
+      prompt = 'اُنْقُرِي الْمُسْتَقِيمَيْنِ الْمُتَوَازِيَيْنِ.'; hint = 'الْمُسْتَقِيمَانِ الْمُتَوَازِيَانِ لَا يَلْتَقِيَانِ أَبَدًا، وَالْمَسَافَةُ بَيْنَهُمَا ثَابِتَةٌ.'; }
+    else if (ty === 'perp') { good = figPair('perp'); bads = ['acute', 'par', 'conv'].map(figPair);
+      prompt = 'اُنْقُرِي الْمُسْتَقِيمَيْنِ الْمُتَعَامِدَيْنِ.'; hint = 'الْمُسْتَقِيمَانِ الْمُتَعَامِدَانِ يَلْتَقِيَانِ وَيُشَكِّلَانِ زَاوِيَةً قَائِمَةً.'; }
+    else if (ty === 'sym') { good = pick(SYM_OK)(); bads = shuffle(SYM_NO).slice(0, 3).map(f => f());
+      prompt = 'فِي أَيِّ شَكْلٍ يَكُونُ الْخَطُّ الْمُتَقَطِّعُ مِحْوَرَ تَنَاظُرٍ؟'; hint = 'إِذَا طَوَيْنَا الشَّكْلَ عَلَى الْمِحْوَرِ انْطَبَقَ الْجُزْءَانِ تَمَامًا.'; }
+    else if (ty === 'align') { good = figAlign(true); bads = [0, 1, 2].map(() => figAlign(false));
+      prompt = 'فِي أَيِّ شَكْلٍ تَكُونُ النِّقَاطُ الثَّلَاثُ عَلَى اسْتِقَامَةٍ وَاحِدَةٍ؟'; hint = 'النِّقَاطُ الَّتِي عَلَى اسْتِقَامَةٍ وَاحِدَةٍ تَقَعُ عَلَى خَطٍّ مُسْتَقِيمٍ وَاحِدٍ. جَرِّبِي بِحَافَّةِ الْمِسْطَرَةِ!'; }
+    else { good = figMid('mid'); bads = ['l', 'r', 'off'].map(figMid);
+      prompt = 'فِي أَيِّ شَكْلٍ تَكُونُ النُّقْطَةُ الْحَمْرَاءُ مُنْتَصَفَ الْقِطْعَةِ؟'; hint = 'مُنْتَصَفُ الْقِطْعَةِ نُقْطَةٌ عَلَيْهَا، وَتَبْعُدُ بِالْمَسَافَةِ نَفْسِهَا عَنْ طَرَفَيْهَا.'; }
+    const all = shuffle([{ g: true, s: good }, ...bads.map(s => ({ g: false, s }))]);
+    return { kind: 'choice', prompt, visual: '', layout: 'figs', options: all.map((o, k) => ({ v: k, html: o.s })), answer: all.findIndex(o => o.g), hint, explain: hint };
+  } },
+];
+
+return { GAMES, words };
+})();
+const MATH_LEVELS = [
+  { name: 'الْمُسْتَوَى الْأَوَّلُ', tag: 'سَهْلٌ', desc: 'الْأَعْدَادُ إِلَى <bdi class="n">999</bdi>، الْحِسَابُ الذِّهْنِيُّ، الْقِيَاسُ وَالْمَرْصُوفَةُ.' },
+  { name: 'الْمُسْتَوَى الثَّانِي', tag: 'مُتَوَسِّطٌ', desc: 'الْمَرَاتِبُ، التَّفْكِيكُ، الْعَمَلِيَّاتُ الْعَمُودِيَّةُ، التَّرْتِيبُ وَالْمُخَطَّطَاتُ.' },
+  { name: 'الْمُسْتَوَى الثَّالِثُ', tag: 'صَعْبٌ', desc: 'الْأَعْدَادُ إِلَى <bdi class="n">9999</bdi>، الْحَصْرُ، الْمُشْكِلَاتُ وَالْأَشْكَالُ الْهَنْدَسِيَّةُ.' },
+];
+
+/* ================= ARABIC module (كنز الحروف) ================= */
+const AR = (() => {
+/* ================= item banks (fully vowelled) ================= */
+const CAT = { n: 'اِسْمٌ', v: 'فِعْلٌ', h: 'حَرْفٌ' };
+const PARTS_WORDS = [
+  ['شَجَرَةٌ', 'n'], ['الْمَدْرَسَةُ', 'n'], ['قَلَمٌ', 'n'], ['الْفَرَاشَةُ', 'n'], ['كِتَابٌ', 'n'], ['الْوَطَنُ', 'n'], ['النَّمْلَةُ', 'n'], ['أُمِّي', 'n'],
+  ['كَتَبَ', 'v'], ['يَلْعَبُ', 'v'], ['شَرِبَ', 'v'], ['تَطِيرُ', 'v'], ['اُكْتُبْ', 'v'], ['جَلَسَ', 'v'], ['يَقْرَأُ', 'v'], ['زَرَعَ', 'v'],
+  ['فِي', 'h'], ['مِنْ', 'h'], ['إِلَى', 'h'], ['عَلَى', 'h'], ['عَنْ', 'h'], ['ثُمَّ', 'h'], ['هَلْ', 'h'], ['لَمْ', 'h'],
+];
+const PARTS_SENT = [
+  'ذَهَبَ|v أَحْمَدُ|n إِلَى|h الْمَدْرَسَةِ|n',
+  'جَلَسَتِ|v الْقِطَّةُ|n عَلَى|h الْكُرْسِيِّ|n',
+  'تَطِيرُ|v الْفَرَاشَةُ|n فِي|h الْحَدِيقَةِ|n',
+  'يَعِيشُ|v الْأَسَدُ|n فِي|h الْغَابَةِ|n',
+  'خَرَجَ|v التَّلَامِيذُ|n مِنَ|h الْقِسْمِ|n',
+  'تَجْمَعُ|v النَّمْلَةُ|n الْحُبُوبَ|n فِي|h الصَّيْفِ|n',
+  'سَافَرَ|v أَبِي|n إِلَى|h الْعَاصِمَةِ|n',
+  'قَرَأَتْ|v مَرْيَمُ|n قِصَّةً|n جَمِيلَةً|n',
+  'رَفَعَ|v التِّلْمِيذُ|n الْعَلَمَ|n',
+  'نَامَ|v الطِّفْلُ|n فِي|h سَرِيرِهِ|n',
+].map(s => s.split(' ').map(t => t.split('|')));
+
+// [masculine, feminine, plural, dual]
+const GEN_A = [
+  ['تِلْمِيذٌ', 'تِلْمِيذَةٌ', 'تَلَامِيذُ', 'تِلْمِيذَانِ'], ['مُعَلِّمٌ', 'مُعَلِّمَةٌ', 'مُعَلِّمُونَ', 'مُعَلِّمَانِ'], ['طَبِيبٌ', 'طَبِيبَةٌ', 'أَطِبَّاءُ', 'طَبِيبَانِ'],
+  ['صَدِيقٌ', 'صَدِيقَةٌ', 'أَصْدِقَاءُ', 'صَدِيقَانِ'], ['جَارٌ', 'جَارَةٌ', 'جِيرَانٌ', 'جَارَانِ'], ['فَلَّاحٌ', 'فَلَّاحَةٌ', 'فَلَّاحُونَ', 'فَلَّاحَانِ'],
+  ['قِطٌّ', 'قِطَّةٌ', 'قِطَطٌ', 'قِطَّانِ'], ['جَدٌّ', 'جَدَّةٌ', 'أَجْدَادٌ', 'جَدَّانِ'], ['أَخٌ', 'أُخْتٌ', 'إِخْوَةٌ', 'أَخَوَانِ'],
+  ['وَلَدٌ', 'بِنْتٌ', 'أَوْلَادٌ', 'وَلَدَانِ'], ['خَيَّاطٌ', 'خَيَّاطَةٌ', 'خَيَّاطُونَ', 'خَيَّاطَانِ'], ['دِيكٌ', 'دَجَاجَةٌ', 'دِيَكَةٌ', 'دِيكَانِ'],
+  ['عَمٌّ', 'عَمَّةٌ', 'أَعْمَامٌ', 'عَمَّانِ'], ['نَشِيطٌ', 'نَشِيطَةٌ', 'نَشِيطُونَ', 'نَشِيطَانِ'],
+];
+const GEN_B = [['بَقَرَةٌ', 'f', '🐄'], ['ثَوْرٌ', 'm', '🐂'], ['أُمٌّ', 'f', ''], ['بِنْتٌ', 'f', '👧'], ['دِيكٌ', 'm', '🐓'], ['جَدَّةٌ', 'f', '👵'], ['حِصَانٌ', 'm', '🐎'], ['فَرَاشَةٌ', 'f', '🦋'], ['أَسَدٌ', 'm', '🦁'], ['خَالَةٌ', 'f', ''], ['وَلَدٌ', 'm', '👦'], ['دَجَاجَةٌ', 'f', '🐔']];
+
+const TAA = [['شَجَرَةٌ', '🌳'], ['نَمْلَةٌ', '🐜'], ['فَرَاشَةٌ', '🦋'], ['مَدْرَسَةٌ', '🏫'], ['تُفَّاحَةٌ', '🍎'], ['سَاعَةٌ', '⌚'], ['وَرْدَةٌ', '🌹'], ['سَمَكَةٌ', '🐟'], ['مِحْفَظَةٌ', '🎒'], ['بَقَرَةٌ', '🐄'], ['شَمْعَةٌ', '🕯️'], ['كُرَةٌ', '⚽'], ['سَيَّارَةٌ', '🚗'],
+  ['بَيْتٌ', '🏠'], ['بِنْتٌ', '👧'], ['وَقْتٌ', '⏰'], ['زَيْتٌ', '🫒'], ['صَوْتٌ', '🔊'], ['حُوتٌ', '🐋'], ['أُخْتٌ', ''], ['نَبَاتٌ', '🌱'], ['تُوتٌ', '🫐']];
+
+const STOPS = [
+  ['ذَهَبَ أَبِي إِلَى الْعَمَلِ', '.'], ['زَرَعَ الْفَلَّاحُ شَجَرَةَ زَيْتُونٍ', '.'], ['يَحْتَفِلُ الْجَزَائِرِيُّونَ بِعِيدِ الِاسْتِقْلَالِ', '.'], ['النَّمْلَةُ حَشَرَةٌ نَشِيطَةٌ', '.'], ['رَحِمَ اللَّهُ الشُّهَدَاءَ', '.'], ['تُسَاعِدُ سَارَةُ أُمَّهَا فِي الْمَطْبَخِ', '.'],
+  ['أَيْنَ تَسْكُنِينَ', '؟'], ['هَلْ أَنْجَزْتِ وَاجِبَكِ', '؟'], ['مَتَى يَبْدَأُ الْعِيدُ', '؟'], ['كَيْفَ حَالُكِ', '؟'], ['لِمَاذَا تَأَخَّرَ أَحْمَدُ', '؟'], ['مَنْ كَتَبَ هَذِهِ الْقِصَّةَ', '؟'],
+  ['مَا أَجْمَلَ الرَّبِيعَ', '!'], ['يَا لَهُ مِنْ يَوْمٍ جَمِيلٍ', '!'], ['مَا أَطْيَبَ هَذِهِ الْحَلْوَى', '!'], ['مَا أَرْوَعَ عَلَمَ بِلَادِي', '!'], ['مَا أَجْمَلَ الْإِيثَارَ', '!'], ['مَا أَشْجَعَ الْمُجَاهِدِينَ', '!'],
+];
+const MARKS = { '.': ['نُقْطَةٌ', 'هَذِهِ جُمْلَةٌ خَبَرِيَّةٌ، نَضَعُ فِي آخِرِهَا نُقْطَةً.'], '؟': ['عَلَامَةُ اسْتِفْهَامٍ', 'هَذِهِ جُمْلَةٌ فِيهَا سُؤَالٌ، نَضَعُ فِي آخِرِهَا عَلَامَةَ اسْتِفْهَامٍ.'], '!': ['عَلَامَةُ تَعَجُّبٍ', 'هَذِهِ جُمْلَةُ تَعَجُّبٍ، نَضَعُ فِي آخِرِهَا عَلَامَةَ تَعَجُّبٍ.'] };
+
+// [sentence, answer, distractor, distractor]
+const MEASURE = [
+  ['قَسَمَتْ أُمِّي الْخُبْزَةَ إِلَى أَرْبَعَةِ أَجْزَاءٍ مُتَسَاوِيَةٍ، فَأَخَذْتُ ___ الْخُبْزَةِ.', 'رُبْعَ', 'نِصْفَ', 'كُلَّ'],
+  ['قَسَمَ سَمِيرٌ التُّفَّاحَةَ إِلَى قِسْمَيْنِ مُتَسَاوِيَيْنِ، وَأَعْطَى أَخَاهُ ___ التُّفَّاحَةِ.', 'نِصْفَ', 'رُبْعَ', 'كُلَّ'],
+  ['أَكَلَ الطِّفْلُ ___ الْكَعْكَةِ، فَلَمْ يَتْرُكْ مِنْهَا شَيْئًا.', 'كُلَّ', 'نِصْفَ', 'رُبْعَ'],
+  ['حَضَرَ ___ التَّلَامِيذِ، فَلَمْ يَغِبْ أَحَدٌ.', 'جَمِيعُ', 'بَعْضُ', 'نِصْفُ'],
+  ['غَابَ ___ التَّلَامِيذِ بِسَبَبِ الْمَطَرِ، وَحَضَرَ الْآخَرُونَ.', 'بَعْضُ', 'كُلُّ', 'جَمِيعُ'],
+  ['فِي السَّاعَةِ سِتُّونَ دَقِيقَةً، وَ___ السَّاعَةِ ثَلَاثُونَ دَقِيقَةً.', 'نِصْفُ', 'رُبْعُ', 'كُلُّ'],
+  ['مُدَّةُ الِاسْتِرَاحَةِ خَمْسَ عَشْرَةَ دَقِيقَةً، أَيْ ___ سَاعَةٍ.', 'رُبْعُ', 'نِصْفُ', 'كُلُّ'],
+  ['قَرَأَ التِّلْمِيذُ ___ مِنَ الْقِصَّةِ، وَسَيُكْمِلُ الْبَاقِيَ غَدًا.', 'جُزْءًا', 'كُلَّ', 'جَمِيعَ'],
+  ['فِي السَّنَةِ أَرْبَعَةُ فُصُولٍ، فَالْفَصْلُ الْوَاحِدُ ___ السَّنَةِ.', 'رُبْعُ', 'نِصْفُ', 'كُلُّ'],
+  ['شَرِبْتُ ___ كَأْسِ الْحَلِيبِ، وَتَرَكْتُ النِّصْفَ الْآخَرَ لِأُخْتِي.', 'نِصْفَ', 'كُلَّ', 'رُبْعَ'],
+  ['سَقَى الْفَلَّاحُ ___ الْأَشْجَارِ، وَتَرَكَ الْبَاقِيَ لِلْغَدِ.', 'بَعْضَ', 'كُلَّ', 'جَمِيعَ'],
+  ['أَعْطَتِ الْأُمُّ ابْنَتَيْهَا ___ التَّمَرَاتِ، فَلَمْ يَبْقَ مِنْهَا شَيْءٌ.', 'كُلَّ', 'رُبْعَ', 'بَعْضَ'],
+];
+
+// [[emoji, word] x4, index of odd word, explanation]
+const ODD = [
+  [[['🐜', 'نَمْلَةٌ'], ['🐝', 'نَحْلَةٌ'], ['🦋', 'فَرَاشَةٌ'], ['🐈', 'قِطٌّ']], 3, 'الْقِطُّ لَيْسَ حَشَرَةً، أَمَّا الْبَاقِي فَحَشَرَاتٌ.'],
+  [[['🦗', 'جَرَادَةٌ'], ['🐞', 'دُعْسُوقَةٌ'], ['🪰', 'ذُبَابَةٌ'], ['🐟', 'سَمَكَةٌ']], 3, 'السَّمَكَةُ لَيْسَتْ حَشَرَةً، أَمَّا الْبَاقِي فَحَشَرَاتٌ.'],
+  [[['🥄', 'مِلْعَقَةٌ'], ['🍴', 'شَوْكَةٌ'], ['🍽️', 'صَحْنٌ'], ['✏️', 'قَلَمٌ']], 3, 'الْقَلَمُ لَيْسَ مِنْ أَدَوَاتِ الْأَكْلِ.'],
+  [[['', 'صِدْقٌ'], ['', 'أَمَانَةٌ'], ['', 'تَعَاوُنٌ'], ['', 'كَذِبٌ']], 3, 'الْكَذِبُ صِفَةٌ سَيِّئَةٌ، أَمَّا الْبَاقِي فَقِيَمٌ حَمِيدَةٌ.'],
+  [[['👨', 'أَبٌ'], ['👩', 'أُمٌّ'], ['👴', 'جَدٌّ'], ['🏠', 'جَارٌ']], 3, 'الْجَارُ لَيْسَ مِنْ أَفْرَادِ الْعَائِلَةِ.'],
+  [[['', 'عِيدُ الْفِطْرِ'], ['', 'عِيدُ الْأَضْحَى'], ['', 'عِيدُ الِاسْتِقْلَالِ'], ['❄️', 'فَصْلُ الشِّتَاءِ']], 3, 'فَصْلُ الشِّتَاءِ لَيْسَ عِيدًا.'],
+  [[['🍎', 'تُفَّاحٌ'], ['🍌', 'مَوْزٌ'], ['🍇', 'عِنَبٌ'], ['🥕', 'جَزَرٌ']], 3, 'الْجَزَرُ مِنَ الْخُضَرِ، أَمَّا الْبَاقِي فَفَوَاكِهُ.'],
+  [[['👕', 'قَمِيصٌ'], ['👗', 'فُسْتَانٌ'], ['👞', 'حِذَاءٌ'], ['🪑', 'كُرْسِيٌّ']], 3, 'الْكُرْسِيُّ لَيْسَ مِنَ الْمَلَابِسِ.'],
+  [[['📕', 'كِتَابٌ'], ['📒', 'كُرَّاسٌ'], ['🎒', 'مِحْفَظَةٌ'], ['🍊', 'بُرْتُقَالَةٌ']], 3, 'الْبُرْتُقَالَةُ لَيْسَتْ مِنَ الْأَدَوَاتِ الْمَدْرَسِيَّةِ.'],
+  [[['🧑‍🌾', 'فَلَّاحٌ'], ['🧑‍⚕️', 'طَبِيبٌ'], ['🧑‍🏫', 'مُعَلِّمٌ'], ['🍞', 'خُبْزٌ']], 3, 'الْخُبْزُ لَيْسَ مِهْنَةً.'],
+  [[['💍', 'الْعُرْسُ'], ['', 'الْحِنَّاءُ'], ['', 'الزَّغَارِيدُ'], ['📏', 'الْمِسْطَرَةُ']], 3, 'الْمِسْطَرَةُ لَا عَلَاقَةَ لَهَا بِالْعُرْسِ.'],
+  [[['🦁', 'أَسَدٌ'], ['🐘', 'فِيلٌ'], ['🦒', 'زَرَافَةٌ'], ['🌻', 'زَهْرَةٌ']], 3, 'الزَّهْرَةُ لَيْسَتْ حَيَوَانًا.'],
+];
+
+// plurals: [singular, plural, distractor, distractor, type]
+const PL_TYPE = { ms: 'جَمْعُ مُذَكَّرٍ سَالِمٌ', fs: 'جَمْعُ مُؤَنَّثٍ سَالِمٌ', tk: 'جَمْعُ تَكْسِيرٍ' };
+const PL_A = [
+  ['مُعَلِّمٌ', 'مُعَلِّمُونَ', 'مُعَلِّمَانِ', 'مُعَلِّمَاتٌ', 'ms'], ['فَلَّاحٌ', 'فَلَّاحُونَ', 'فَلَّاحَانِ', 'فَلَّاحَةٌ', 'ms'], ['لَاعِبٌ', 'لَاعِبُونَ', 'لَاعِبَانِ', 'لَاعِبَةٌ', 'ms'],
+  ['صَيَّادٌ', 'صَيَّادُونَ', 'صَيَّادَانِ', 'صَيَّادَةٌ', 'ms'], ['مُهَنْدِسٌ', 'مُهَنْدِسُونَ', 'مُهَنْدِسَانِ', 'مُهَنْدِسَةٌ', 'ms'], ['مُسَافِرٌ', 'مُسَافِرُونَ', 'مُسَافِرَانِ', 'مُسَافِرَةٌ', 'ms'],
+  ['مُعَلِّمَةٌ', 'مُعَلِّمَاتٌ', 'مُعَلِّمَتَانِ', 'مُعَلِّمُونَ', 'fs'], ['تِلْمِيذَةٌ', 'تِلْمِيذَاتٌ', 'تِلْمِيذَتَانِ', 'تَلَامِيذُ', 'fs'], ['سَيَّارَةٌ', 'سَيَّارَاتٌ', 'سَيَّارَتَانِ', 'سَيَّارُونَ', 'fs'],
+  ['فَرَاشَةٌ', 'فَرَاشَاتٌ', 'فَرَاشَتَانِ', 'فَرَاشُونَ', 'fs'], ['طَبِيبَةٌ', 'طَبِيبَاتٌ', 'طَبِيبَتَانِ', 'أَطِبَّاءُ', 'fs'],
+  ['كِتَابٌ', 'كُتُبٌ', 'كِتَابَانِ', 'كِتَابُونَ', 'tk'], ['قَلَمٌ', 'أَقْلَامٌ', 'قَلَمَانِ', 'قَلَمَاتٌ', 'tk'], ['وَلَدٌ', 'أَوْلَادٌ', 'وَلَدَانِ', 'وَلَدُونَ', 'tk'],
+  ['بَيْتٌ', 'بُيُوتٌ', 'بَيْتَانِ', 'بَيْتَاتٌ', 'tk'], ['صَدِيقٌ', 'أَصْدِقَاءُ', 'صَدِيقَانِ', 'صَدِيقُونَ', 'tk'], ['بَطَلٌ', 'أَبْطَالٌ', 'بَطَلَانِ', 'بَطَلُونَ', 'tk'],
+  ['عَلَمٌ', 'أَعْلَامٌ', 'عَلَمَانِ', 'عَلَمَاتٌ', 'tk'], ['طِفْلٌ', 'أَطْفَالٌ', 'طِفْلَانِ', 'طِفْلُونَ', 'tk'], ['تِلْمِيذٌ', 'تَلَامِيذُ', 'تِلْمِيذَانِ', 'تِلْمِيذُونَ', 'tk'],
+];
+// [sentence with the word to transform between ⟦ ⟧, answer, distractor, distractor, role]
+const PL_C = [
+  ['جَاءَ ⟦الْمُعَلِّمُ⟧ إِلَى الْقِسْمِ.', 'الْمُعَلِّمُونَ', 'الْمُعَلِّمِينَ', 'الْمُعَلِّمَاتُ', 'f'],
+  ['سَاعَدَ أَبِي ⟦الْمُحْتَاجَ⟧.', 'الْمُحْتَاجِينَ', 'الْمُحْتَاجُونَ', 'الْمُحْتَاجَاتِ', 'o'],
+  ['وَضَعَ ⟦الصَّيَّادُ⟧ شَبَكَةً بَيْنَ الْأَشْجَارِ.', 'الصَّيَّادُونَ', 'الصَّيَّادِينَ', 'الصَّيَّادَاتُ', 'f'],
+  ['شَكَرَ الْمُدِيرُ ⟦اللَّاعِبَ⟧.', 'اللَّاعِبِينَ', 'اللَّاعِبُونَ', 'اللَّاعِبَاتِ', 'o'],
+  ['زَرَعَ ⟦الْفَلَّاحُ⟧ الْقَمْحَ.', 'الْفَلَّاحُونَ', 'الْفَلَّاحِينَ', 'الْفَلَّاحَاتُ', 'f'],
+  ['اِسْتَقْبَلَتِ الْعَائِلَةُ ⟦الْمُسَافِرَ⟧.', 'الْمُسَافِرِينَ', 'الْمُسَافِرُونَ', 'الْمُسَافِرَاتِ', 'o'],
+];
+
+// agent noun: [verb, ism al-fa'il, distractor, distractor]
+const AG_A = [
+  ['كَتَبَ', 'كَاتِبٌ', 'مَكْتُوبٌ', 'كِتَابَةٌ'], ['لَعِبَ', 'لَاعِبٌ', 'مَلْعَبٌ', 'لُعْبَةٌ'], ['زَرَعَ', 'زَارِعٌ', 'مَزْرُوعٌ', 'زِرَاعَةٌ'], ['رَسَمَ', 'رَاسِمٌ', 'مَرْسُومٌ', 'رَسْمٌ'],
+  ['جَلَسَ', 'جَالِسٌ', 'جُلُوسٌ', 'يَجْلِسُ'], ['حَفِظَ', 'حَافِظٌ', 'مَحْفُوظٌ', 'حِفْظٌ'], ['عَمِلَ', 'عَامِلٌ', 'مَعْمَلٌ', 'عَمَلٌ'], ['قَرَأَ', 'قَارِئٌ', 'مَقْرُوءٌ', 'قِرَاءَةٌ'],
+  ['نَجَحَ', 'نَاجِحٌ', 'نَجَاحٌ', 'يَنْجَحُ'], ['سَمِعَ', 'سَامِعٌ', 'مَسْمُوعٌ', 'سَمْعٌ'], ['بَاعَ', 'بَائِعٌ', 'مَبِيعٌ', 'بَيْعٌ'], ['حَرَسَ', 'حَارِسٌ', 'مَحْرُوسٌ', 'حِرَاسَةٌ'],
+];
+const AG_B = [
+  ['الَّذِي يَبِيعُ فِي الدُّكَّانِ هُوَ ___.', 'بَائِعٌ', 'مَبِيعٌ', 'بَيْعٌ'],
+  ['الَّتِي تَكْتُبُ الْقِصَصَ هِيَ ___.', 'كَاتِبَةٌ', 'مَكْتُوبَةٌ', 'كِتَابَةٌ'],
+  ['الَّذِي يَلْعَبُ الْكُرَةَ هُوَ ___.', 'لَاعِبٌ', 'مَلْعَبٌ', 'لُعْبَةٌ'],
+  ['الَّذِي يَصْدُقُ فِي كَلَامِهِ هُوَ ___.', 'صَادِقٌ', 'صِدْقٌ', 'يَصْدُقُ'],
+  ['الَّذِي نَجَحَ فِي الِامْتِحَانِ هُوَ ___.', 'نَاجِحٌ', 'نَجَاحٌ', 'يَنْجَحُ'],
+  ['الَّتِي تَحْرُسُ الْمَدْرَسَةَ هِيَ ___.', 'حَارِسَةٌ', 'مَحْرُوسَةٌ', 'حِرَاسَةٌ'],
+];
+
+// relative pronouns: [sentence, answer, head noun, kind]
+const REL_KIND = { m: 'مُفْرَدٌ مُذَكَّرٌ', f: 'مُفْرَدٌ مُؤَنَّثٌ', p: 'جَمْعٌ مُذَكَّرٌ' };
+const REL = [
+  ['الْبِنْتُ ___ تَرْسُمُ أُخْتِي.', 'الَّتِي', 'الْبِنْتُ', 'f'], ['الْوَلَدُ ___ يَلْعَبُ صَدِيقِي.', 'الَّذِي', 'الْوَلَدُ', 'm'],
+  ['التَّلَامِيذُ ___ نَجَحُوا فَرِحُونَ.', 'الَّذِينَ', 'التَّلَامِيذُ', 'p'], ['الْكِتَابُ ___ قَرَأْتُهُ مُفِيدٌ.', 'الَّذِي', 'الْكِتَابُ', 'm'],
+  ['الْقِصَّةُ ___ قَرَأْتُهَا جَمِيلَةٌ.', 'الَّتِي', 'الْقِصَّةُ', 'f'], ['الْفَلَّاحُونَ ___ يَزْرَعُونَ الْأَرْضَ نَشِيطُونَ.', 'الَّذِينَ', 'الْفَلَّاحُونَ', 'p'],
+  ['الشُّهَدَاءُ ___ ضَحَّوْا مِنْ أَجْلِ الْوَطَنِ أَبْطَالٌ.', 'الَّذِينَ', 'الشُّهَدَاءُ', 'p'], ['الْفَرَاشَةُ ___ تَطِيرُ مُلَوَّنَةٌ.', 'الَّتِي', 'الْفَرَاشَةُ', 'f'],
+  ['الْأَسَدُ ___ وَقَعَ فِي الشَّبَكَةِ مَلِكُ الْغَابَةِ.', 'الَّذِي', 'الْأَسَدُ', 'm'], ['الْجَارَةُ ___ زَارَتْنَا كَرِيمَةٌ.', 'الَّتِي', 'الْجَارَةُ', 'f'],
+  ['الْأَطْفَالُ ___ يَلْعَبُونَ فِي الْحَدِيقَةِ إِخْوَتِي.', 'الَّذِينَ', 'الْأَطْفَالُ', 'p'], ['الْحَلْوَى ___ صَنَعَتْهَا أُمِّي لَذِيذَةٌ.', 'الَّتِي', 'الْحَلْوَى', 'f'],
+];
+
+// reading: short texts with questions [question, answer, distractor, distractor]
+const TEXTS = [
+  { t: 'كَانَ لِسَمِيرٍ تُفَّاحَةٌ وَاحِدَةٌ، وَكَانَ أَخُوهُ الصَّغِيرُ جَائِعًا. قَسَمَ سَمِيرٌ التُّفَّاحَةَ نِصْفَيْنِ، وَأَعْطَى أَخَاهُ النِّصْفَ الْأَكْبَرَ. فَرِحَ الْأَخُ الصَّغِيرُ وَشَكَرَ أَخَاهُ.',
+    q: [['مَاذَا فَعَلَ سَمِيرٌ بِالتُّفَّاحَةِ؟', 'قَسَمَهَا نِصْفَيْنِ.', 'أَكَلَهَا كُلَّهَا.', 'رَمَاهَا فِي الْحَدِيقَةِ.'], ['مَا الْعُنْوَانُ الْمُنَاسِبُ لِلنَّصِّ؟', 'الْأَخُ الْكَرِيمُ', 'التُّفَّاحَةُ الضَّائِعَةُ', 'يَوْمٌ مُمْطِرٌ']] },
+  { t: 'وَعَدَتْ مَرْيَمُ صَدِيقَتَهَا أَنْ تُعِيدَ لَهَا الْقِصَّةَ يَوْمَ السَّبْتِ. وَفِي الصَّبَاحِ نَزَلَ الْمَطَرُ بِغَزَارَةٍ، لَكِنَّ مَرْيَمَ حَمَلَتِ الْقِصَّةَ وَذَهَبَتْ إِلَى بَيْتِ صَدِيقَتِهَا، وَقَالَتْ لَهَا: الْوَعْدُ هُوَ الْوَعْدُ.',
+    q: [['مَتَى وَعَدَتْ مَرْيَمُ بِإِعَادَةِ الْقِصَّةِ؟', 'يَوْمَ السَّبْتِ.', 'يَوْمَ الْجُمُعَةِ.', 'فِي الْمَسَاءِ.'], ['مَا الْقِيمَةُ الَّتِي فِي النَّصِّ؟', 'الْوَفَاءُ بِالْوَعْدِ.', 'النَّظَافَةُ.', 'حُبُّ الرِّيَاضَةِ.']] },
+  { t: 'فِي فَصْلِ الصَّيْفِ، كَانَتِ النَّمْلَةُ تَجْمَعُ الْحُبُوبَ، وَكَانَتِ الْفَرَاشَةُ تَلْعَبُ بَيْنَ الْأَزْهَارِ. وَلَمَّا جَاءَ الشِّتَاءُ، وَجَدَتِ النَّمْلَةُ طَعَامًا كَثِيرًا، وَلَمْ تَجِدِ الْفَرَاشَةُ شَيْئًا.',
+    q: [['مَاذَا كَانَتْ تَفْعَلُ النَّمْلَةُ فِي الصَّيْفِ؟', 'تَجْمَعُ الْحُبُوبَ.', 'تَلْعَبُ بَيْنَ الْأَزْهَارِ.', 'تَنَامُ طُولَ النَّهَارِ.'], ['مَاذَا نَتَعَلَّمُ مِنَ النَّصِّ؟', 'الْعَمَلُ يَنْفَعُنَا وَقْتَ الْحَاجَةِ.', 'اللَّعِبُ أَهَمُّ مِنَ الْعَمَلِ.', 'الشِّتَاءُ فَصْلٌ حَارٌّ.']] },
+  { t: 'صَبَاحَ يَوْمِ الْعِيدِ، لَبِسَ الْأَطْفَالُ ثِيَابًا جَدِيدَةً، وَذَهَبُوا مَعَ أَبِيهِمْ إِلَى الْمَسْجِدِ. ثُمَّ زَارُوا الْأَقَارِبَ وَتَبَادَلُوا التَّهَانِيَ قَائِلِينَ: عِيدٌ مُبَارَكٌ!',
+    q: [['مَاذَا لَبِسَ الْأَطْفَالُ يَوْمَ الْعِيدِ؟', 'ثِيَابًا جَدِيدَةً.', 'ثِيَابَ الْمَدْرَسَةِ.', 'مِعْطَفًا قَدِيمًا.'], ['إِلَى أَيْنَ ذَهَبَ الْأَطْفَالُ مَعَ أَبِيهِمْ؟', 'إِلَى الْمَسْجِدِ.', 'إِلَى السُّوقِ.', 'إِلَى الْمَدْرَسَةِ.']] },
+  { t: 'أَقَامَتْ عَائِلَةُ زُهَيْرٍ حَفْلًا كَبِيرًا. حَضَرَ الْجِيرَانُ وَالْأَقَارِبُ، وَزَغْرَدَتِ النِّسَاءُ، وَقَدَّمَتِ الْجَدَّةُ الْحَلْوَى لِلضُّيُوفِ. وَكَانَ زُهَيْرٌ سَعِيدًا بِلِبَاسِهِ التَّقْلِيدِيِّ.',
+    q: [['مَنْ قَدَّمَ الْحَلْوَى لِلضُّيُوفِ؟', 'الْجَدَّةُ.', 'الْجِيرَانُ.', 'زُهَيْرٌ.'], ['كَيْفَ كَانَ زُهَيْرٌ؟', 'سَعِيدًا.', 'حَزِينًا.', 'خَائِفًا.']] },
+  { t: 'فِي شَهْرِ رَمَضَانَ، كَانَ التَّاجِرُ عُمَرُ يَبِيعُ الْخُضَرَ بِثَمَنٍ مُنَاسِبٍ، وَيُعْطِي الْفُقَرَاءَ مَجَّانًا. فَأَحَبَّهُ النَّاسُ، وَدَعَوْا لَهُ بِالْخَيْرِ.',
+    q: [['مَاذَا كَانَ يَبِيعُ التَّاجِرُ عُمَرُ؟', 'الْخُضَرَ.', 'الثِّيَابَ.', 'الْكُتُبَ.'], ['لِمَاذَا أَحَبَّ النَّاسُ التَّاجِرَ؟', 'لِأَنَّهُ كَرِيمٌ وَأَمِينٌ.', 'لِأَنَّهُ غَنِيٌّ.', 'لِأَنَّهُ يَسْكُنُ بَعِيدًا.']] },
+  { t: 'يَسْتَيْقِظُ الْفَلَّاحُ مَعَ طُلُوعِ الشَّمْسِ، فَيَحْرُثُ الْأَرْضَ، وَيَزْرَعُ الْقَمْحَ، وَيَسْقِي الْأَشْجَارَ. وَفِي الصَّيْفِ يَحْصُدُ مَحْصُولًا وَفِيرًا، فَيَفْرَحُ بِثِمَارِ تَعَبِهِ.',
+    q: [['مَتَى يَسْتَيْقِظُ الْفَلَّاحُ؟', 'مَعَ طُلُوعِ الشَّمْسِ.', 'فِي مُنْتَصَفِ اللَّيْلِ.', 'عِنْدَ الظُّهْرِ.'], ['مَا مُرَادِفُ كَلِمَةِ «وَفِيرًا»؟', 'كَثِيرًا', 'قَلِيلًا', 'صَغِيرًا']] },
+  { t: 'عُمَرُ يَاسِف طِفْلٌ جَزَائِرِيٌّ شُجَاعٌ، شَارَكَ فِي الثَّوْرَةِ التَّحْرِيرِيَّةِ وَهُوَ صَغِيرٌ. كَانَ يَحْمِلُ الرَّسَائِلَ إِلَى الْمُجَاهِدِينَ فِي الْقَصَبَةِ، وَاسْتُشْهِدَ دِفَاعًا عَنِ الْوَطَنِ.',
+    q: [['مَاذَا كَانَ يَحْمِلُ عُمَرُ إِلَى الْمُجَاهِدِينَ؟', 'الرَّسَائِلَ.', 'الْكُتُبَ.', 'الْحَلْوَى.'], ['أَيُّ صِفَةٍ تُنَاسِبُ عُمَرَ يَاسِف؟', 'شُجَاعٌ.', 'كَسُولٌ.', 'خَائِفٌ.']] },
+  { t: 'فِي صَبَاحِ كُلِّ يَوْمِ أَحَدٍ، يَقِفُ التَّلَامِيذُ فِي السَّاحَةِ صَفًّا وَاحِدًا. يُرْفَعُ الْعَلَمُ الْوَطَنِيُّ، فَيُرَدِّدُونَ النَّشِيدَ الْوَطَنِيَّ بِصَوْتٍ وَاحِدٍ، وَقُلُوبُهُمْ مَمْلُوءَةٌ بِحُبِّ الْجَزَائِرِ.',
+    q: [['مَتَى يُرْفَعُ الْعَلَمُ فِي الْمَدْرَسَةِ؟', 'صَبَاحَ يَوْمِ الْأَحَدِ.', 'مَسَاءَ يَوْمِ الْخَمِيسِ.', 'يَوْمَ الْجُمُعَةِ.'], ['مَاذَا يُرَدِّدُ التَّلَامِيذُ؟', 'النَّشِيدَ الْوَطَنِيَّ.', 'جَدْوَلَ الضَّرْبِ.', 'قِصَّةً قَصِيرَةً.']] },
+];
+
+// synonyms / antonyms: [kind, word, answer, distractor, distractor]
+const SYN = [
+  ['d', 'كَبِيرٌ', 'صَغِيرٌ', 'ضَخْمٌ', 'جَمِيلٌ'], ['d', 'طَوِيلٌ', 'قَصِيرٌ', 'عَالٍ', 'سَرِيعٌ'], ['d', 'غَنِيٌّ', 'فَقِيرٌ', 'كَرِيمٌ', 'سَعِيدٌ'],
+  ['d', 'شُجَاعٌ', 'جَبَانٌ', 'بَطَلٌ', 'قَوِيٌّ'], ['d', 'قَوِيٌّ', 'ضَعِيفٌ', 'شَدِيدٌ', 'كَبِيرٌ'], ['d', 'صَادِقٌ', 'كَاذِبٌ', 'أَمِينٌ', 'صَدِيقٌ'],
+  ['d', 'نَشِيطٌ', 'كَسُولٌ', 'مُجْتَهِدٌ', 'سَرِيعٌ'], ['d', 'مُتَكَبِّرٌ', 'مُتَوَاضِعٌ', 'مَغْرُورٌ', 'قَوِيٌّ'], ['d', 'قَرِيبٌ', 'بَعِيدٌ', 'جَارٌ', 'صَغِيرٌ'],
+  ['d', 'حَارٌّ', 'بَارِدٌ', 'سَاخِنٌ', 'جَمِيلٌ'], ['d', 'دَخَلَ', 'خَرَجَ', 'وَلَجَ', 'جَلَسَ'], ['d', 'فَرِحَ', 'حَزِنَ', 'سُرَّ', 'ضَحِكَ'], ['d', 'اللَّيْلُ', 'النَّهَارُ', 'الظَّلَامُ', 'الْقَمَرُ'],
+  ['m', 'عَرَفَ', 'عَلِمَ', 'جَهِلَ', 'نَسِيَ'], ['m', 'يَخَافُ', 'يَهَابُ', 'يَفْرَحُ', 'يَضْحَكُ'], ['m', 'بَيْتٌ', 'مَنْزِلٌ', 'شَارِعٌ', 'سُوقٌ'],
+  ['m', 'جَلَسَ', 'قَعَدَ', 'وَقَفَ', 'نَامَ'], ['m', 'رَأَى', 'شَاهَدَ', 'سَمِعَ', 'نَسِيَ'], ['m', 'وَفِيرٌ', 'كَثِيرٌ', 'قَلِيلٌ', 'صَغِيرٌ'],
+  ['m', 'الْعَامُ', 'السَّنَةُ', 'الْيَوْمُ', 'الشَّهْرُ'], ['m', 'صَدِيقٌ', 'رَفِيقٌ', 'عَدُوٌّ', 'غَرِيبٌ'], ['m', 'سَاعَدَ', 'عَاوَنَ', 'ضَرَبَ', 'تَرَكَ'],
+  ['m', 'فَرْحَانُ', 'مَسْرُورٌ', 'حَزِينٌ', 'غَضْبَانُ'], ['m', 'مُتَكَبِّرٌ', 'مَغْرُورٌ', 'مُتَوَاضِعٌ', 'لَطِيفٌ'], ['m', 'جَمِيلٌ', 'حَسَنٌ', 'قَبِيحٌ', 'طَوِيلٌ'],
+];
+
+// verbs: [verb, tense]
+const TENSE_NAME = { p: 'فِعْلٌ مَاضٍ', m: 'فِعْلٌ مُضَارِعٌ', a: 'فِعْلُ أَمْرٍ' };
+const TN_A = [
+  ['كَتَبَ', 'p'], ['لَعِبَ', 'p'], ['زَرَعَ', 'p'], ['رَسَمَ', 'p'], ['شَرِبَ', 'p'], ['فَهِمَ', 'p'], ['جَلَسَ', 'p'], ['سَافَرَ', 'p'],
+  ['يَكْتُبُ', 'm'], ['يَلْعَبُ', 'm'], ['يَزْرَعُ', 'm'], ['تَرْسُمُ', 'm'], ['نَشْرَبُ', 'm'], ['أَفْهَمُ', 'm'], ['يَجْلِسُ', 'm'], ['تُسَافِرُ', 'm'],
+  ['اُكْتُبْ', 'a'], ['اِلْعَبْ', 'a'], ['اِزْرَعْ', 'a'], ['اُرْسُمْ', 'a'], ['اِشْرَبْ', 'a'], ['اِفْهَمْ', 'a'], ['اِجْلِسْ', 'a'], ['سَافِرْ', 'a'],
+];
+const TN_B = [
+  ['غَدًا ___ إِلَى الْمَكْتَبَةِ.', 'سَأَذْهَبُ', 'ذَهَبْتُ', 'اِذْهَبْ', 'كَلِمَةُ «غَدًا» تَدُلُّ عَلَى الْمُسْتَقْبَلِ.'],
+  ['أَمْسِ ___ قِصَّةً جَمِيلَةً.', 'قَرَأْتُ', 'سَأَقْرَأُ', 'اِقْرَأْ', 'كَلِمَةُ «أَمْسِ» تَدُلُّ عَلَى الْمَاضِي.'],
+  ['يَا سَارَةُ، ___ النَّافِذَةَ مِنْ فَضْلِكِ.', 'اِفْتَحِي', 'فَتَحَتْ', 'سَتَفْتَحُ', 'نُخَاطِبُ سَارَةَ وَنَطْلُبُ مِنْهَا عَمَلًا: فِعْلُ أَمْرٍ.'],
+  ['الْآنَ ___ التِّلْمِيذُ دَرْسَهُ.', 'يَكْتُبُ', 'كَتَبَ', 'اُكْتُبْ', 'كَلِمَةُ «الْآنَ» تَدُلُّ عَلَى الْحَاضِرِ.'],
+  ['فِي الْعَامِ الْمَاضِي ___ أَبِي شَجَرَةً.', 'زَرَعَ', 'يَزْرَعُ', 'اِزْرَعْ', '«الْعَامُ الْمَاضِي» يَدُلُّ عَلَى الْمَاضِي.'],
+  ['يَا أَحْمَدُ، ___ يَدَيْكَ قَبْلَ الْأَكْلِ.', 'اِغْسِلْ', 'غَسَلَ', 'يَغْسِلُ', 'نُخَاطِبُ أَحْمَدَ وَنَطْلُبُ مِنْهُ عَمَلًا: فِعْلُ أَمْرٍ.'],
+  ['كُلَّ صَبَاحٍ ___ الطُّيُورُ فَوْقَ الشَّجَرَةِ.', 'تُغَرِّدُ', 'غَرَّدَتْ', 'غَرِّدْ', 'شَيْءٌ يَتَكَرَّرُ «كُلَّ صَبَاحٍ»: فِعْلٌ مُضَارِعٌ.'],
+  ['بَعْدَ قَلِيلٍ ___ الْحَافِلَةُ.', 'سَتَصِلُ', 'وَصَلَتْ', 'صِلْ', '«بَعْدَ قَلِيلٍ» تَدُلُّ عَلَى الْمُسْتَقْبَلِ.'],
+];
+
+// object noun: [verb, ism al-maf'ul, distractor, distractor]
+const OB_A = [
+  ['كَتَبَ', 'مَكْتُوبٌ', 'كَاتِبٌ', 'كِتَابَةٌ'], ['رَسَمَ', 'مَرْسُومٌ', 'رَاسِمٌ', 'رَسْمٌ'], ['زَرَعَ', 'مَزْرُوعٌ', 'زَارِعٌ', 'زِرَاعَةٌ'], ['فَتَحَ', 'مَفْتُوحٌ', 'فَاتِحٌ', 'فَتْحٌ'],
+  ['شَرِبَ', 'مَشْرُوبٌ', 'شَارِبٌ', 'شُرْبٌ'], ['أَكَلَ', 'مَأْكُولٌ', 'آكِلٌ', 'أَكْلٌ'], ['حَفِظَ', 'مَحْفُوظٌ', 'حَافِظٌ', 'حِفْظٌ'], ['صَنَعَ', 'مَصْنُوعٌ', 'صَانِعٌ', 'صِنَاعَةٌ'],
+  ['كَسَرَ', 'مَكْسُورٌ', 'كَاسِرٌ', 'كَسْرٌ'], ['غَسَلَ', 'مَغْسُولٌ', 'غَاسِلٌ', 'غَسْلٌ'], ['حَمَلَ', 'مَحْمُولٌ', 'حَامِلٌ', 'حَمْلٌ'], ['نَصَرَ', 'مَنْصُورٌ', 'نَاصِرٌ', 'نَصْرٌ'],
+];
+const OB_B = [['مَكْسُورٌ', 'o'], ['لَاعِبٌ', 'a'], ['مَفْتُوحٌ', 'o'], ['كَاتِبٌ', 'a'], ['مَزْرُوعٌ', 'o'], ['حَارِسٌ', 'a'], ['مَشْرُوبٌ', 'o'], ['بَائِعٌ', 'a'], ['مَحْبُوبٌ', 'o'], ['سَامِعٌ', 'a']];
+const OB_C = [
+  ['الْبَابُ الَّذِي فُتِحَ بَابٌ ___.', 'مَفْتُوحٌ', 'فَاتِحٌ', 'فَتْحٌ'], ['الرِّسَالَةُ الَّتِي كُتِبَتْ رِسَالَةٌ ___.', 'مَكْتُوبَةٌ', 'كَاتِبَةٌ', 'كِتَابَةٌ'],
+  ['الزُّجَاجُ الَّذِي كُسِرَ زُجَاجٌ ___.', 'مَكْسُورٌ', 'كَاسِرٌ', 'كَسْرٌ'], ['الطَّعَامُ الَّذِي أُكِلَ طَعَامٌ ___.', 'مَأْكُولٌ', 'آكِلٌ', 'أَكْلٌ'],
+  ['الدَّرْسُ الَّذِي حُفِظَ دَرْسٌ ___.', 'مَحْفُوظٌ', 'حَافِظٌ', 'حِفْظٌ'], ['الْقَمِيصُ الَّذِي غُسِلَ قَمِيصٌ ___.', 'مَغْسُولٌ', 'غَاسِلٌ', 'غَسْلٌ'],
+];
+
+// tanwin: [word, kind]
+const TW_NAME = { f: 'تَنْوِينٌ بِالْفَتْحِ', d: 'تَنْوِينٌ بِالضَّمِّ', k: 'تَنْوِينٌ بِالْكَسْرِ' };
+const TW_A = [['قَلَمٌ', 'd'], ['بَيْتٍ', 'k'], ['شَجَرَةً', 'f'], ['وَلَدًا', 'f'], ['مَدْرَسَةٍ', 'k'], ['عُصْفُورٌ', 'd'], ['تُفَّاحَةً', 'f'], ['كُرَةٌ', 'd'], ['جَبَلٍ', 'k'], ['سَمَاءً', 'f'], ['بَحْرًا', 'f'], ['وَطَنٌ', 'd'], ['عَلَمٍ', 'k']];
+const TW_B = [
+  ['رَأَيْتُ ___ فِي الْحَدِيقَةِ.', 'عُصْفُورًا', 'عُصْفُورً', 'عُصْفُورَنْ'], ['أَكَلْتُ ___ لَذِيذَةً.', 'تُفَّاحَةً', 'تُفَّاحَةًا', 'تُفَّاحَتَنْ'],
+  ['شَرِبْتُ ___ بَارِدًا.', 'حَلِيبًا', 'حَلِيبً', 'حَلِيبَنْ'], ['رَسَمَتْ أُخْتِي ___ كَبِيرَةً.', 'شَجَرَةً', 'شَجَرَةًا', 'شَجَرَتَنْ'],
+  ['سَمِعْنَا ___ جَمِيلًا.', 'صَوْتًا', 'صَوْتً', 'صَوْتَنْ'], ['رَأَيْتُ ___ صَافِيَةً.', 'سَمَاءً', 'سَمَاءًا', 'سَمَاءَنْ'],
+  ['يَحْمِلُ عَلَمُ بِلَادِي ___ أَحْمَرَ.', 'هِلَالًا', 'هِلَالً', 'هِلَالَنْ'], ['اِشْتَرَى أَبِي ___ جَدِيدَةً.', 'سَيَّارَةً', 'سَيَّارَةًا', 'سَيَّارَتَنْ'],
+];
+
+// connectors and adverbs: [sentence, answer, distractor, distractor, explanation]
+const TOOLS = [
+  ['حَضَرَ التَّلَامِيذُ ___ تِلْمِيذًا وَاحِدًا.', 'إِلَّا', 'لِأَنَّ', 'ثُمَّ', 'نَسْتَعْمِلُ «إِلَّا» لِلِاسْتِثْنَاءِ.'],
+  ['لَمْ يَبْقَ فِي الْقِسْمِ ___ الْمُعَلِّمُ.', 'إِلَّا', 'لَكِنَّ', 'غَدًا', 'نَسْتَعْمِلُ «إِلَّا» لِلِاسْتِثْنَاءِ.'],
+  ['نَجَحَ كُلُّ التَّلَامِيذِ ___ وَاحِدًا.', 'إِلَّا', 'ثُمَّ', 'لِأَنَّ', 'نَسْتَعْمِلُ «إِلَّا» لِلِاسْتِثْنَاءِ.'],
+  ['نَامَ الطِّفْلُ مُبَكِّرًا ___ مُتْعَبٌ.', 'لِأَنَّهُ', 'إِلَّا', 'سَوْفَ', 'نَسْتَعْمِلُ «لِأَنَّ» لِلتَّعْلِيلِ: نَذْكُرُ السَّبَبَ.'],
+  ['تَأَخَّرَ أَحْمَدُ عَنِ الْمَدْرَسَةِ ___ الْحَافِلَةَ تَعَطَّلَتْ.', 'لِأَنَّ', 'إِلَّا', 'أَمِ', 'نَسْتَعْمِلُ «لِأَنَّ» لِلتَّعْلِيلِ: نَذْكُرُ السَّبَبَ.'],
+  ['أَتُحِبِّينَ الشَّايَ ___ الْحَلِيبَ؟', 'أَمِ', 'لِأَنَّ', 'إِلَّا', 'نَسْتَعْمِلُ «أَمْ» لِلِاخْتِيَارِ بَيْنَ شَيْئَيْنِ فِي السُّؤَالِ.'],
+  ['الْأَسَدُ قَوِيٌّ، ___ الْفَأْرَةَ أَنْقَذَتْهُ.', 'لَكِنَّ', 'لِأَنَّ', 'أَمِ', 'نَسْتَعْمِلُ «لَكِنَّ» لِلِاسْتِدْرَاكِ.'],
+  ['___ سَأَزُورُ جَدَّتِي.', 'غَدًا', 'أَمْسِ', 'الْبَارِحَةَ', 'الْفِعْلُ «سَأَزُورُ» فِي الْمُسْتَقْبَلِ، فَنَقُولُ: غَدًا.'],
+  ['زُرْتُ الْمَتْحَفَ ___ مَعَ أَبِي.', 'أَمْسِ', 'غَدًا', 'بَعْدَ غَدٍ', 'الْفِعْلُ «زُرْتُ» فِي الْمَاضِي، فَنَقُولُ: أَمْسِ.'],
+  ['تُشْرِقُ الشَّمْسُ مِنَ ___.', 'الشَّرْقِ', 'الْغَرْبِ', 'الشَّمَالِ', 'تُشْرِقُ الشَّمْسُ مِنَ الشَّرْقِ، وَتَغْرُبُ فِي الْغَرْبِ.'],
+  ['تَغْرُبُ الشَّمْسُ فِي ___.', 'الْغَرْبِ', 'الشَّرْقِ', 'الْجَنُوبِ', 'تُشْرِقُ الشَّمْسُ مِنَ الشَّرْقِ، وَتَغْرُبُ فِي الْغَرْبِ.'],
+  ['قَرَأْتُ الدَّرْسَ، ___ حَلَلْتُ التَّمَارِينَ.', 'ثُمَّ', 'أَمْ', 'إِلَّا', 'نَسْتَعْمِلُ «ثُمَّ» لِلتَّرْتِيبِ.'],
+  ['___ يَوْمٍ مِنَ الْأَيَّامِ، خَرَجَ الْأَسَدُ لِلصَّيْدِ.', 'فِي', 'إِلَّا', 'لَكِنَّ', 'نَبْدَأُ الْقِصَّةَ بِقَوْلِنَا: فِي يَوْمٍ مِنَ الْأَيَّامِ.'],
+  ['يَدْرُسُ أَخِي ___، وَيَلْعَبُ مَسَاءً.', 'صَبَاحًا', 'أَمْسِ', 'لِأَنَّ', '«صَبَاحًا» وَ«مَسَاءً» ظَرْفَا زَمَانٍ.'],
+];
+
+// stories: four events in the right order
+const STORIES = [
+  { title: 'الْأَسَدُ وَالْفَأْرَةُ', s: ['كَانَ أَسَدٌ مُتَكَبِّرٌ يَعِيشُ فِي غَابَةٍ وَاسِعَةٍ.', 'ذَاتَ يَوْمٍ، وَقَعَ الْأَسَدُ فِي شَبَكَةِ صَيَّادٍ.', 'مَرَّتْ فَأْرَةٌ صَغِيرَةٌ، فَقَطَعَتِ الْحَبْلَ بِأَسْنَانِهَا.', 'شَكَرَ الْأَسَدُ الْفَأْرَةَ، وَصَارَ مُتَوَاضِعًا.'] },
+  { title: 'النَّمْلَةُ وَالْفَرَاشَةُ', s: ['فِي فَصْلِ الصَّيْفِ، كَانَتِ النَّمْلَةُ تَجْمَعُ الْحُبُوبَ.', 'وَكَانَتِ الْفَرَاشَةُ تَلْعَبُ بَيْنَ الْأَزْهَارِ وَتَسْخَرُ مِنْهَا.', 'جَاءَ الشِّتَاءُ الْبَارِدُ، فَجَاعَتِ الْفَرَاشَةُ.', 'أَعْطَتْهَا النَّمْلَةُ طَعَامًا، فَتَعَلَّمَتِ الْفَرَاشَةُ قِيمَةَ الْعَمَلِ.'] },
+  { title: 'صَبَاحُ الْعِيدِ', s: ['اِسْتَيْقَظَ يُوسُفُ بَاكِرًا صَبَاحَ يَوْمِ الْعِيدِ.', 'لَبِسَ ثِيَابَهُ الْجَدِيدَةَ، وَذَهَبَ مَعَ أَبِيهِ إِلَى الْمَسْجِدِ.', 'بَعْدَ الصَّلَاةِ، زَارَ جَدَّتَهُ فَأَعْطَتْهُ حَلْوَى.', 'فِي الْمَسَاءِ، عَادَ إِلَى الْبَيْتِ فَرْحَانَ.'] },
+  { title: 'الْفَلَّاحُ النَّشِيطُ', s: ['فِي الْخَرِيفِ، حَرَثَ الْفَلَّاحُ أَرْضَهُ.', 'ثُمَّ زَرَعَ فِيهَا حُبُوبَ الْقَمْحِ.', 'نَزَلَ الْمَطَرُ فِي الشِّتَاءِ، فَنَمَا الزَّرْعُ.', 'وَفِي الصَّيْفِ، حَصَدَ الْفَلَّاحُ مَحْصُولًا وَفِيرًا.'] },
+  { title: 'الْمُهْرُ الصَّغِيرُ', s: ['كَانَ مُهْرٌ صَغِيرٌ يَعِيشُ مَعَ أُمِّهِ فِي مَزْرَعَةٍ.', 'ذَاتَ يَوْمٍ، شَعَرَ الْمُهْرُ بِالْمَلَلِ، فَقَرَّرَ الرَّحِيلَ.', 'ضَاعَ فِي الْعَرَاءِ، وَلَمْ يَجِدْ مَكَانًا يَأْوِيهِ.', 'نَدِمَ عَلَى فِعْلَتِهِ، وَعَادَ إِلَى أُمِّهِ.'] },
+  { title: 'الْوَعْدُ هُوَ الْوَعْدُ', s: ['وَعَدَ سَامِي صَدِيقَهُ أَنْ يَزُورَهُ يَوْمَ الْجُمُعَةِ.', 'فِي ذَلِكَ الْيَوْمِ، اشْتَدَّ الْبَرْدُ وَنَزَلَ الْمَطَرُ.', 'لَبِسَ سَامِي مِعْطَفَهُ، وَحَمَلَ مِظَلَّتَهُ.', 'وَصَلَ إِلَى بَيْتِ صَدِيقِهِ، فَفَرِحَ الصَّدِيقُ بِوَفَائِهِ.'] },
+  { title: 'تَحِيَّةُ الْعَلَمِ', s: ['فِي صَبَاحِ يَوْمِ الْأَحَدِ، وَقَفَ التَّلَامِيذُ فِي السَّاحَةِ.', 'رَفَعَ أَحَدُ التَّلَامِيذِ الْعَلَمَ الْوَطَنِيَّ.', 'رَدَّدَ الْجَمِيعُ النَّشِيدَ الْوَطَنِيَّ بِصَوْتٍ وَاحِدٍ.', 'ثُمَّ دَخَلُوا إِلَى أَقْسَامِهِمْ بِهُدُوءٍ.'] },
+  { title: 'عُلْبَةُ الْأَلْوَانِ', s: ['كَانَ فِي قِسْمِنَا تِلْمِيذٌ يَمْلِكُ عُلْبَةَ أَلْوَانٍ جَمِيلَةٍ.', 'اِحْتَاجَ زُمَلَاؤُهُ الْأَلْوَانَ، فَرَفَضَ أَنْ يُعِيرَهَا لَهُمْ.', 'شَعَرَ بِالنَّدَمِ، فَقَرَّرَ أَنْ يُشَارِكَ أَلْوَانَهُ مَعَ أَصْدِقَائِهِ.', 'فَرِحَ الْجَمِيعُ، وَعَرَفُوا أَنَّ الْإِيثَارَ يَجْلِبُ السَّعَادَةَ.'] },
+];
+
+// riddles: [riddle, [emoji, answer], [emoji, distractor], [emoji, distractor]]
+const WHO = [
+  ['أَحْرُثُ الْأَرْضَ وَأَزْرَعُ الْقَمْحَ، فَمَنْ أَنَا؟', ['🧑‍🌾', 'الْفَلَّاحُ'], ['🧑‍⚕️', 'الطَّبِيبُ'], ['🧑‍🍳', 'الطَّبَّاخُ']],
+  ['أُعَالِجُ الْمَرْضَى فِي الْمُسْتَشْفَى، فَمَنْ أَنَا؟', ['🧑‍⚕️', 'الطَّبِيبُ'], ['🧑‍🏫', 'الْمُعَلِّمُ'], ['🧑‍🌾', 'الْفَلَّاحُ']],
+  ['أَصْنَعُ الْخُبْزَ كُلَّ صَبَاحٍ، فَمَنْ أَنَا؟', ['🥖', 'الْخَبَّازُ'], ['🧵', 'الْخَيَّاطُ'], ['🎣', 'الصَّيَّادُ']],
+  ['أُعَلِّمُ التَّلَامِيذَ الْقِرَاءَةَ وَالْكِتَابَةَ، فَمَنْ أَنَا؟', ['🧑‍🏫', 'الْمُعَلِّمُ'], ['🧑‍🚒', 'الْإِطْفَائِيُّ'], ['🥖', 'الْخَبَّازُ']],
+  ['أُطْفِئُ النَّارَ وَأُنْقِذُ النَّاسَ، فَمَنْ أَنَا؟', ['🧑‍🚒', 'الْإِطْفَائِيُّ'], ['🧱', 'الْبَنَّاءُ'], ['🧑‍🏫', 'الْمُعَلِّمُ']],
+  ['أَخِيطُ الثِّيَابَ الْجَمِيلَةَ، فَمَنْ أَنَا؟', ['🧵', 'الْخَيَّاطُ'], ['🎣', 'الصَّيَّادُ'], ['🧑‍⚕️', 'الطَّبِيبُ']],
+  ['أَصْطَادُ السَّمَكَ مِنَ الْبَحْرِ، فَمَنْ أَنَا؟', ['🎣', 'الصَّيَّادُ'], ['🧑‍🌾', 'الْفَلَّاحُ'], ['🧵', 'الْخَيَّاطُ']],
+  ['أَبْنِي الْبُيُوتَ وَالْمَدَارِسَ، فَمَنْ أَنَا؟', ['🧱', 'الْبَنَّاءُ'], ['🥖', 'الْخَبَّازُ'], ['🧑‍🚒', 'الْإِطْفَائِيُّ']],
+  ['أَحْرُسُ حُدُودَ الْوَطَنِ وَأَحْمِيهِ، فَمَنْ أَنَا؟', ['🪖', 'الْجُنْدِيُّ'], ['🧑‍🍳', 'الطَّبَّاخُ'], ['🎣', 'الصَّيَّادُ']],
+  ['لَوْنَايَ الْأَخْضَرُ وَالْأَبْيَضُ، وَفِي وَسَطِي هِلَالٌ وَنَجْمَةٌ حَمْرَاوَانِ، فَمَنْ أَنَا؟', ['🇩🇿', 'الْعَلَمُ الْوَطَنِيُّ'], ['🎶', 'النَّشِيدُ الْوَطَنِيُّ'], ['🗺️', 'الْخَرِيطَةُ']],
+  ['أَنَا كَلِمَاتٌ يُرَدِّدُهَا التَّلَامِيذُ وُقُوفًا عِنْدَ رَفْعِ الْعَلَمِ، فَمَا اسْمِي؟', ['🎶', 'النَّشِيدُ الْوَطَنِيُّ'], ['🇩🇿', 'الْعَلَمُ الْوَطَنِيُّ'], ['📖', 'الْقِصَّةُ']],
+  ['ضَحَّيْتُ بِحَيَاتِي مِنْ أَجْلِ حُرِّيَّةِ الْجَزَائِرِ، فَمَنْ أَنَا؟', ['🕊️', 'الشَّهِيدُ'], ['🧑‍🏫', 'الْمُعَلِّمُ'], ['🎣', 'الصَّيَّادُ']],
+  ['أُوصِلُ الرَّسَائِلَ إِلَى الْبُيُوتِ، فَمَنْ أَنَا؟', ['📮', 'سَاعِي الْبَرِيدِ'], ['🧑‍🌾', 'الْفَلَّاحُ'], ['🧱', 'الْبَنَّاءُ']],
+];
+
+/* ================= drawing helpers ================= */
+const STAR = on => `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.8 6.1 6.6.7-4.9 4.5 1.4 6.6L12 17.2l-5.9 3.3 1.4-6.6-4.9-4.5 6.6-.7z" fill="${on ? 'var(--star)' : 'none'}" stroke="${on ? 'var(--star)' : 'var(--edge)'}" stroke-width="1.8" stroke-linejoin="round"/></svg>`;
+const ICON = {
+  ok: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="currentColor"/><path d="M6.5 12.5l3.5 3.5 7.5-8" stroke="var(--card)" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  try: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="currentColor"/><path d="M12 6.5v7" stroke="var(--card)" stroke-width="2.6" stroke-linecap="round"/><circle cx="12" cy="17.3" r="1.6" fill="var(--card)"/></svg>',
+};
+ICON.bad = ICON.try;
+const SPEAKER = on => `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/>${on ? '<path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>' : '<path d="M16 9l5 6M21 9l-5 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>'}</svg>`;
+const CHEST = open => `<svg viewBox="0 0 62 52" aria-hidden="true">
+  ${open ? '<path d="M6 22 L10 6 Q31 -2 52 6 L56 22 Z" fill="var(--orange)" stroke="var(--ink)" stroke-width="2"/><circle cx="20" cy="20" r="4" fill="var(--gold)"/><circle cx="31" cy="17" r="5" fill="var(--gold)"/><circle cx="42" cy="20" r="4" fill="var(--gold)"/>'
+          : '<path d="M6 24 Q6 8 31 8 Q56 8 56 24 Z" fill="var(--orange)" stroke="var(--ink)" stroke-width="2"/>'}
+  <rect x="6" y="24" width="50" height="24" rx="3" fill="var(--orange)" stroke="var(--ink)" stroke-width="2"/>
+  <rect x="6" y="24" width="50" height="5" fill="var(--gold)" stroke="var(--ink)" stroke-width="1.5"/>
+  <rect x="27" y="26" width="8" height="10" rx="2" fill="var(--gold)" stroke="var(--ink)" stroke-width="1.5"/></svg>`;
+
+/* scene for «أين القط؟» */
+const OBJS = [{ e: '🐈', n: 'الْقِطُّ' }, { e: '⚽', n: 'الْكُرَةُ' }, { e: '🐇', n: 'الْأَرْنَبُ' }, { e: '🐕', n: 'الْكَلْبُ' }, { e: '🧸', n: 'الدُّمْيَةُ' }];
+const REFS = [{ k: 'table', n: 'الطَّاوِلَةِ' }, { k: 'chair', n: 'الْكُرْسِيِّ' }];
+const POS = { up: 'فَوْقَ', down: 'تَحْتَ', right: 'عَلَى يَمِينِ', left: 'عَلَى يَسَارِ' };
+function sceneSVG(ref, pos, emo) {
+  let furn, P;
+  if (ref === 'table') {
+    furn = '<rect x="100" y="78" width="140" height="12" rx="3" class="wood"/><rect x="110" y="90" width="10" height="80" class="wood"/><rect x="220" y="90" width="10" height="80" class="wood"/>';
+    P = { up: [170, 76, ''], down: [170, 166, ' sm'], right: [292, 168, ''], left: [48, 168, ''] };
+  } else {
+    furn = '<rect x="138" y="40" width="10" height="130" class="wood"/><rect x="138" y="106" width="74" height="10" rx="2" class="wood"/><rect x="202" y="116" width="10" height="54" class="wood"/>';
+    P = { up: [176, 104, ''], down: [176, 166, ' sm'], right: [282, 168, ''], left: [62, 168, ''] };
+  }
+  const [x, y, c] = P[pos];
+  return `<svg viewBox="0 0 340 186" class="scene" aria-hidden="true"><line x1="10" y1="172" x2="330" y2="172" class="floor"/>${furn}<text x="${x}" y="${y}" class="obj${c}">${emo}</text></svg>`;
+}
+
+/* ================= the 18 games ================= */
+const optRow = (arr, cls = '') => arr.map(t => ({ v: t, html: t, cls }));
+const GAMES = [
+/* ---------- LEVEL 1 ---------- */
+{ id: 'parts', lvl: 0, name: 'اِسْمٌ أَمْ فِعْلٌ أَمْ حَرْفٌ؟', sub: 'أَقْسَامُ الْكَلَامِ',
+  badge: '<span class="c-n">اِسْمٌ</span><span class="c-v">فِعْلٌ</span><span class="c-h">حَرْفٌ</span>',
+  consigne: 'الْكَلِمَةُ ثَلَاثَةُ أَقْسَامٍ: اِسْمٌ، وَفِعْلٌ، وَحَرْفٌ. اِقْرَئِي جَيِّدًا، ثُمَّ اخْتَارِي الْجَوَابَ.',
+  init(ctx) { ctx.list = mix([[PARTS_WORDS.map(w => ({ w })), 3], [PARTS_SENT.map(s => ({ s })), 3]]); },
+  gen(ctx, i) {
+    const it = ctx.list[i];
+    const hint = 'الِاسْمُ يَدُلُّ عَلَى إِنْسَانٍ أَوْ حَيَوَانٍ أَوْ شَيْءٍ، وَالْفِعْلُ يَدُلُّ عَلَى عَمَلٍ، وَالْحَرْفُ لَا يَظْهَرُ مَعْنَاهُ إِلَّا مَعَ غَيْرِهِ.';
+    if (it.w) {
+      const [w, tag] = it.w;
+      return { kind: 'choice', prompt: 'إِلَى أَيِّ قِسْمٍ تَنْتَمِي هَذِهِ الْكَلِمَةُ؟', visual: `<div class="bigword">${w}</div>`, layout: 'row cats',
+        options: ['n', 'v', 'h'].map(k => ({ v: k, html: CAT[k], tag: k })), answer: tag, hint, explain: `كَلِمَةُ ${Q(w)} ${CAT[tag]}.` };
+    }
+    const toks = it.s, tags = new Set(toks.map(t => t[1]));
+    const want = pick([...tags]);
+    const prompt = { v: 'اُنْقُرِي الْفِعْلَ فِي الْجُمْلَةِ.', h: 'اُنْقُرِي الْحَرْفَ فِي الْجُمْلَةِ.', n: 'اُنْقُرِي اسْمًا فِي الْجُمْلَةِ.' }[want];
+    const idx = toks.map((t, k) => t[1] === want ? k : -1).filter(k => k >= 0);
+    const names = idx.map(k => Q(toks[k][0])).join('، ');
+    const explain = want === 'n' ? `الْأَسْمَاءُ فِي الْجُمْلَةِ هِيَ: ${names}.` : `${want === 'v' ? 'الْفِعْلُ' : 'الْحَرْفُ'} فِي الْجُمْلَةِ هُوَ: ${names}.`;
+    return { kind: 'choice', prompt, visual: '', layout: 'sentence', tail: '<span class="dot">.</span>',
+      options: toks.map((t, k) => ({ v: k, html: t[0] })), answer: idx, hint, explain };
+  } },
+{ id: 'gender', lvl: 0, name: 'الْمُذَكَّرُ وَالْمُؤَنَّثُ', sub: 'الصِّيَغُ الصَّرْفِيَّةُ',
+  badge: '<span class="c-n">هُوَ</span><span class="c-v">هِيَ</span>',
+  consigne: 'نُؤَنِّثُ كَثِيرًا مِنَ الْكَلِمَاتِ بِإِضَافَةِ تَاءٍ مَرْبُوطَةٍ: مُعَلِّمٌ ← مُعَلِّمَةٌ. وَبَعْضُ الْكَلِمَاتِ لَهَا مُؤَنَّثٌ خَاصٌّ: أَبٌ ← أُمٌّ.',
+  init(ctx) { ctx.list = mix([[GEN_A.map(a => ({ a })), 4], [GEN_B.map(b => ({ b })), 2]]); },
+  gen(ctx, i) {
+    const it = ctx.list[i];
+    if (it.a) {
+      const [m, f, pl, du] = it.a;
+      return { kind: 'choice', prompt: `مَا مُؤَنَّثُ كَلِمَةِ ${Q(m)}؟`, visual: '', layout: 'row', options: optRow(shuffle([f, pl, du])), answer: f,
+        hint: 'الْمُؤَنَّثُ كَلِمَةٌ وَاحِدَةٌ تَدُلُّ عَلَى أُنْثَى، وَلَيْسَتْ جَمْعًا وَلَا مُثَنًّى.', explain: `مُؤَنَّثُ ${Q(m)} هُوَ ${Q(f)}.` };
+    }
+    const [w, g, e] = it.b;
+    return { kind: 'choice', prompt: 'هَلْ هَذِهِ الْكَلِمَةُ مُذَكَّرَةٌ أَمْ مُؤَنَّثَةٌ؟', visual: `${e ? `<div class="pic" aria-hidden="true">${e}</div>` : ''}<div class="bigword">${w}</div>`, layout: 'row',
+      options: [{ v: 'm', html: 'مُذَكَّرٌ' }, { v: 'f', html: 'مُؤَنَّثٌ' }], answer: g,
+      hint: 'هَلْ تَدُلُّ الْكَلِمَةُ عَلَى ذَكَرٍ أَمْ عَلَى أُنْثَى؟', explain: `${Q(w)} ${g === 'm' ? 'مُذَكَّرٌ' : 'مُؤَنَّثٌ'}.` };
+  } },
+{ id: 'taa', lvl: 0, name: 'التَّاءُ الْمَرْبُوطَةُ وَالْمَفْتُوحَةُ', sub: 'الظَّوَاهِرُ الْإِمْلَائِيَّةُ',
+  badge: '<span class="c-h">ـة</span><span class="c-v">ـت</span>',
+  consigne: 'إِذَا وَقَفْنَا عَلَى آخِرِ الْكَلِمَةِ فَنَطَقْنَا هَاءً، كَتَبْنَا تَاءً مَرْبُوطَةً (ـة)، وَإِذَا نَطَقْنَا تَاءً، كَتَبْنَا تَاءً مَفْتُوحَةً (ـت).',
+  init(ctx) { const mar = TAA.filter(x => /ةٌ$/.test(x[0])), maf = TAA.filter(x => /تٌ$/.test(x[0])); ctx.list = mix([[mar, 3], [maf, 3]]); },
+  gen(ctx, i) {
+    const [w, e] = ctx.list[i], marb = /ةٌ$/.test(w), wrong = marb ? w.replace(/ةٌ$/, 'تٌ') : w.replace(/تٌ$/, 'ةٌ');
+    return { kind: 'choice', prompt: 'اِخْتَارِي الْكِتَابَةَ الصَّحِيحَةَ.', visual: e ? `<div class="pic" aria-hidden="true">${e}</div>` : '', layout: 'row',
+      options: optRow(shuffle([w, wrong])), answer: w,
+      hint: 'اِقْرَئِي الْكَلِمَةَ بِصَوْتٍ عَالٍ، وَقِفِي عَلَى آخِرِهَا: هَلْ تَسْمَعِينَ هَاءً أَمْ تَاءً؟',
+      explain: `الصَّوَابُ: ${Q(w)} بِتَاءٍ ${marb ? 'مَرْبُوطَةٍ' : 'مَفْتُوحَةٍ'}.` };
+  } },
+{ id: 'stops', lvl: 0, name: 'عَلَامَاتُ الْوَقْفِ', sub: 'النُّقْطَةُ وَالِاسْتِفْهَامُ وَالتَّعَجُّبُ',
+  badge: '<span style="font:800 26px var(--f-ui);letter-spacing:6px">. ؟ !</span>',
+  consigne: 'نَضَعُ النُّقْطَةَ بَعْدَ الْجُمْلَةِ الْخَبَرِيَّةِ، وَعَلَامَةَ الِاسْتِفْهَامِ بَعْدَ السُّؤَالِ، وَعَلَامَةَ التَّعَجُّبِ بَعْدَ التَّعَجُّبِ.',
+  init(ctx) { ctx.list = mix([[STOPS.filter(s => s[1] === '.'), 2], [STOPS.filter(s => s[1] === '؟'), 2], [STOPS.filter(s => s[1] === '!'), 2]]); },
+  gen(ctx, i) {
+    const [s, m] = ctx.list[i];
+    return { kind: 'choice', prompt: 'ضَعِي الْعَلَامَةَ الْمُنَاسِبَةَ فِي آخِرِ الْجُمْلَةِ.', visual: `<p class="sent">${s}<span class="blank mark" data-q>…</span></p>`, layout: 'row marks',
+      options: ['.', '؟', '!'].map(k => ({ v: k, html: `<b>${k}</b><small>${MARKS[k][0]}</small>` })), answer: m,
+      hint: 'هَلِ الْجُمْلَةُ سُؤَالٌ؟ أَمْ تَعَجُّبٌ؟ أَمْ خَبَرٌ عَادِيٌّ؟', explain: MARKS[m][1], after() { fillQ(m); } };
+  } },
+{ id: 'measure', lvl: 0, name: 'أَلْفَاظُ التَّقْدِيرِ', sub: 'كُلٌّ، نِصْفٌ، رُبْعٌ، بَعْضٌ',
+  badge: '<span style="font:800 26px var(--f-ui)">½</span><span style="font:800 26px var(--f-ui)">¼</span>',
+  consigne: 'أَكْمِلِي الْجُمْلَةَ بِاللَّفْظِ الْمُنَاسِبِ، وَانْتَبِهِي إِلَى الْكَلِمَاتِ الَّتِي تَدُلُّكِ عَلَى الْجَوَابِ.',
+  init(ctx) { ctx.list = take(MEASURE, 6); },
+  gen(ctx, i) {
+    const [s, a, d1, d2] = ctx.list[i];
+    return { kind: 'choice', prompt: 'اِخْتَارِي اللَّفْظَ الْمُنَاسِبَ.', visual: `<p class="sent">${withBlank(s)}</p>`, layout: 'row', options: optRow(shuffle([a, d1, d2])), answer: a,
+      hint: 'نِصْفٌ: قِسْمٌ مِنْ قِسْمَيْنِ. رُبْعٌ: قِسْمٌ مِنْ أَرْبَعَةٍ. كُلٌّ وَجَمِيعٌ: الشَّيْءُ كَامِلًا. بَعْضٌ وَجُزْءٌ: قِسْمٌ مِنْهُ.',
+      explain: s.replace(BLANK, `<b>${a}</b>`), after() { fillQ(a); } };
+  } },
+{ id: 'odd', lvl: 0, name: 'الْكَلِمَةُ الدَّخِيلَةُ', sub: 'الرَّصِيدُ اللُّغَوِيُّ',
+  badge: '<span>🐜</span><span>🐝</span><span style="opacity:.45">🐈</span>',
+  consigne: 'فِي كُلِّ مَجْمُوعَةٍ كَلِمَةٌ لَا تَنْتَمِي إِلَيْهَا. اُنْقُرِي الْكَلِمَةَ الدَّخِيلَةَ.',
+  init(ctx) { ctx.list = take(ODD, 6); },
+  gen(ctx, i) {
+    const [items, odd, exp] = ctx.list[i];
+    return { kind: 'choice', prompt: 'أَيُّ كَلِمَةٍ لَا تَنْتَمِي إِلَى الْمَجْمُوعَةِ؟', visual: '', layout: 'row',
+      options: shuffle(items.map((it, k) => ({ v: k, html: `${it[0] ? `<span class="em" aria-hidden="true">${it[0]}</span>` : ''}<span>${it[1]}</span>` }))), answer: odd,
+      hint: 'اِبْحَثِي عَنِ الشَّيْءِ الْمُشْتَرَكِ بَيْنَ ثَلَاثِ كَلِمَاتٍ.', explain: exp };
+  } },
+/* ---------- LEVEL 2 ---------- */
+{ id: 'plural', lvl: 1, name: 'الْمُفْرَدُ وَالْجَمْعُ', sub: 'الْجُمُوعُ الثَّلَاثَةُ',
+  badge: '<span class="c-n">ـُونَ</span><span class="c-v">ـَاتٌ</span><span class="c-h">كُتُبٌ</span>',
+  consigne: 'جَمْعُ الْمُذَكَّرِ السَّالِمِ يَنْتَهِي بِـ «ـُونَ» أَوْ «ـِينَ»، وَجَمْعُ الْمُؤَنَّثِ السَّالِمِ يَنْتَهِي بِـ «ـَاتٌ»، وَجَمْعُ التَّكْسِيرِ تَتَغَيَّرُ فِيهِ صُورَةُ الْمُفْرَدِ.',
+  init(ctx) { ctx.list = mix([[PL_A.map(a => ({ a })), 3], [PL_A.map(b => ({ b })), 2], [PL_C.map(c => ({ c })), 1]]); },
+  gen(ctx, i) {
+    const it = ctx.list[i];
+    if (it.a) {
+      const [s, p, d1, d2] = it.a;
+      return { kind: 'choice', prompt: `مَا جَمْعُ كَلِمَةِ ${Q(s)}؟`, visual: '', layout: 'row', options: optRow(shuffle([p, d1, d2])), answer: p,
+        hint: 'الْجَمْعُ يَدُلُّ عَلَى أَكْثَرَ مِنَ اثْنَيْنِ، أَمَّا الْمُثَنَّى فَيَنْتَهِي بِـ «ـَانِ».', explain: `جَمْعُ ${Q(s)} هُوَ ${Q(p)}.` };
+    }
+    if (it.b) {
+      const [, p, , , ty] = it.b;
+      return { kind: 'choice', prompt: 'مَا نَوْعُ هَذَا الْجَمْعِ؟', visual: `<div class="bigword">${p}</div>`, layout: 'list',
+        options: ['ms', 'fs', 'tk'].map(k => ({ v: k, html: PL_TYPE[k] })), answer: ty,
+        hint: 'هَلْ بَقِيَتْ صُورَةُ الْمُفْرَدِ سَالِمَةً مَعَ زِيَادَةِ «ـُونَ» أَوْ «ـَاتٌ»، أَمْ تَغَيَّرَتْ؟', explain: `${Q(p)} ${PL_TYPE[ty]}.` };
+    }
+    const [s, a, d1, d2, role] = it.c;
+    const word = s.match(/⟦(.+?)⟧/)[1];
+    return { kind: 'choice', prompt: 'حَوِّلِي الْكَلِمَةَ الْمُسَطَّرَةَ إِلَى جَمْعِ الْمُذَكَّرِ السَّالِمِ.', visual: `<p class="sent">${s.replace(/⟦(.+?)⟧/, '<span class="u" data-q>$1</span>')}</p>`, layout: 'row',
+      options: optRow(shuffle([a, d1, d2])), answer: a,
+      hint: 'مَنْ قَامَ بِالْفِعْلِ نَجْمَعُهُ بِـ «ـُونَ»، وَمَنْ وَقَعَ عَلَيْهِ الْفِعْلُ نَجْمَعُهُ بِـ «ـِينَ».',
+      explain: `${role === 'f' ? `${Q(word)} قَامَ بِالْفِعْلِ` : `${Q(word)} وَقَعَ عَلَيْهِ الْفِعْلُ`}، فَنَقُولُ: ${Q(a)}.`, after() { fillQ(a); } };
+  } },
+{ id: 'agent', lvl: 1, name: 'اِسْمُ الْفَاعِلِ', sub: 'مَنْ قَامَ بِالْفِعْلِ',
+  badge: '<span>كَتَبَ</span><span class="c-g">←</span><span class="c-v">كَاتِبٌ</span>',
+  consigne: 'اِسْمُ الْفَاعِلِ يَدُلُّ عَلَى مَنْ قَامَ بِالْفِعْلِ، وَنَصُوغُهُ مِنَ الْفِعْلِ عَلَى وَزْنِ «فَاعِلٍ»: كَتَبَ ← كَاتِبٌ.',
+  init(ctx) { ctx.list = mix([[AG_A.map(a => ({ a })), 4], [AG_B.map(b => ({ b })), 2]]); },
+  gen(ctx, i) {
+    const it = ctx.list[i], hint = 'اِسْمُ الْفَاعِلِ عَلَى وَزْنِ «فَاعِلٍ»: لَاعِبٌ، زَارِعٌ، حَارِسٌ.';
+    if (it.a) {
+      const [v, f, d1, d2] = it.a;
+      return { kind: 'choice', prompt: `مَا اسْمُ الْفَاعِلِ مِنَ الْفِعْلِ ${Q(v)}؟`, visual: '', layout: 'row', options: optRow(shuffle([f, d1, d2])), answer: f, hint,
+        explain: `اِسْمُ الْفَاعِلِ مِنْ ${Q(v)} هُوَ ${Q(f)}.` };
+    }
+    const [s, a, d1, d2] = it.b;
+    return { kind: 'choice', prompt: 'اِخْتَارِي اسْمَ الْفَاعِلِ الْمُنَاسِبَ.', visual: `<p class="sent">${withBlank(s)}</p>`, layout: 'row', options: optRow(shuffle([a, d1, d2])), answer: a, hint,
+      explain: s.replace(BLANK, `<b>${a}</b>`), after() { fillQ(a); } };
+  } },
+{ id: 'rel', lvl: 1, name: 'الِاسْمُ الْمَوْصُولُ', sub: 'الَّذِي، الَّتِي، الَّذِينَ',
+  badge: '<span class="c-n">الَّذِي</span><span class="c-v">الَّتِي</span>',
+  consigne: 'نَسْتَعْمِلُ «الَّذِي» لِلْمُفْرَدِ الْمُذَكَّرِ، وَ«الَّتِي» لِلْمُفْرَدِ الْمُؤَنَّثِ، وَ«الَّذِينَ» لِجَمْعِ الْمُذَكَّرِ.',
+  init(ctx) { ctx.list = take(REL, 6); },
+  gen(ctx, i) {
+    const [s, a, noun, kind] = ctx.list[i];
+    return { kind: 'choice', prompt: 'أَكْمِلِي بِالِاسْمِ الْمَوْصُولِ الْمُنَاسِبِ.', visual: `<p class="sent">${withBlank(s)}</p>`, layout: 'row',
+      options: optRow(['الَّذِي', 'الَّتِي', 'الَّذِينَ']), answer: a,
+      hint: 'اُنْظُرِي إِلَى الِاسْمِ الَّذِي قَبْلَ الْفَرَاغِ: هَلْ هُوَ مُذَكَّرٌ أَمْ مُؤَنَّثٌ؟ مُفْرَدٌ أَمْ جَمْعٌ؟',
+      explain: `${Q(noun)} ${REL_KIND[kind]}، فَنَقُولُ: ${Q(a)}.`, after() { fillQ(a); } };
+  } },
+{ id: 'where', lvl: 1, name: 'أَيْنَ الْقِطُّ؟', sub: 'ظُرُوفُ الْمَكَانِ',
+  badge: '<span style="font-size:26px">🐈</span><span>فَوْقَ</span><span>تَحْتَ</span>',
+  consigne: 'اُنْظُرِي إِلَى الصُّورَةِ جَيِّدًا، ثُمَّ اخْتَارِي الْكَلِمَاتِ الَّتِي تَصِفُ الْمَكَانَ.',
+  init(ctx) { ctx.pos = shuffle(['up', 'down', 'right', 'left', 'up', 'down', 'right', 'left']).slice(0, 6); },
+  gen(ctx, i) {
+    const o = pick(OBJS), r = pick(REFS), p = ctx.pos[i], others = shuffle(Object.keys(POS).filter(k => k !== p)).slice(0, 2);
+    const phrase = k => `${POS[k]} ${r.n}`;
+    return { kind: 'choice', prompt: `أَيْنَ ${o.n}؟`, visual: sceneSVG(r.k, p, o.e), layout: 'list',
+      options: shuffle([p, ...others]).map(k => ({ v: k, html: phrase(k) })), answer: p,
+      hint: 'هَلِ الشَّيْءُ أَعْلَى أَمْ أَسْفَلَ؟ أَمْ عَلَى يَمِينِكِ أَمْ عَلَى يَسَارِكِ وَأَنْتِ تَنْظُرِينَ إِلَى الصُّورَةِ؟',
+      explain: `${o.n} ${phrase(p)}.` };
+  } },
+{ id: 'read', lvl: 1, name: 'اِقْرَئِي وَأَجِيبِي', sub: 'فَهْمُ الْمَكْتُوبِ',
+  badge: '<span style="font-size:28px">📖</span>',
+  consigne: 'اِقْرَئِي النَّصَّ الْقَصِيرَ بِانْتِبَاهٍ، ثُمَّ اخْتَارِي الْجَوَابَ الصَّحِيحَ.',
+  init(ctx) { ctx.list = take(TEXTS, 6).map(t => ({ t: t.t, q: pick(t.q) })); },
+  gen(ctx, i) {
+    const { t, q } = ctx.list[i], [qq, a, d1, d2] = q;
+    return { kind: 'choice', prompt: qq, visual: `<p class="textcard">${t}</p>`, layout: 'list', options: optRow(shuffle([a, d1, d2])), answer: a,
+      hint: 'اِرْجِعِي إِلَى النَّصِّ، وَابْحَثِي عَنِ الْجُمْلَةِ الَّتِي فِيهَا الْجَوَابُ.', explain: a };
+  } },
+{ id: 'syn', lvl: 1, name: 'الْمُرَادِفُ وَالضِّدُّ', sub: 'الرَّصِيدُ اللُّغَوِيُّ',
+  badge: '<span>كَبِيرٌ</span><span class="c-v">≠</span><span>صَغِيرٌ</span>',
+  consigne: 'الْمُرَادِفُ كَلِمَةٌ لَهَا الْمَعْنَى نَفْسُهُ، وَالضِّدُّ كَلِمَةٌ لَهَا الْمَعْنَى الْمُعَاكِسُ.',
+  init(ctx) { ctx.list = mix([[SYN.filter(s => s[0] === 'd'), 3], [SYN.filter(s => s[0] === 'm'), 3]]); },
+  gen(ctx, i) {
+    const [k, w, a, d1, d2] = ctx.list[i], lab = k === 'd' ? 'ضِدُّ' : 'مُرَادِفُ';
+    return { kind: 'choice', prompt: `مَا ${lab} كَلِمَةِ ${Q(w)}؟`, visual: '', layout: 'row', options: optRow(shuffle([a, d1, d2])), answer: a,
+      hint: k === 'd' ? 'الضِّدُّ عَكْسُ الْمَعْنَى، مِثْلُ: سَرِيعٌ ≠ بَطِيءٌ.' : 'الْمُرَادِفُ لَهُ الْمَعْنَى نَفْسُهُ، مِثْلُ: مَشَى = سَارَ.',
+      explain: `${lab} ${Q(w)} هُوَ ${Q(a)}.` };
+  } },
+/* ---------- LEVEL 3 ---------- */
+{ id: 'tense', lvl: 2, name: 'الْمَاضِي وَالْمُضَارِعُ وَالْأَمْرُ', sub: 'أَزْمِنَةُ الْفِعْلِ',
+  badge: '<span>أَمْسِ</span><span class="c-g">·</span><span>الْآنَ</span><span class="c-g">·</span><span>غَدًا</span>',
+  consigne: 'الْفِعْلُ الْمَاضِي حَدَثَ وَانْتَهَى، وَالْمُضَارِعُ يَحْدُثُ الْآنَ، وَفِعْلُ الْأَمْرِ نَطْلُبُ بِهِ الْقِيَامَ بِعَمَلٍ.',
+  init(ctx) { ctx.list = mix([[TN_A.map(a => ({ a })), 3], [TN_B.map(b => ({ b })), 3]]); },
+  gen(ctx, i) {
+    const it = ctx.list[i];
+    if (it.a) {
+      const [v, t] = it.a;
+      return { kind: 'choice', prompt: 'مَا نَوْعُ هَذَا الْفِعْلِ؟', visual: `<div class="bigword">${v}</div>`, layout: 'list',
+        options: ['p', 'm', 'a'].map(k => ({ v: k, html: TENSE_NAME[k] })), answer: t,
+        hint: 'الْمُضَارِعُ يَبْدَأُ بِحَرْفٍ مِنْ حُرُوفِ «أَنَيْتُ»، وَفِعْلُ الْأَمْرِ نَطْلُبُ بِهِ مِنْ غَيْرِنَا أَنْ يَعْمَلَ.', explain: `${Q(v)} ${TENSE_NAME[t]}.` };
+    }
+    const [s, a, d1, d2, why] = it.b;
+    return { kind: 'choice', prompt: 'اِخْتَارِي الْفِعْلَ الْمُنَاسِبَ لِلزَّمَنِ.', visual: `<p class="sent">${withBlank(s)}</p>`, layout: 'row', options: optRow(shuffle([a, d1, d2])), answer: a,
+      hint: 'اُنْظُرِي إِلَى كَلِمَاتِ الزَّمَنِ فِي الْجُمْلَةِ: أَمْسِ، الْآنَ، غَدًا، يَا…', explain: `${why} نَقُولُ: ${Q(a)}.`, after() { fillQ(a); } };
+  } },
+{ id: 'object', lvl: 2, name: 'اِسْمُ الْمَفْعُولِ', sub: 'مَنْ وَقَعَ عَلَيْهِ الْفِعْلُ',
+  badge: '<span>كَتَبَ</span><span class="c-g">←</span><span class="c-n">مَكْتُوبٌ</span>',
+  consigne: 'اِسْمُ الْمَفْعُولِ يَدُلُّ عَلَى مَا وَقَعَ عَلَيْهِ الْفِعْلُ، وَنَصُوغُهُ عَلَى وَزْنِ «مَفْعُولٍ»: كَتَبَ ← مَكْتُوبٌ.',
+  init(ctx) { ctx.list = mix([[OB_A.map(a => ({ a })), 2], [OB_B.map(b => ({ b })), 2], [OB_C.map(c => ({ c })), 2]]); },
+  gen(ctx, i) {
+    const it = ctx.list[i], hint = 'اِسْمُ الْفَاعِلِ عَلَى وَزْنِ «فَاعِلٍ»: كَاتِبٌ، وَاسْمُ الْمَفْعُولِ عَلَى وَزْنِ «مَفْعُولٍ»: مَكْتُوبٌ.';
+    if (it.a) {
+      const [v, o, d1, d2] = it.a;
+      return { kind: 'choice', prompt: `مَا اسْمُ الْمَفْعُولِ مِنَ الْفِعْلِ ${Q(v)}؟`, visual: '', layout: 'row', options: optRow(shuffle([o, d1, d2])), answer: o, hint,
+        explain: `اِسْمُ الْمَفْعُولِ مِنْ ${Q(v)} هُوَ ${Q(o)}.` };
+    }
+    if (it.b) {
+      const [w, t] = it.b;
+      return { kind: 'choice', prompt: 'هَلْ هَذِهِ الْكَلِمَةُ اسْمُ فَاعِلٍ أَمِ اسْمُ مَفْعُولٍ؟', visual: `<div class="bigword">${w}</div>`, layout: 'row',
+        options: [{ v: 'a', html: 'اِسْمُ فَاعِلٍ' }, { v: 'o', html: 'اِسْمُ مَفْعُولٍ' }], answer: t, hint,
+        explain: `${Q(w)} ${t === 'a' ? 'اِسْمُ فَاعِلٍ عَلَى وَزْنِ «فَاعِلٍ»' : 'اِسْمُ مَفْعُولٍ عَلَى وَزْنِ «مَفْعُولٍ»'}.` };
+    }
+    const [s, a, d1, d2] = it.c;
+    return { kind: 'choice', prompt: 'أَكْمِلِي بِاسْمِ الْمَفْعُولِ الْمُنَاسِبِ.', visual: `<p class="sent">${withBlank(s)}</p>`, layout: 'row', options: optRow(shuffle([a, d1, d2])), answer: a, hint,
+      explain: s.replace(BLANK, `<b>${a}</b>`), after() { fillQ(a); } };
+  } },
+{ id: 'tanwin', lvl: 2, name: 'التَّنْوِينُ', sub: 'بِالْفَتْحِ وَالضَّمِّ وَالْكَسْرِ',
+  badge: '<span style="font-size:24px">ـًا ـٌ ـٍ</span>',
+  consigne: 'التَّنْوِينُ نُونٌ سَاكِنَةٌ نَنْطِقُهَا وَلَا نَكْتُبُهَا. وَنَكْتُبُ تَنْوِينَ الْفَتْحِ بِأَلِفٍ زَائِدَةٍ «ـًا»، إِلَّا بَعْدَ التَّاءِ الْمَرْبُوطَةِ «ـةً» وَالْهَمْزَةِ الَّتِي بَعْدَ أَلِفٍ «ـاءً».',
+  init(ctx) { ctx.list = mix([[TW_A.map(a => ({ a })), 3], [TW_B.map(b => ({ b })), 3]]); },
+  gen(ctx, i) {
+    const it = ctx.list[i];
+    if (it.a) {
+      const [w, k] = it.a;
+      return { kind: 'choice', prompt: `مَا نَوْعُ التَّنْوِينِ فِي كَلِمَةِ ${Q(w)}؟`, visual: `<div class="bigword">${w}</div>`, layout: 'list',
+        options: ['f', 'd', 'k'].map(x => ({ v: x, html: TW_NAME[x] })), answer: k,
+        hint: 'اُنْظُرِي إِلَى آخِرِ الْكَلِمَةِ: فَتْحَتَانِ «ـً»، ضَمَّتَانِ «ـٌ»، كَسْرَتَانِ «ـٍ».', explain: `فِي ${Q(w)} ${TW_NAME[k]}.` };
+    }
+    const [s, a, d1, d2] = it.b;
+    return { kind: 'choice', prompt: 'اِخْتَارِي الْكِتَابَةَ الصَّحِيحَةَ.', visual: `<p class="sent">${withBlank(s)}</p>`, layout: 'row', options: optRow(shuffle([a, d1, d2])), answer: a,
+      hint: 'تَنْوِينُ الْفَتْحِ يُكْتَبُ بِأَلِفٍ «ـًا»، إِلَّا بَعْدَ التَّاءِ الْمَرْبُوطَةِ وَالْهَمْزَةِ الَّتِي بَعْدَ أَلِفٍ.',
+      explain: `الصَّوَابُ: ${Q(a)}.`, after() { fillQ(a); } };
+  } },
+{ id: 'tools', lvl: 2, name: 'أَكْمِلِي الْجُمْلَةَ', sub: 'الِاسْتِثْنَاءُ وَالتَّعْلِيلُ وَالظُّرُوفُ',
+  badge: '<span class="c-h">إِلَّا</span><span class="c-g">·</span><span class="c-v">لِأَنَّ</span>',
+  consigne: 'اِقْرَئِي الْجُمْلَةَ، وَفَكِّرِي فِي مَعْنَاهَا، ثُمَّ اخْتَارِي الْكَلِمَةَ الَّتِي تُكْمِلُهَا.',
+  init(ctx) { ctx.list = take(TOOLS, 6); },
+  gen(ctx, i) {
+    const [s, a, d1, d2, why] = ctx.list[i];
+    return { kind: 'choice', prompt: 'اِخْتَارِي الْكَلِمَةَ الْمُنَاسِبَةَ.', visual: `<p class="sent">${withBlank(s)}</p>`, layout: 'row', options: optRow(shuffle([a, d1, d2])), answer: a,
+      hint: 'جَرِّبِي كُلَّ كَلِمَةٍ فِي الْفَرَاغِ، وَاقْرَئِي الْجُمْلَةَ: أَيُّهَا يُعْطِي مَعْنًى صَحِيحًا؟', explain: why, after() { fillQ(a); } };
+  } },
+{ id: 'story', lvl: 2, name: 'رَتِّبِي أَحْدَاثَ الْقِصَّةِ', sub: 'الْوَضْعِيَّةُ الْإِدْمَاجِيَّةُ',
+  badge: '<span style="font:800 22px var(--f-ui);direction:rtl">1 2 3 4</span>',
+  consigne: 'اُنْقُرِي الْجُمَلَ بِالتَّرْتِيبِ، مِنْ بِدَايَةِ الْقِصَّةِ إِلَى نِهَايَتِهَا. لِإِرْجَاعِ جُمْلَةٍ، اُنْقُرِي عَلَيْهَا فِي مَكَانِهَا.',
+  init(ctx) { ctx.list = take(STORIES, 6); },
+  gen(ctx, i) {
+    const st = ctx.list[i], order = shuffle([0, 1, 2, 3]), placed = [null, null, null, null]; let root;
+    const q = { kind: 'custom', useCheck: true, prompt: `رَتِّبِي أَحْدَاثَ قِصَّةِ ${Q(st.title)}.`,
+      hint: 'اِبْحَثِي أَوَّلًا عَنِ الْبِدَايَةِ (كَانَ…، فِي يَوْمٍ…)، ثُمَّ عَنِ النِّهَايَةِ (شَكَرَ…، فَرِحَ…، عَادَ…).', explain: 'هَذَا هُوَ التَّرْتِيبُ الصَّحِيحُ لِأَحْدَاثِ الْقِصَّةِ.', _story: st, _shown: order };
+    const draw = () => {
+      root.querySelectorAll('.sslot').forEach((s, k) => { s.querySelector('span').textContent = placed[k] === null ? '' : st.s[placed[k]]; s.classList.toggle('filled', placed[k] !== null); });
+      root.querySelectorAll('.stile').forEach(t => t.classList.toggle('used', placed.includes(+t.dataset.t)));
+    };
+    q.mount = (stage, ctl) => {
+      stage.innerHTML = `<ol class="sslots">${placed.map((_, k) => `<li><button type="button" class="sslot" data-i="${k}"><b>${k + 1}</b><span></span></button></li>`).join('')}</ol>
+        <div class="stiles">${order.map(k => `<button type="button" class="stile" data-t="${k}">${st.s[k]}</button>`).join('')}</div>`;
+      root = stage;
+      stage.addEventListener('click', e => {
+        if (G.done) return;
+        const t = e.target.closest('.stile'), s = e.target.closest('.sslot');
+        if (t && !t.classList.contains('used')) { const k = placed.indexOf(null); if (k < 0) return; placed[k] = +t.dataset.t; sfx.tap(); }
+        else if (s) { const k = +s.dataset.i; if (placed[k] === null) return; placed[k] = null; }
+        else return;
+        root.querySelectorAll('.sslot').forEach(x => x.classList.remove('is-bad'));
+        draw(); ctl.ready(placed.every(x => x !== null));
+      });
+    };
+    q.check = () => placed.every((v, k) => v === k);
+    q.markWrong = () => root.querySelectorAll('.sslot').forEach((s, k) => s.classList.toggle('is-bad', placed[k] !== k));
+    q.reveal = () => { for (let k = 0; k < 4; k++) placed[k] = k; draw(); root.querySelectorAll('.sslot').forEach(s => { s.classList.remove('is-bad'); s.classList.add('revealed'); }); };
+    q.after = ok => { if (ok) root.querySelectorAll('.sslot').forEach(s => s.classList.add('is-ok')); };
+    return q;
+  } },
+{ id: 'who', lvl: 2, name: 'مَنْ أَنَا؟', sub: 'الْمِهَنُ وَالرُّمُوزُ الْوَطَنِيَّةُ',
+  badge: '<span style="font-size:26px">🧑‍🌾</span><span style="font-size:26px">🇩🇿</span>',
+  consigne: 'اِقْرَئِي اللُّغْزَ جَيِّدًا، ثُمَّ اخْتَارِي الْجَوَابَ.',
+  init(ctx) { ctx.list = take(WHO, 6); },
+  gen(ctx, i) {
+    const [r, a, d1, d2] = ctx.list[i];
+    return { kind: 'choice', prompt: '', visual: `<p class="textcard">${r}</p>`, layout: 'list who',
+      options: shuffle([a, d1, d2]).map(o => ({ v: o[1], html: `<span class="em" aria-hidden="true">${o[0]}</span><span>${o[1]}</span>` })), answer: a[1],
+      hint: 'اِبْحَثِي عَنِ الْكَلِمَةِ الْمُهِمَّةِ فِي اللُّغْزِ.', explain: `${a[1]}.` };
+  } },
+];
+
+return { GAMES };
+})();
+const AR_LEVELS = [
+  { name: 'الْمُسْتَوَى الْأَوَّلُ', tag: 'سَهْلٌ', desc: 'أَقْسَامُ الْكَلَامِ، الْمُذَكَّرُ وَالْمُؤَنَّثُ، التَّاءُ، عَلَامَاتُ الْوَقْفِ، أَلْفَاظُ التَّقْدِيرِ وَالرَّصِيدُ اللُّغَوِيُّ.' },
+  { name: 'الْمُسْتَوَى الثَّانِي', tag: 'مُتَوَسِّطٌ', desc: 'الْجُمُوعُ، اسْمُ الْفَاعِلِ، الِاسْمُ الْمَوْصُولُ، ظُرُوفُ الْمَكَانِ، فَهْمُ الْمَكْتُوبِ، الْمُرَادِفُ وَالضِّدُّ.' },
+  { name: 'الْمُسْتَوَى الثَّالِثُ', tag: 'صَعْبٌ', desc: 'أَزْمِنَةُ الْفِعْلِ، اسْمُ الْمَفْعُولِ، التَّنْوِينُ، الْأَسَالِيبُ، تَرْتِيبُ أَحْدَاثِ الْقِصَّةِ، الْمِهَنُ وَالرُّمُوزُ الْوَطَنِيَّةُ.' },
+];
+
+/* ================= interface texts ================= */
+const STAR = on => `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.8 6.1 6.6.7-4.9 4.5 1.4 6.6L12 17.2l-5.9 3.3 1.4-6.6-4.9-4.5 6.6-.7z" fill="${on ? 'var(--star)' : 'none'}" stroke="${on ? 'var(--star)' : 'var(--edge)'}" stroke-width="1.8" stroke-linejoin="round"/></svg>`;
+const ICON = {
+  ok: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="currentColor"/><path d="M6.5 12.5l3.5 3.5 7.5-8" stroke="var(--card)" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  try: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="currentColor"/><path d="M12 6.5v7" stroke="var(--card)" stroke-width="2.6" stroke-linecap="round"/><circle cx="12" cy="17.3" r="1.6" fill="var(--card)"/></svg>',
+};
+ICON.bad = ICON.try;
+const SPEAKER = on => `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/>${on ? '<path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>' : '<path d="M16 9l5 6M21 9l-5 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>'}</svg>`;
+const CHEST = open => `<svg viewBox="0 0 62 52" aria-hidden="true">
+  ${open ? '<path d="M6 22 L10 6 Q31 -2 52 6 L56 22 Z" fill="var(--accent)" stroke="var(--ink)" stroke-width="2"/><circle cx="20" cy="20" r="4" fill="var(--gold)"/><circle cx="31" cy="17" r="5" fill="var(--gold)"/><circle cx="42" cy="20" r="4" fill="var(--gold)"/>'
+          : '<path d="M6 24 Q6 8 31 8 Q56 8 56 24 Z" fill="var(--accent)" stroke="var(--ink)" stroke-width="2"/>'}
+  <rect x="6" y="24" width="50" height="24" rx="3" fill="var(--accent)" stroke="var(--ink)" stroke-width="2"/>
+  <rect x="6" y="24" width="50" height="5" fill="var(--gold)" stroke="var(--ink)" stroke-width="1.5"/>
+  <path d="M31 30 c-3 -4 -8 -1 -5 3 l5 5 l5 -5 c3 -4 -2 -7 -5 -3z" fill="var(--gold)" stroke="var(--ink)" stroke-width="1.2"/></svg>`;
+const T = {
+  praise: ['أَحْسَنْتِ!', 'مُمْتَازٌ!', 'رَائِعٌ!', 'إِجَابَةٌ صَحِيحَةٌ!', 'بَارَكَ اللَّهُ فِيكِ!', 'أَنْتِ نَجْمَةٌ!'],
+  praise2: 'أَحْسَنْتِ، صَحَّحْتِ خَطَأَكِ!',
+  tryAgain: 'لَيْسَ تَمَامًا… حَاوِلِي مَرَّةً أُخْرَى.',
+  answerIs: 'الْجَوَابُ الصَّحِيحُ:',
+  hello: p => `<span class="ava" aria-hidden="true">${p.av}</span>مَرْحَبًا يَا ${esc(p.name)}! اِخْتَارِي بَوَّابَتَكِ:`,
+  trGoal: 'اِجْمَعِي <bdi class="n">40</bdi> نَجْمَةً لِتَفْتَحِي الْكَنْزَ!',
+  trWon: 'مَبْرُوكٌ! فَتَحْتِ الْكَنْزَ. اُطْلُبِي مُكَافَأَتَكِ مِنْ وَالِدَيْكِ!',
+  stars: [
+    'لَا بَأْسَ، نَتَعَلَّمُ مِنْ أَخْطَائِنَا. أَعِيدِي الْمُحَاوَلَةَ.',
+    'بِدَايَةٌ طَيِّبَةٌ، أَعِيدِي الْمُحَاوَلَةَ لِتَرْبَحِي نُجُومًا أَكْثَرَ.',
+    'جَيِّدٌ جِدًّا! وَاصِلِي التَّدَرُّبَ.',
+    'عَمَلٌ رَائِعٌ! أَنْتِ بَطَلَةٌ حَقِيقِيَّةٌ.'],
+  score: (k, t) => `إِجَابَاتُكِ الصَّحِيحَةُ: ${N(k)} مِنْ ${N(t)}`,
+  record: 'رَقْمٌ قِيَاسِيٌّ جَدِيدٌ!',
+  qcount: (i, t) => `السُّؤَالُ ${N(i)} مِنْ ${N(t)}`,
+  addName: 'أَضِيفِي اسْمَكِ',
+  manage: 'تَعْدِيلُ الْأَسْمَاءِ', done: 'تَمَّ',
+  delAsk: n => `حَذْفُ الِاسْمِ ${Q(esc(n))} وَكُلِّ نُجُومِهِ؟`,
+  needName: 'اُكْتُبِي اسْمًا أَوَّلًا.',
+  enter: 'اُدْخُلِي',
+};
+const SUBJECTS = {
+  math: { name: 'كَنْزُ الْأَعْدَادِ', door: 'بَوَّابَةُ الرِّيَاضِيَّاتِ', tag: 'أَلْعَابٌ لِمُرَاجَعَةِ الرِّيَاضِيَّاتِ · السَّنَةُ الثَّالِثَةُ اِبْتِدَائِيٌّ',
+    glyphs: '<i class="d-h">1</i><i class="d-t">2</i><i class="d-u">3</i>', logo: '<i class="lg-h"></i><i class="lg-t"></i><i class="lg-u"></i>', games: MATH.GAMES, levels: MATH_LEVELS },
+  ar: { name: 'كَنْزُ الْحُرُوفِ', door: 'بَوَّابَةُ اللُّغَةِ الْعَرَبِيَّةِ', tag: 'أَلْعَابٌ لِمُرَاجَعَةِ اللُّغَةِ الْعَرَبِيَّةِ · السَّنَةُ الثَّالِثَةُ اِبْتِدَائِيٌّ',
+    glyphs: '<i class="c-n">أ</i><i class="c-v">ب</i><i class="c-h">ت</i>', logo: '<i class="lt l1">ح</i><i class="lt l2">ر</i><i class="lt l3">ف</i>', games: AR.GAMES, levels: AR_LEVELS },
+};
+Object.entries(SUBJECTS).forEach(([k, s]) => s.games.forEach(g => { g.subj = k; }));
+const ALL_GAMES = [...MATH.GAMES, ...AR.GAMES];
+const best = (p, id) => (p.best && p.best[id]) || 0;
+const subjStars = (p, k) => SUBJECTS[k].games.reduce((s, g) => s + best(p, g.id), 0);
+const playerStars = p => ALL_GAMES.reduce((s, g) => s + best(p, g.id), 0);
+
+/* ================= screens ================= */
+let CUR_SUBJ = 'math';
+function show(id) {
+  ['home', 'subj', 'game'].forEach(s => { $('#' + s).hidden = s !== id; });
+  document.body.dataset.subj = id === 'home' ? '' : CUR_SUBJ;
+  window.scrollTo(0, 0);
+}
+function paintSound() { $$('.sound-btn').forEach(b => { b.innerHTML = SPEAKER(store.sound); b.setAttribute('aria-pressed', store.sound ? 'true' : 'false'); }); }
+
+let managing = false, pendingDel = null;
+function renderHome() {
+  const p = P();
+  $('#playerList').innerHTML = store.players.map(x => `<button type="button" class="player${x.id === p.id ? ' on' : ''}" data-pid="${x.id}" aria-pressed="${x.id === p.id}">
+      <span class="ava" aria-hidden="true">${x.av}</span><span>${esc(x.name)}</span><span class="pst">${STAR(true)}<bdi class="n">${playerStars(x)}</bdi></span>
+      ${managing && store.players.length > 1 ? `<span class="del" data-del="${x.id}" role="button" aria-label="حَذْفٌ">×</span>` : ''}</button>`).join('')
+    + `<button type="button" class="player add" id="addPlayer"><span class="ava" aria-hidden="true">＋</span><span>${T.addName}</span></button>`;
+  $('#manageBtn').textContent = managing ? T.done : T.manage;
+  $('#manageBtn').hidden = store.players.length < 2 && !managing;
+  const da = $('#delAsk');
+  if (pendingDel) { const x = store.players.find(q => q.id === pendingDel); da.innerHTML = `${T.delAsk(x ? x.name : '')} <button type="button" class="mini" id="delYes">نَعَمْ</button> <button type="button" class="mini" id="delNo">لَا</button>`; da.hidden = false; }
+  else da.hidden = true;
+  $('#hello').innerHTML = T.hello(p);
+  $('#doors').innerHTML = Object.entries(SUBJECTS).map(([k, s]) => {
+    const got = subjStars(p, k), max = s.games.length * 3;
+    return `<button type="button" class="door door-${k}" data-subj="${k}" aria-label="${s.name}">
+      <span class="arch"><span class="leaf"><span class="glyphs">${s.glyphs}</span><span class="knob"></span></span></span>
+      <span class="dname">${s.name}</span><span class="dsub">${s.door}</span>
+      <span class="dprog">${STAR(true)}<span class="tr-bar"><i style="width:${Math.round(got / max * 100)}%"></i></span><bdi class="n" dir="ltr">${got}/${max}</bdi></span>
+      <span class="dgo">${T.enter}</span></button>`;
+  }).join('');
+  paintSound();
+}
+function renderSubj() {
+  const s = SUBJECTS[CUR_SUBJ], p = P();
+  $('#whoChip').innerHTML = `<span class="ava" aria-hidden="true">${p.av}</span>${esc(p.name)}`;
+  $('#sLogo').innerHTML = s.logo; $('#sTitle').innerHTML = s.name; $('#sTag').innerHTML = s.tag;
+  const total = subjStars(p, CUR_SUBJ), max = s.games.length * 3, open = (p.tr && p.tr[CUR_SUBJ]) || total >= 40;
+  $('#chestBox').innerHTML = CHEST(open);
+  $('#trText').innerHTML = open ? T.trWon : T.trGoal;
+  $('#trBar').style.width = Math.min(100, total / 40 * 100) + '%';
+  $('#trNum').textContent = `${total} / ${max}`;
+  $('#levels').innerHTML = s.levels.map((L, li) => {
+    const gs = s.games.filter(g => g.lvl === li), got = gs.reduce((a, g) => a + best(p, g.id), 0);
+    return `<section class="level"><div class="lvhead"><span class="lvnum">${li + 1}</span><h2>${L.name}</h2>
+      <span class="diff">${[0, 1, 2].map(k => `<i class="${k <= li ? 'on' : ''}"></i>`).join('')} ${L.tag}</span>
+      <span class="lvstars">${STAR(true)}<bdi class="n">${got} / ${gs.length * 3}</bdi></span></div>
+      <p class="lvdesc">${L.desc}</p>
+      <div class="cards">${gs.map(g => `<button type="button" class="card ${CUR_SUBJ}" data-id="${g.id}"><span class="badge">${g.badge}</span><span class="cname">${g.name}</span><span class="csub">${g.sub}</span><span class="cstars">${[0, 1, 2].map(k => STAR(k < best(p, g.id))).join('')}</span></button>`).join('')}</div></section>`;
+  }).join('');
+  $('#resetAsk').hidden = true;
+  paintSound();
+}
+function openSubj(k) { CUR_SUBJ = k; renderSubj(); show('subj'); }
+
+/* ================= game engine ================= */
+const QN = 6;
+const isRight = (q, v) => Array.isArray(q.answer) ? q.answer.includes(v) : v === q.answer;
+function startGame(id) {
+  const game = ALL_GAMES.find(g => g.id === id); if (!game) return;
+  CUR_SUBJ = game.subj;
+  G = { game, qi: 0, score: 0, correct: 0, ctx: {}, res: [], token: 0 };
+  game.init && game.init(G.ctx);
+  $('#game').dataset.subj = game.subj;
+  $('#gName').innerHTML = game.name; $('#gLevel').innerHTML = SUBJECTS[game.subj].levels[game.lvl].tag;
+  show('game'); loadQ();
+}
+function loadQ() {
+  clearTimeout(G.timer); G.token++;
+  const q = G.game.gen(G.ctx, G.qi); G.q = q; G.attempt = 0; G.done = false;
+  renderDots();
+  $('#cText').innerHTML = q.consigne || G.game.consigne;
+  $('#qPrompt').innerHTML = q.prompt || '';
+  const stage = $('#stage'); stage.innerHTML = ''; stage.className = 'stage';
+  $('#fb').hidden = true; $('#nextBtn').hidden = true; setCheck(false, false); showPad(false);
+  if (q.kind === 'choice') mountChoice(q, stage);
+  else if (q.kind === 'slots') mountSlots(q, stage);
+  else mountCustom(q, stage);
+}
+function renderDots() {
+  $('#dots').innerHTML = Array.from({ length: QN }, (_, i) => `<i class="${G.res[i] || ''}${i === G.qi && !G.res[i] ? ' cur' : ''}"></i>`).join('');
+  $('#qCount').innerHTML = T.qcount(Math.min(G.qi + 1, QN), QN);
+}
+function showPad(on) { $('#pad').hidden = !on; $('#gbody').classList.toggle('has-pad', on); }
+function setCheck(show, enabled) { const b = $('#checkBtn'); b.hidden = !show; b.disabled = !enabled; }
+
+function mountChoice(q, stage) {
+  stage.insertAdjacentHTML('beforeend', `<div class="visual">${q.visual || ''}</div><div class="opts ${q.layout || 'row'}"${q.optDir ? ` dir="${q.optDir}"` : ''}></div>`);
+  const box = stage.querySelector('.opts');
+  q.options.forEach((o, i) => {
+    const b = document.createElement('button'); b.type = 'button'; b.className = 'opt' + (o.cls ? ' ' + o.cls : ''); b.innerHTML = o.html; b.dataset.i = i;
+    if (o.tag) b.dataset.tag = o.tag; box.appendChild(b);
+  });
+  if (q.tail) box.insertAdjacentHTML('beforeend', q.tail);
+  box.addEventListener('click', e => {
+    const b = e.target.closest('.opt'); if (!b || b.disabled || G.done) return;
+    const o = q.options[+b.dataset.i];
+    if (isRight(q, o.v)) { b.classList.add('is-ok'); succeed(); }
+    else {
+      b.classList.add('is-bad'); b.disabled = true;
+      fail(() => { const bs = $$('.opt', box); q.options.forEach((x, k) => { if (isRight(q, x.v)) bs[k].classList.add('is-ok'); }); bs.forEach(x => x.disabled = true); });
+    }
+  });
+}
+function mountSlots(q, stage) {
+  stage.insertAdjacentHTML('beforeend', `${q.visual ? `<div class="visual">${q.visual}</div>` : ''}<div class="slotwrap">${q.html}</div>`);
+  G.slots = $$('[data-slot]', stage).sort((a, b) => a.dataset.slot - b.dataset.slot);
+  G.vals = G.slots.map(() => '');
+  G.order = q.order || G.slots.map((_, i) => i);
+  G.slots.forEach((s, i) => { s.setAttribute('role', 'button'); s.tabIndex = 0; s.addEventListener('click', () => { if (!G.done) setActive(i); }); });
+  setActive(G.order[0]); showPad(true); updatePadOk();
+  q.onMount && q.onMount(stage);
+}
+function mountCustom(q, stage) {
+  const ctl = { ready: b => setCheck(true, b), submit: ok => { if (G.done) return; ok ? succeed() : fail(); } };
+  q.mount(stage, ctl);
+  if (q.useCheck) setCheck(true, false);
+}
+function setActive(i) { G.active = i; G.slots.forEach((s, j) => s.classList.toggle('active', j === i)); }
+function paint(i) { G.slots[i].textContent = G.vals[i]; G.slots[i].classList.toggle('filled', !!G.vals[i]); }
+function updatePadOk() { $('#padOk').disabled = !G.vals.every(v => v !== ''); }
+function typeDigit(d) {
+  if (!G || G.done || G.q.kind !== 'slots') return;
+  const i = G.active, s = G.slots[i];
+  if (s.classList.contains('is-bad')) { G.vals[i] = ''; s.classList.remove('is-bad'); }
+  const max = (G.q.maxLen && G.q.maxLen[i]) || 5; if (G.vals[i].length >= max) return;
+  G.vals[i] += d; paint(i); sfx.tap();
+  const exp = G.q.answers ? String(G.q.answers[i]) : '';
+  if (G.q.autoAdvance !== false && exp && G.vals[i].length >= exp.length) {
+    const pos = G.order.indexOf(i), nx = G.order.slice(pos + 1).find(j => !G.vals[j]);
+    if (nx !== undefined) setActive(nx);
+  }
+  updatePadOk();
+}
+function erase() {
+  if (!G || G.done || G.q.kind !== 'slots') return;
+  const i = G.active; G.slots[i].classList.remove('is-bad');
+  if (G.vals[i]) G.vals[i] = G.vals[i].slice(0, -1);
+  else { const pos = G.order.indexOf(i); if (pos > 0) setActive(G.order[pos - 1]); }
+  paint(i); updatePadOk();
+}
+function checkSlots() {
+  if (!G || G.done || G.q.kind !== 'slots' || !G.vals.every(v => v !== '')) return;
+  const q = G.q, v = G.vals.map(Number);
+  const res = q.check ? q.check(v) : (() => { const wrong = []; q.answers.forEach((a, i) => { if (v[i] !== a) wrong.push(i); }); return { ok: !wrong.length, wrong }; })();
+  if (res.ok) { G.slots.forEach(s => s.classList.add('is-ok')); succeed(); return; }
+  res.wrong.forEach(i => G.slots[i].classList.add('is-bad'));
+  fail(() => G.slots.forEach((s, i) => { s.textContent = q.answers[i]; s.classList.remove('is-bad', 'active'); s.classList.add('revealed'); }));
+  if (!G.done && res.wrong.length) setActive(res.wrong[0]);
+}
+function succeed() {
+  G.done = true; const first = G.attempt === 0; G.score += first ? 1 : .5; G.correct++;
+  G.res[G.qi] = first ? 'ok' : 'ok2'; renderDots(); sfx.ok();
+  showFb('ok', first ? pick(T.praise) : T.praise2);
+  G.q.after && G.q.after(true);
+  finishQ(true);
+}
+function fail(reveal) {
+  if (G.attempt === 0) {
+    G.attempt = 1; sfx.bad();
+    showFb('try', `${T.tryAgain}${G.q.hint ? `<span class="hint">${G.q.hint}</span>` : ''}`);
+    G.q.markWrong && G.q.markWrong();
+    return;
+  }
+  G.done = true; G.res[G.qi] = 'bad'; renderDots(); sfx.bad();
+  reveal && reveal(); G.q.reveal && G.q.reveal(); G.q.after && G.q.after(false);
+  showFb('bad', `${T.answerIs}<span class="exp">${G.q.explain || ''}</span>`);
+  finishQ(false);
+}
+function showFb(type, html) { const f = $('#fb'); f.className = 'fb ' + type; f.innerHTML = `<span class="fb-ic" aria-hidden="true">${ICON[type]}</span><div class="fb-tx" role="status">${html}</div>`; f.hidden = false; }
+function finishQ(ok) {
+  showPad(false); setCheck(false, false);
+  const nb = $('#nextBtn'); nb.hidden = false; nb.textContent = G.qi === QN - 1 ? 'النَّتِيجَةُ' : 'تَابِعِي';
+  const tk = G.token; clearTimeout(G.timer);
+  if (ok) G.timer = setTimeout(() => { if (G && G.token === tk) next(); }, G.q.delay || 1500);
+  else $('#fb').scrollIntoView({ block: 'nearest', behavior: reduceMotion() ? 'auto' : 'smooth' });
+}
+function next() { if (!G || !G.done) return; clearTimeout(G.timer); G.qi++; if (G.qi >= QN) endGame(); else loadQ(); }
+function endGame() {
+  const p = P(), sc = G.score, stars = sc >= 5.5 ? 3 : sc >= 4 ? 2 : sc >= 2 ? 1 : 0, id = G.game.id, prev = best(p, id);
+  p.best = p.best || {}; p.tr = p.tr || {};
+  const improved = stars > prev; if (improved) { p.best[id] = stars; save(); }
+  $('#rStars').innerHTML = [0, 1, 2].map(i => STAR(i < stars)).join('');
+  $('#rMsg').innerHTML = T.stars[stars];
+  $('#rScore').innerHTML = T.score(G.correct, QN) + (improved && prev > 0 ? `<br><span class="record">${T.record}</span>` : '');
+  let extra = ''; const k = G.game.subj;
+  if (subjStars(p, k) >= 40 && !p.tr[k]) { p.tr[k] = true; save(); extra = `<div class="tr-win">${CHEST(true)}<p>${T.trWon}</p></div>`; }
+  $('#rExtra').innerHTML = extra;
+  $('#result').hidden = false; $('#rAgain').focus({ preventScroll: true });
+  if (stars === 3 || extra) { sfx.win(); confetti(); }
+}
+
+/* ================= confetti ================= */
+function confetti() {
+  if (reduceMotion()) return;
+  const cv = $('#confetti'), cx = cv.getContext('2d'); cv.hidden = false;
+  const W = cv.width = innerWidth, H = cv.height = innerHeight, cs = getComputedStyle(document.documentElement);
+  const cols = ['--accent', '--lilac', '--gold', '--peach', '--tens'].map(v => cs.getPropertyValue(v).trim() || '#f90');
+  const Pt = Array.from({ length: 130 }, () => ({ x: Math.random() * W, y: -20 - Math.random() * H * .4, vx: (Math.random() - .5) * 3, vy: 2 + Math.random() * 3, s: 5 + Math.random() * 6, r: Math.random() * 6, c: pick(cols), h: Math.random() < .3 }));
+  const t0 = performance.now();
+  (function fr(t) {
+    cx.clearRect(0, 0, W, H);
+    Pt.forEach(p => { p.x += p.vx; p.y += p.vy; p.r += .1; cx.save(); cx.translate(p.x, p.y); cx.rotate(p.r); cx.fillStyle = p.c;
+      if (p.h) { cx.beginPath(); cx.arc(-p.s / 4, 0, p.s / 4, Math.PI, 0); cx.arc(p.s / 4, 0, p.s / 4, Math.PI, 0); cx.lineTo(0, p.s / 2); cx.closePath(); cx.fill(); }
+      else cx.fillRect(-p.s / 2, -p.s / 4, p.s, p.s / 2);
+      cx.restore(); });
+    if (t - t0 < 2300) requestAnimationFrame(fr); else { cx.clearRect(0, 0, W, H); cv.hidden = true; }
+  })(t0);
+}
+
+/* ================= events ================= */
+$('#playerList').addEventListener('click', e => {
+  const del = e.target.closest('[data-del]');
+  if (del) { pendingDel = del.dataset.del; renderHome(); return; }
+  if (e.target.closest('#addPlayer')) { openPlayer(); return; }
+  const b = e.target.closest('.player[data-pid]'); if (!b) return;
+  store.cur = b.dataset.pid; save(); sfx.tap(); renderHome();
+});
+$('#delAsk').addEventListener('click', e => {
+  if (e.target.id === 'delYes' && pendingDel) {
+    store.players = store.players.filter(p => p.id !== pendingDel);
+    if (!store.players.find(p => p.id === store.cur)) store.cur = store.players[0].id;
+    save();
+  }
+  if (e.target.id === 'delYes' || e.target.id === 'delNo') { pendingDel = null; if (store.players.length < 2) managing = false; renderHome(); }
+});
+$('#manageBtn').addEventListener('click', () => { managing = !managing; pendingDel = null; renderHome(); });
+$('#doors').addEventListener('click', e => {
+  const d = e.target.closest('.door'); if (!d) return; sfx.tap();
+  if (reduceMotion()) { openSubj(d.dataset.subj); return; }
+  d.classList.add('opening'); setTimeout(() => openSubj(d.dataset.subj), 380);
+});
+$('#homeBtn').addEventListener('click', () => { renderHome(); show('home'); });
+$('#levels').addEventListener('click', e => { const c = e.target.closest('.card'); if (c) { sfx.tap(); startGame(c.dataset.id); } });
+$('#backBtn').addEventListener('click', backToSubj);
+function backToSubj() { if (G) clearTimeout(G.timer); G = null; renderSubj(); show('subj'); }
+$('#nextBtn').addEventListener('click', next);
+$('#checkBtn').addEventListener('click', () => { if (!G || G.done) return; const ok = G.q.check(); ok ? succeed() : fail(); });
+$('#pad').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; const k = b.dataset.k; if (k === 'del') erase(); else if (k === 'ok') checkSlots(); else typeDigit(k); });
+document.addEventListener('keydown', e => {
+  if (!$('#playerModal').hidden) { if (e.key === 'Escape') closePlayer(); return; }
+  if (!G || $('#game').hidden || !$('#result').hidden) return;
+  if (/^[0-9]$/.test(e.key)) { typeDigit(e.key); e.preventDefault(); }
+  else if (e.key === 'Backspace') { erase(); e.preventDefault(); }
+  else if (e.key === 'Escape') { backToSubj(); }
+  else if (e.key === 'Enter') {
+    if (G.done) { next(); e.preventDefault(); }
+    else if (G.q.kind === 'slots') { checkSlots(); e.preventDefault(); }
+    else if (!$('#checkBtn').hidden && !$('#checkBtn').disabled) { $('#checkBtn').click(); e.preventDefault(); }
+  }
+});
+$('#rAgain').addEventListener('click', () => { $('#result').hidden = true; startGame(G.game.id); });
+$('#rMenu').addEventListener('click', () => { $('#result').hidden = true; backToSubj(); });
+$$('.sound-btn').forEach(b => b.addEventListener('click', () => { store.sound = !store.sound; save(); paintSound(); sfx.tap(); }));
+$('#resetBtn').addEventListener('click', () => { $('#resetAsk').hidden = false; });
+$('#resetNo').addEventListener('click', () => { $('#resetAsk').hidden = true; });
+$('#resetYes').addEventListener('click', () => { const p = P(); SUBJECTS[CUR_SUBJ].games.forEach(g => { if (p.best) delete p.best[g.id]; }); if (p.tr) p.tr[CUR_SUBJ] = false; save(); renderSubj(); });
+
+let pickedAva = AVATARS[0];
+function openPlayer() {
+  $('#nameInput').value = ''; $('#formErr').textContent = '';
+  pickedAva = AVATARS.find(a => !store.players.some(p => p.av === a)) || AVATARS[0];
+  $('#avas').innerHTML = AVATARS.map(a => `<button type="button" data-av="${a}" aria-pressed="${a === pickedAva}">${a}</button>`).join('');
+  $('#playerModal').hidden = false; setTimeout(() => $('#nameInput').focus(), 50);
+}
+function closePlayer() { $('#playerModal').hidden = true; }
+$('#avas').addEventListener('click', e => { const b = e.target.closest('[data-av]'); if (!b) return; pickedAva = b.dataset.av; $$('#avas button').forEach(x => x.setAttribute('aria-pressed', x === b ? 'true' : 'false')); });
+$('#playerCancel').addEventListener('click', closePlayer);
+$('#playerForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const name = $('#nameInput').value.trim().slice(0, 20);
+  if (!name) { $('#formErr').textContent = T.needName; $('#nameInput').focus(); return; }
+  const id = 'p' + Date.now().toString(36);
+  store.players.push({ id, name, av: pickedAva, best: {}, tr: {} }); store.cur = id; save();
+  closePlayer(); renderHome();
+});
+
+window.KANZ = { GAMES: ALL_GAMES, MATH: MATH.GAMES, AR: AR.GAMES, state: () => G, words: (typeof MATH.words === 'function' ? MATH.words : null) };
+function start() { renderHome(); show('home'); }
+try { (window.claude && window.claude.hot && window.claude.hot.ready) ? window.claude.hot.ready(() => start()) : start(); } catch (e) { start(); }
+})();
+</script>
+
+</body></html>
